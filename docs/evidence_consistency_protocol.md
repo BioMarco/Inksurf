@@ -44,6 +44,13 @@ This is deliberately conservative and is not proof of statistical independence.
 
 This prevents correlated variants from manufacturing confidence.
 
+The reviewer-facing claim ledger applies the same rule: a claim of two or more
+groups is capped at one unless it links a SHA-256-verified
+`inksurf-independence-audit/1.0` receipt. Editing a number in the ledger cannot
+make a result confirmation-eligible. The independence receipt must itself bind
+to the exact evidence receipt hash, so an audit from another experiment cannot
+be substituted.
+
 The PHerc0814 locked check demonstrates why this guardrail matters: disagreement
 between two official seed replicas was positively associated with the ink label
 and removing the highest-disagreement 20% reduced AP. Only disagreement between

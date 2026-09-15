@@ -21,6 +21,11 @@ but no combination satisfies the frozen confirmation contract. A confirmatory
 claim requires a G2/G3 locked result, at least two sufficiently independent
 evidence groups and independent ground truth.
 
+The PHerc0814 group count is verified by a SHA-256-bound independence receipt
+and resolves to one effective group. Counts without such a bound receipt are
+automatically capped at one, so editing the ledger cannot manufacture an
+independent confirmation.
+
 This audit does not weaken the software contribution. It makes the current
 claim ceiling explicit and machine-checkable instead of allowing a promising
 DEV metric or repeatability number to silently become an ink claim.

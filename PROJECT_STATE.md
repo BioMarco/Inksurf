@@ -1982,12 +1982,16 @@ le mappe.
 **Risultato verificato:** l'esempio congelato sui checkpoint ufficiali seed
 42/43 parte da 2 gruppi dichiarati e termina con 1 gruppo effettivo. Sono
 condivisi `acquisition_id`, `model_family_id` e `training_data_id`; il verdetto
-è `NO_GO_DEPENDENT_EVIDENCE`. La suite completa conta 106 test, tutti superati.
+è `NO_GO_DEPENDENT_EVIDENCE`. La receipt è legata tramite SHA-256 all'esatto
+report PHerc0814 cui si applica, così non può essere sostituita con un audit di
+un altro esperimento. La suite completa conta 108 test, tutti superati.
 
 **Interpretazione:** risultato robusto come guardrail software. È una regola
 conservativa di provenance e non dimostra da sola dipendenza statistica. Impedisce
 però che nomi di gruppo arbitrari trasformino repliche correlate in conferme
-indipendenti. Artefatti: `src/inksurf/independence_audit.py`,
+indipendenti. Anche `inksurf-claim-audit` limita automaticamente a un solo
+gruppo ogni claim privo di receipt di indipendenza verificata e collegata
+all'hash dell'evidenza. Artefatti: `src/inksurf/independence_audit.py`,
 `configs/independence_audit_seed_example.json`, test e report JSON/Markdown in
 `results/independence_audit_seed_example/`.
 

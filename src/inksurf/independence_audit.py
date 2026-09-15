@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import tempfile
@@ -27,6 +28,14 @@ def _atomic_json(path: Path, payload: dict) -> None:
         except FileNotFoundError:
             pass
         raise
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
 
 
 def audit_independence(
@@ -112,6 +121,21 @@ def run(config_path: Path) -> dict:
         raise ValueError("regime must be explicit")
     if cfg.get("track") not in {"A", "B", "C"}:
         raise ValueError("track must be A, B or C")
+    subject = cfg.get("subject")
+    verified_subject = None
+    if subject is not None:
+        subject_path = root / subject["artifact"]
+        actual_hash = _sha256(subject_path)
+        if actual_hash != subject["sha256"]:
+            raise ValueError(f"subject hash mismatch for {subject_path}")
+        subject_payload = json.loads(subject_path.read_text(encoding="utf-8"))
+        if subject_payload.get("schema_version") != subject["expected_schema"]:
+            raise ValueError(f"subject schema mismatch for {subject_path}")
+        verified_subject = {
+            "artifact": subject["artifact"],
+            "sha256": actual_hash,
+            "schema_version": subject["expected_schema"],
+        }
     result = audit_independence(
         cfg["views"],
         list(cfg["policy"]["required_distinct_fields"]),
@@ -123,6 +147,7 @@ def run(config_path: Path) -> dict:
         "track": cfg["track"],
         "regime": cfg["regime"],
         "status": "PASS_INDEPENDENCE" if result["independence_gate_passed"] else "NO_GO_DEPENDENT_EVIDENCE",
+        "subject": verified_subject,
         **result,
         "claim": "Effective groups are a conservative provenance audit, not proof of statistical independence.",
     }

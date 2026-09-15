@@ -41,6 +41,10 @@
       "expected_schema": "inksurf-ink9um-validation-evaluation/1.0",
       "role": "locked_validation",
       "independent_groups": 1,
+      "independence_audit": {
+        "artifact": "results/independence_audit_seed_example/report.json",
+        "sha256": "702f93fbf2a1382844014577a640b142fc9dddfb2465593bfc37352981d8fa7f"
+      },
       "ground_truth_independent": false,
       "permitted_claim": "negative locked result; no confirmation"
     },

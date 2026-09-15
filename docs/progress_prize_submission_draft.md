@@ -58,7 +58,7 @@ spending review time or publishing an ink claim.
 
 ## Reproducibility
 
-- 106 offline tests on Windows; the same suite runs in GitHub Actions;
+- 108 offline tests on Windows; the same suite runs in GitHub Actions;
 - deterministic synthetic demonstration with a planted correlated artifact;
 - frozen real-data configs, source/checkpoint hashes and bounded I/O manifests;
 - atomic output, cache verification and explicit negative-result retention;

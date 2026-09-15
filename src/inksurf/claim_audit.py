@@ -21,6 +21,38 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _audited_independent_groups(
+    root: Path, specification: dict, evidence_hash: str
+) -> tuple[int, dict]:
+    declared = int(specification.get("independent_groups", 0))
+    audit_spec = specification.get("independence_audit")
+    if audit_spec is None:
+        return min(declared, 1), {
+            "status": "unverified",
+            "declared_groups": declared,
+            "reason": "no hashed independence audit; claim ceiling capped at one group",
+        }
+    path = root / audit_spec["artifact"]
+    actual_hash = sha256(path)
+    if actual_hash != audit_spec["sha256"]:
+        raise ValueError(f"independence audit hash mismatch for {path}")
+    audit = json.loads(path.read_text(encoding="utf-8"))
+    if audit.get("schema_version") != "inksurf-independence-audit/1.0":
+        raise ValueError(f"invalid independence audit schema for {path}")
+    subject = audit.get("subject") or {}
+    if subject.get("sha256") != evidence_hash:
+        raise ValueError("independence audit is not bound to the evidence receipt")
+    effective = int(audit.get("effective_group_count", 0))
+    passed = bool(audit.get("independence_gate_passed", False))
+    return effective, {
+        "status": "verified",
+        "artifact": audit_spec["artifact"],
+        "sha256": actual_hash,
+        "effective_groups": effective,
+        "gate_passed": passed,
+    }
+
+
 def audit_entry(root: Path, specification: dict) -> dict:
     role = specification.get("role")
     if role not in ROLES:
@@ -43,13 +75,14 @@ def audit_entry(root: Path, specification: dict) -> dict:
 
     checks = artifact.get("go_checks", {})
     passed = sum(bool(value) for value in checks.values())
-    groups = int(specification.get("independent_groups", 0))
+    groups, independence = _audited_independent_groups(root, specification, actual_hash)
     ground_truth_independent = bool(specification.get("ground_truth_independent", False))
     confirmation_eligible = (
         role == "locked_validation"
         and bool(checks)
         and passed == len(checks)
         and tier in {"G2", "G3"}
+        and independence.get("gate_passed") is True
         and groups >= 2
         and ground_truth_independent
     )
@@ -62,6 +95,7 @@ def audit_entry(root: Path, specification: dict) -> dict:
         "regime": regime,
         "geometry_tier": tier,
         "independent_groups": groups,
+        "independence_verification": independence,
         "ground_truth_independent": ground_truth_independent,
         "go_checks_passed": passed,
         "go_checks_total": len(checks),

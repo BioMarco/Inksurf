@@ -10,6 +10,11 @@
       "go_checks_passed": 0,
       "go_checks_total": 0,
       "ground_truth_independent": false,
+      "independence_verification": {
+        "declared_groups": 1,
+        "reason": "no hashed independence audit; claim ceiling capped at one group",
+        "status": "unverified"
+      },
       "independent_groups": 1,
       "permitted_claim": "pipeline compatibility",
       "regime": "DEV",
@@ -25,6 +30,11 @@
       "go_checks_passed": 4,
       "go_checks_total": 4,
       "ground_truth_independent": false,
+      "independence_verification": {
+        "declared_groups": 1,
+        "reason": "no hashed independence audit; claim ceiling capped at one group",
+        "status": "unverified"
+      },
       "independent_groups": 1,
       "permitted_claim": "cross-scan repeatability under a shared model",
       "regime": "DEV",
@@ -40,6 +50,11 @@
       "go_checks_passed": 3,
       "go_checks_total": 3,
       "ground_truth_independent": false,
+      "independence_verification": {
+        "declared_groups": 1,
+        "reason": "no hashed independence audit; claim ceiling capped at one group",
+        "status": "unverified"
+      },
       "independent_groups": 1,
       "permitted_claim": "promising bounded DEV behavior",
       "regime": "DEV",
@@ -55,6 +70,13 @@
       "go_checks_passed": 2,
       "go_checks_total": 4,
       "ground_truth_independent": false,
+      "independence_verification": {
+        "artifact": "results/independence_audit_seed_example/report.json",
+        "effective_groups": 1,
+        "gate_passed": false,
+        "sha256": "702f93fbf2a1382844014577a640b142fc9dddfb2465593bfc37352981d8fa7f",
+        "status": "verified"
+      },
       "independent_groups": 1,
       "permitted_claim": "negative locked result; no confirmation",
       "regime": "VALIDATION",
@@ -70,6 +92,11 @@
       "go_checks_passed": 0,
       "go_checks_total": 0,
       "ground_truth_independent": false,
+      "independence_verification": {
+        "declared_groups": 1,
+        "reason": "no hashed independence audit; claim ceiling capped at one group",
+        "status": "unverified"
+      },
       "independent_groups": 1,
       "permitted_claim": "diagnosis of signal-bearing seed disagreement",
       "regime": "DEV",

@@ -3,6 +3,11 @@
   "experiment_id": "ink9um-seed-independence-example-20260915",
   "track": "A",
   "regime": "DEV",
+  "subject": {
+    "artifact": "results/ink9um_pherc0814_validation/evaluation_report.json",
+    "sha256": "cd53de34335aa5409c2a6a1cc6fd5588cc3c8dbd73d15b6777dd4a9404b8276f",
+    "expected_schema": "inksurf-ink9um-validation-evaluation/1.0"
+  },
   "policy": {
     "required_distinct_fields": [
       "acquisition_id",

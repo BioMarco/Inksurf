@@ -135,6 +135,8 @@ inksurf-claim-audit --config configs/progress_prize_claim_audit.json
 The current result is deliberately `NO_GO_SUBMISSION_CLAIM`: the software
 guardrail is demonstrated, but no receipt yet combines locked success, G2/G3
 geometry, independent evidence groups and independent ground truth.
+Claims of two or more independent groups require a hashed provenance-audit
+receipt; an unaudited number in the ledger is automatically capped at one.
 
 Declared group names are not trusted on their own. The provenance audit merges
 groups that share any required dependency field, and also fails closed when a

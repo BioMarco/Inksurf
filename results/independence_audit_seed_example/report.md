@@ -26,3 +26,6 @@ replicas cannot manufacture a second independent confirmation merely by using
 different group names. Missing required provenance also fails closed.
 
 Machine-readable receipt: `report.json`.
+
+The receipt is cryptographically bound to the preserved PHerc0814 evaluation
+report by its SHA-256 digest. It cannot be reused as proof for another result.

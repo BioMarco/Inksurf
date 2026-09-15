@@ -44,5 +44,10 @@
   ],
   "schema_version": "inksurf-independence-audit/1.0",
   "status": "NO_GO_DEPENDENT_EVIDENCE",
+  "subject": {
+    "artifact": "results/ink9um_pherc0814_validation/evaluation_report.json",
+    "schema_version": "inksurf-ink9um-validation-evaluation/1.0",
+    "sha256": "cd53de34335aa5409c2a6a1cc6fd5588cc3c8dbd73d15b6777dd4a9404b8276f"
+  },
   "track": "A"
 }
