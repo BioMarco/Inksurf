@@ -225,7 +225,10 @@ cross-energy, cross-model render pair on the same segment. It remains a
 candidate only: registration and training provenance are not yet sufficient to
 count two independent groups. The first bounded overlap attempt is preserved as
 `NO_GO_CURRENT_ROI_OVERLAP`: the second render has no coverage on the 12
-existing evaluation chunks.
+existing evaluation chunks. A second, metadata-only search inside the second
+render's nonblank coverage found no non-empty transferred-label chunk and is
+preserved as `NO_GO_NO_LABELED_OVERLAP`; no source, prediction or label pixels
+were downloaded by that failed preflight.
 
 Before submission:
 

@@ -2142,3 +2142,32 @@ e non prova di assenza d'inchiostro. Le ROI correnti non possono testare la
 seconda fonte. Il prossimo pilot DEV va selezionato nell'intersezione di
 copertura usando soltanto metadata TIFF e validation-mask size; prediction e
 valori label devono restare esclusi dalla selezione. La suite conta 124 test.
+
+## 48. Verifica metadata-only dell'overlap etichettato PHerc0139-w029
+
+**Data:** 15 settembre 2026. **Track/regime/tier:** Track A / DEV / G1.
+
+Il preflight delle annotazioni e stato esteso con due vincoli dichiarativi:
+una finestra di chunk `Y=[14,35), X=[0,54)`, derivata esclusivamente dalle tile
+nonblank del secondo TIFF, e una dimensione compressa minima di 79 byte per
+escludere i chunk validation-mask vuoti, che nel dataset occupano 78 byte. La
+config congelata e `configs/pherc0139_w029_overlap_preflight.json`.
+
+**Risultato verificato:** tra i 9.414 oggetti elencati non esiste alcun chunk
+validation-mask non vuoto nella copertura utile del secondo render. Il run
+termina con `NO_GO_NO_LABELED_OVERLAP`, dopo 2.900.698 byte di soli metadati e
+prima di scaricare qualunque pixel sorgente, prediction o label. I byte
+pianificati per dati e annotazioni sono quindi zero.
+
+**Interpretazione:** risultato negativo robusto per questa specifica via di
+benchmark. Il pair PHerc0139-w029 non puo essere valutato contro le label
+trasferite w016 nella propria zona di segnale, e non va salvato scegliendo ROI
+in base ai valori delle prediction. Questo non invalida il pair come oggetto di
+registrazione o studio non etichettato e non prova assenza di inchiostro. Il
+prossimo test informativo deve cercare, attraverso soli cataloghi e metadati,
+un altro segmento con almeno due render distinti e una reference non vuota
+nella loro intersezione; in assenza di tale segmento, il contributo Progress
+Prize resta correttamente posizionato come validator/auditor, non detector
+confermato. Artefatti: report JSON/Markdown in
+`results/pherc0139_w029_overlap_preflight_v2/`. La suite completa conta 126
+test, tutti superati.

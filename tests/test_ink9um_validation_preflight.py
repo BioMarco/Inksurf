@@ -17,6 +17,19 @@ class Ink9umValidationPreflightTests(unittest.TestCase):
     def test_raw_bytes_handles_edge_chunks(self):
         self.assertEqual(raw_chunk_bytes([109, 300, 270], [109, 128, 128], 2, 2), 109 * 44 * 14)
 
+    def test_selection_can_be_limited_by_metadata_coverage(self):
+        items = [
+            {"path": "a_validation_mask.zarr/0/0.10.1", "size": 200},
+            {"path": "a_validation_mask.zarr/0/0.20.1", "size": 100},
+        ]
+        result = select_validation_chunks(items, 1, [[14, 35], [0, 54]])
+        self.assertEqual(result[0]["chunk_yx"], [20, 1])
+
+    def test_empty_compressed_chunks_can_be_excluded(self):
+        items = [{"path": "a_validation_mask.zarr/0/0.20.1", "size": 78}]
+        with self.assertRaises(ValueError):
+            select_validation_chunks(items, 1, minimum_compressed_bytes=79)
+
 
 if __name__ == "__main__":
     unittest.main()

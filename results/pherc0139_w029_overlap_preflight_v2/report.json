@@ -1,0 +1,31 @@
+{
+  "discovery_files_accessed": 0,
+  "experiment_id": "pherc0139-w029-cross-model-overlap-dev-20260915",
+  "geometry_tier": "G1",
+  "limitations": [
+    "The second render coverage does not overlap a non-empty transferred-label validation chunk.",
+    "No source, prediction or label pixels were downloaded by this failed preflight."
+  ],
+  "listed_annotation_objects": 9414,
+  "metadata_bytes_transferred": 2900698,
+  "minimum_compressed_validation_bytes": 79,
+  "planned_annotation_bytes": 0,
+  "planned_source_raw_bytes": 0,
+  "regime": "DEV",
+  "schema_version": "inksurf-ink9um-validation-preflight/1.0",
+  "selected_chunk_count": 0,
+  "selection_chunk_bounds_yx": [
+    [
+      14,
+      35
+    ],
+    [
+      0,
+      54
+    ]
+  ],
+  "selection_error": "only 0 validation chunks found",
+  "status": "NO_GO_NO_LABELED_OVERLAP",
+  "track": "A",
+  "validation_files_accessed": 0
+}

@@ -63,7 +63,7 @@ mistaken for independent confirmation.
 
 ## Reproducibility
 
-- 124 offline tests on Windows; the same suite runs in GitHub Actions;
+- 126 offline tests on Windows; the same suite runs in GitHub Actions;
 - deterministic synthetic demonstration with a planted correlated artifact;
 - frozen real-data configs, source/checkpoint hashes and bounded I/O manifests;
 - atomic output, cache verification and explicit negative-result retention;
@@ -87,6 +87,15 @@ First Letters image. PHerc0814 uses transferred reference annotations and was
 exposed to upstream model selection; the locked result is therefore useful as a
 local method stress test, not independent ground truth. Structural claims
 require G2/G3 geometry and are currently blocked.
+
+The first official cross-acquisition/cross-model candidate also failed two
+prospective overlap checks. Its second render is blank on the 12 frozen bounded
+ROIs, and a metadata-only search within that render's nonblank tile coverage
+found zero non-empty transferred-label chunks. The preserved verdicts are
+`NO_GO_CURRENT_ROI_OVERLAP` and `NO_GO_NO_LABELED_OVERLAP`; the latter stopped
+before downloading source, prediction or label pixels. This prevents
+content-driven ROI selection from turning missing benchmark overlap into an
+apparently positive result.
 
 On PHerc0139-w016, geometry is now G2 only for the 12 frozen bounded DEV
 chunks. They cover `0.0751664 cm²`; the naive top-5% policy has pixel precision

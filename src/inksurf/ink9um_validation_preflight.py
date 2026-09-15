@@ -41,12 +41,21 @@ def chunk_key(path: str) -> tuple[int, int] | None:
     return (int(match.group(1)), int(match.group(2))) if match else None
 
 
-def select_validation_chunks(items: list[dict[str, Any]], count: int) -> list[dict[str, Any]]:
+def select_validation_chunks(
+    items: list[dict[str, Any]], count: int, chunk_bounds_yx: list[list[int]] | None = None,
+    minimum_compressed_bytes: int = 0,
+) -> list[dict[str, Any]]:
     candidates = []
     marker = "_validation_mask.zarr/0/"
     for item in items:
         key = chunk_key(str(item.get("path", "")))
         if marker in str(item.get("path", "")) and key is not None:
+            if chunk_bounds_yx is not None:
+                (y0, y1), (x0, x1) = chunk_bounds_yx
+                if not (y0 <= key[0] < y1 and x0 <= key[1] < x1):
+                    continue
+            if int(item["size"]) < minimum_compressed_bytes:
+                continue
             candidates.append({"chunk_yx": list(key), "compressed_validation_bytes": int(item["size"])})
     candidates.sort(key=lambda item: (-item["compressed_validation_bytes"], item["chunk_yx"]))
     if len(candidates) < count:
@@ -109,7 +118,29 @@ def run(config_path: Path) -> dict[str, Any]:
     if list(source_meta["shape"][1:]) != list(next(iter(shapes))[1:]):
         raise ValueError("annotation and source XY shapes differ")
 
-    selected = select_validation_chunks(items, int(cfg["roi_chunk_count"]))
+    try:
+        selected = select_validation_chunks(
+            items, int(cfg["roi_chunk_count"]), cfg.get("selection_chunk_bounds_yx"),
+            int(cfg.get("minimum_compressed_validation_bytes", 0)),
+        )
+    except ValueError as exc:
+        report = {
+            "schema_version": cfg["schema_version"], "experiment_id": cfg["experiment_id"],
+            "status": "NO_GO_NO_LABELED_OVERLAP", "track": "A", "regime": regime,
+            "geometry_tier": "G1", "listed_annotation_objects": len(items),
+            "metadata_bytes_transferred": transferred,
+            "selection_chunk_bounds_yx": cfg.get("selection_chunk_bounds_yx"),
+            "minimum_compressed_validation_bytes": int(cfg.get("minimum_compressed_validation_bytes", 0)),
+            "selection_error": str(exc), "selected_chunk_count": 0,
+            "planned_source_raw_bytes": 0, "planned_annotation_bytes": 0,
+            "validation_files_accessed": 0, "discovery_files_accessed": 0,
+            "limitations": [
+                "The second render coverage does not overlap a non-empty transferred-label validation chunk.",
+                "No source, prediction or label pixels were downloaded by this failed preflight.",
+            ],
+        }
+        _atomic_json(root / cfg["report_json"], report)
+        return report
     item_index = {str(item["path"]): item for item in items}
     planned_raw = 0
     planned_annotation = 0
@@ -196,6 +227,7 @@ def run(config_path: Path) -> dict[str, Any]:
         "listed_annotation_objects": len(items),
         "metadata_bytes_transferred": transferred,
         "selected_chunk_count": len(selected),
+        "selection_chunk_bounds_yx": cfg.get("selection_chunk_bounds_yx"),
         "planned_source_raw_bytes": planned_raw,
         "planned_annotation_bytes": planned_annotation,
         "validation_files_accessed": 0,
