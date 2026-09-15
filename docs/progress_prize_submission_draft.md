@@ -56,9 +56,14 @@ This converts a subtle scientific failure mode into actionable information:
 teams can determine whether an ensemble or rescan really adds evidence before
 spending review time or publishing an ink claim.
 
+The complete decision comparison is preserved in `docs/method_comparison.md`.
+It shows that InkSurf reaches a different, safer conclusion in all cases where
+high compatibility, cross-scan correlation or ensemble AP could otherwise be
+mistaken for independent confirmation.
+
 ## Reproducibility
 
-- 108 offline tests on Windows; the same suite runs in GitHub Actions;
+- 113 offline tests on Windows; the same suite runs in GitHub Actions;
 - deterministic synthetic demonstration with a planted correlated artifact;
 - frozen real-data configs, source/checkpoint hashes and bounded I/O manifests;
 - atomic output, cache verification and explicit negative-result retention;

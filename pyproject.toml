@@ -61,6 +61,7 @@ inksurf-replica-disagreement-audit = "inksurf.replica_disagreement_audit:main"
 inksurf-demo = "inksurf.demo:main"
 inksurf-claim-audit = "inksurf.claim_audit:main"
 inksurf-independence-audit = "inksurf.independence_audit:main"
+inksurf-physical-fp-audit = "inksurf.physical_metrics:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

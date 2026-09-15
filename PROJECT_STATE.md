@@ -2000,3 +2000,46 @@ una seconda fonte semanticamente distinta (diversa acquisizione e diverso
 meccanismo/modello o riferimento), quindi congelare un confronto whole-region.
 Finché tale fonte non esiste, il claim ceiling resta diagnostico e non è ammesso
 un claim di inchiostro o struttura.
+
+## 43. Comparazione decisionale per la candidatura Progress Prize
+
+**Data:** 15 settembre 2026. **Track/regime:** Track A / packaging DEV.
+
+È stata prodotta `docs/method_comparison.md`, che confronta sugli stessi
+artefatti cinque letture ingenue con il verdetto fail-closed di InkSurf:
+compatibilità canonica, repeatability cross-scan, ensemble DEV, trasferimento
+locked e astensione per seed. I numeri sono quelli delle receipt versionate;
+non sono state eseguite nuove scansioni né modificati gate.
+
+**Risultato verificato:** metriche apparentemente forti (`r=0,98974`,
+`r=0,99534`, ensemble AP `0,72371` e AP locked `0,59718`) non soddisfano il
+contratto di conferma. Il caso decisivo resta l'astensione PHerc0814: AP da
+`0,59718` a `0,52245`, mentre il disaccordo stesso ha AP `0,63808`. InkSurf
+preserva il NO-GO e identifica una sola fonte effettiva.
+
+**Interpretazione:** risultato robusto come vantaggio decisionale e controllo
+di claim; promettente ma ancora da validare come contributo premiabile. Non è
+un risultato d'inchiostro. Il prossimo blocker tecnico misurabile è il false
+positive rate per cm2 su benchmark G2; il blocker scientifico resta una seconda
+fonte semanticamente indipendente. L'azione esterna successiva sarà una review
+comunitaria, ma richiede prima pubblicazione e approvazione del proprietario.
+
+## 44. Metrica di falsi positivi in area fisica
+
+**Data:** 15 settembre 2026. **Track/regime:** Track A / implementazione DEV.
+
+È stato aggiunto `inksurf-physical-fp-audit`. Il modulo accetta mask 2D
+allineate e area fisica per pixel costante o variabile, esclude i positivi di
+riferimento dal denominatore negativo e riporta area falsa, frazione di area e
+componenti 4-connesse per cm2. La soglia minima di componente è espressa in
+mm2; le componenti sotto soglia restano incluse nell'area falsa.
+
+**Risultato verificato:** i test sintetici controllano conversioni µm2/mm2/cm2,
+area variabile, separazione di componenti e fallimento su area non fisica. Il
+CLI rifiuta geometry tier G0/G1. Nessuna metrica reale è stata prodotta e nessun
+nuovo dato è stato letto. La suite completa conta 113 test, tutti superati.
+
+**Interpretazione:** capacità software implementata, risultato reale ancora da
+validare. Il prossimo test richiede una ROI G2 con reference ammissibile e una
+mappa di area derivata dalla geometria; usare una scala nominale su una
+flattening distorta non sarebbe sufficiente.

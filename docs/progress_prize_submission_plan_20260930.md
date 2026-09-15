@@ -25,8 +25,8 @@ disagreement and abstention maps in standard formats.
    a G2 benchmark with explicit scale.
 4. ~~Freeze and run one untouched scroll-surface validation unit.~~ Completed:
    PHerc0814, 2/4 gates, `NO-GO`. The negative outcome is preserved.
-5. Package CLI, examples, machine-readable provenance, permissive license and
-   an end-to-end walkthrough.
+5. ~~Package CLI, examples, machine-readable provenance, permissive license and
+   an end-to-end walkthrough.~~ Completed in the private release candidate.
 6. Prepare an upstream integration example and request community feedback.
 
 Current status: the geometry and cross-scan repeatability gates pass, but the
@@ -50,11 +50,12 @@ not a result to hide or retune.
 
 Next implementation sequence:
 
-1. consolidate the independence-group and disagreement diagnostics behind one
-   public audit command;
-2. add a small synthetic example plus the two preserved real-data receipts;
-3. produce a comparison table: naive repeatability, naive seed abstention and
-   InkSurf fail-closed verdict;
+1. ~~consolidate the independence-group and disagreement diagnostics behind one
+   public audit command;~~ completed;
+2. ~~add a small synthetic example plus the preserved real-data receipts;~~
+   completed;
+3. ~~produce a comparison table: naive repeatability, naive seed abstention and
+   InkSurf fail-closed verdict;~~ completed;
 4. integrate rather than duplicate official/community CT-support, seating and
    dual-energy outputs;
 5. prepare the open-source walkthrough and submission draft for owner review.

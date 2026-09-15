@@ -43,6 +43,7 @@ result is preserved rather than retuned.
 | Disagreement audit | Tests whether replica disagreement behaves like uncertainty or signal |
 | Geometry checks | TIFXYZ bounds, coordinates, CT support and surface seating utilities |
 | Bounded I/O | Chunk-aware plans, byte limits, manifests, hashes, resume and atomic output |
+| Physical burden | False-positive area and reviewable regions per negative cm² on G2/G3 surfaces |
 | Reproducibility | Frozen JSON configs, seeds, source versions and machine-readable reports |
 
 The historical threshold/component/skeleton micro-patch review path is closed
@@ -124,6 +125,8 @@ inksurf-evidence-consistency --config path/to/config.json
 
 See [the evidence consistency protocol](docs/evidence_consistency_protocol.md)
 for the input contract and a complete configuration example.
+Physical false-positive reporting is specified in
+[the physical-area protocol](docs/physical_false_positive_protocol.md).
 
 The reviewer-facing claim audit verifies receipt hashes and schemas, then
 computes the highest claim the evidence actually permits:
@@ -168,6 +171,7 @@ Detailed reports:
 - [cross-scan repeatability](results/pherc0139_cross_scan_consistency/report.md)
 - [bounded DEV benchmark](results/ink9um_validation_evaluation/report.md)
 - [locked PHerc0814 validation](results/ink9um_pherc0814_validation/report.md)
+- [naive workflow versus InkSurf](docs/method_comparison.md)
 - [bounded real-data walkthrough](docs/real_data_walkthrough.md)
 - [Progress Prize submission draft](docs/progress_prize_submission_draft.md)
 
@@ -216,11 +220,14 @@ diagnostic layer, not a First Letters submission.
 
 Before submission:
 
-1. demonstrate measurable advantage over naive ensemble/repeatability checks;
-2. consume rather than duplicate community CT-support, seating and dual-energy
+1. ~~demonstrate a decision-level advantage over naive ensemble/repeatability
+   checks;~~ completed in the preserved comparison;
+2. measure the implemented physical false-positive burden on an eligible G2
+   labeled ROI;
+3. consume rather than duplicate community CT-support, seating and dual-energy
    outputs;
-3. publish an end-to-end real-data walkthrough with bounded downloads;
-4. obtain community feedback and complete the official submission review.
+4. publish an end-to-end real-data walkthrough with bounded downloads;
+5. obtain community feedback and complete the official submission review.
 
 First Letters work remains a separate locked-discovery track. A qualifying
 submission would additionally require a verified TIFXYZ mesh, low-distortion
