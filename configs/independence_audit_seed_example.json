@@ -1,0 +1,35 @@
+{
+  "schema_version": "inksurf-independence-audit/1.0",
+  "experiment_id": "ink9um-seed-independence-example-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "policy": {
+    "required_distinct_fields": [
+      "acquisition_id",
+      "model_family_id",
+      "training_data_id"
+    ],
+    "minimum_effective_groups": 2
+  },
+  "views": [
+    {
+      "view_id": "ink9um-seed42-step75000",
+      "independence_group": "seed42",
+      "provenance": {
+        "acquisition_id": "same-surface-volume",
+        "model_family_id": "hybrid-3d2d",
+        "training_data_id": "ink9um-official-training"
+      }
+    },
+    {
+      "view_id": "ink9um-seed43-step75000",
+      "independence_group": "seed43",
+      "provenance": {
+        "acquisition_id": "same-surface-volume",
+        "model_family_id": "hybrid-3d2d",
+        "training_data_id": "ink9um-official-training"
+      }
+    }
+  ],
+  "output_report": "results/independence_audit_seed_example/report.json"
+}

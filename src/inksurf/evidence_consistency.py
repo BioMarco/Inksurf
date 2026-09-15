@@ -12,6 +12,8 @@ from typing import Any
 
 import numpy as np
 
+from .independence_audit import audit_independence
+
 
 def validate_config(config: dict[str, Any]) -> None:
     if config.get("schema_version") != "inksurf-evidence-consistency/1.0":
@@ -35,6 +37,29 @@ def validate_config(config: dict[str, Any]) -> None:
     minimum = int(thresholds.get("minimum_independent_groups", 0))
     if minimum < 2 or minimum > group_count:
         raise ValueError("minimum_independent_groups must be between 2 and available groups")
+    policy = config.get("independence_policy")
+    if policy is not None:
+        audit = audit_independence(
+            views,
+            list(policy.get("required_distinct_fields", [])),
+            minimum,
+        )
+        if not audit["independence_gate_passed"]:
+            raise ValueError("insufficient effective independent groups after provenance audit")
+
+
+def _effective_groups(config: dict[str, Any]) -> tuple[list[str], dict[str, Any] | None]:
+    declared = [view["independence_group"] for view in config["views"]]
+    policy = config.get("independence_policy")
+    if policy is None:
+        return declared, None
+    audit = audit_independence(
+        config["views"],
+        list(policy["required_distinct_fields"]),
+        int(config["thresholds"]["minimum_independent_groups"]),
+    )
+    mapping = audit["declared_to_effective_group"]
+    return [mapping[group] for group in declared], audit
 
 
 def _normalize(array: np.ndarray, value_range: list[float] | tuple[float, float]) -> np.ndarray:
@@ -188,11 +213,10 @@ def run(config_path: Path) -> dict[str, Any]:
     validate_config(config)
     root = config_path.resolve().parent.parent
     views = []
-    groups = []
+    groups, independence_audit = _effective_groups(config)
     for specification in config["views"]:
         raw = _load_array(root, specification)
         views.append(_normalize(raw, specification["value_range"]))
-        groups.append(specification["independence_group"])
     thresholds = config["thresholds"]
     maps = combine_evidence(
         views,
@@ -214,7 +238,9 @@ def run(config_path: Path) -> dict[str, Any]:
         "status": "evidence_maps_created_not_validated",
         "shape": list(maps["accepted"].shape),
         "view_count": len(views),
+        "declared_independent_group_count": len({view["independence_group"] for view in config["views"]}),
         "independent_group_count": len(set(groups)),
+        "independence_audit": independence_audit,
         "accepted_pixels": int(maps["accepted"].sum()),
         "accepted_fraction": float(maps["accepted"].sum() / total),
         "thresholds": thresholds,

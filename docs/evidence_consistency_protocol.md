@@ -23,6 +23,12 @@ official metadata
 
 Every input view has a required `independence_group`.
 
+For real experiments, a group name is only a declaration. Add an
+`independence_policy` with provenance fields that must differ between groups.
+InkSurf merges two declared groups if any required field is shared or missing;
+the run fails before loading evidence arrays if too few effective groups remain.
+This is deliberately conservative and is not proof of statistical independence.
+
 - Normal offsets, thresholds, tiles or test-time augmentations derived from the
   same acquisition/model belong to the same group.
 - Replicate outputs trained from the same labels are not automatically
@@ -80,16 +86,33 @@ Example configuration fragment:
     {
       "view_id": "scan-a-offsets-median-input-1",
       "independence_group": "scan-a",
+      "provenance": {
+        "acquisition_id": "scan-a",
+        "model_family_id": "model-a",
+        "training_data_id": "labels-a"
+      },
       "path": "data/aligned/scan_a_0.tif",
       "value_range": [0, 255]
     },
     {
       "view_id": "scan-b-offsets-median-input-1",
       "independence_group": "scan-b",
+      "provenance": {
+        "acquisition_id": "scan-b",
+        "model_family_id": "model-b",
+        "training_data_id": "labels-b"
+      },
       "path": "data/aligned/scan_b_0.tif",
       "value_range": [0, 255]
     }
   ],
+  "independence_policy": {
+    "required_distinct_fields": [
+      "acquisition_id",
+      "model_family_id",
+      "training_data_id"
+    ]
+  },
   "thresholds": {
     "evidence": 0.5,
     "minimum_independent_groups": 2,

@@ -136,6 +136,18 @@ The current result is deliberately `NO_GO_SUBMISSION_CLAIM`: the software
 guardrail is demonstrated, but no receipt yet combines locked success, G2/G3
 geometry, independent evidence groups and independent ground truth.
 
+Declared group names are not trusted on their own. The provenance audit merges
+groups that share any required dependency field, and also fails closed when a
+required field is missing:
+
+```bash
+inksurf-independence-audit --config configs/independence_audit_seed_example.json
+```
+
+In the example, two seeds are deliberately declared as separate groups. Shared
+acquisition, model family and training data reduce them to one effective group,
+so the independence gate fails.
+
 ## Real-data evidence ledger
 
 These experiments are receipts for specific claims, not a ladder in which every
@@ -154,6 +166,8 @@ Detailed reports:
 - [cross-scan repeatability](results/pherc0139_cross_scan_consistency/report.md)
 - [bounded DEV benchmark](results/ink9um_validation_evaluation/report.md)
 - [locked PHerc0814 validation](results/ink9um_pherc0814_validation/report.md)
+- [bounded real-data walkthrough](docs/real_data_walkthrough.md)
+- [Progress Prize submission draft](docs/progress_prize_submission_draft.md)
 
 The PHerc0814 labels are transferred annotations/pseudo-labels and the upstream
 model used that case for online validation. This is not fully independent

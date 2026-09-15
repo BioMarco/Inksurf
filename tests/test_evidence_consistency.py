@@ -50,6 +50,24 @@ class EvidenceConsistencyTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate_config(config)
 
+    def test_config_collapses_falsely_distinct_provenance_groups(self):
+        config = {
+            "schema_version": "inksurf-evidence-consistency/1.0", "regime": "DEV",
+            "views": [
+                {"view_id": "seed-a", "independence_group": "a",
+                 "provenance": {"acquisition_id": "scan", "model_family_id": "model"}},
+                {"view_id": "seed-b", "independence_group": "b",
+                 "provenance": {"acquisition_id": "scan", "model_family_id": "model"}},
+            ],
+            "independence_policy": {
+                "required_distinct_fields": ["acquisition_id", "model_family_id"]
+            },
+            "thresholds": {"evidence": 0.5, "minimum_support_fraction": 0.5,
+                           "maximum_disagreement": 0.5, "minimum_independent_groups": 2},
+        }
+        with self.assertRaisesRegex(ValueError, "effective independent groups"):
+            validate_config(config)
+
 
 if __name__ == "__main__":
     unittest.main()

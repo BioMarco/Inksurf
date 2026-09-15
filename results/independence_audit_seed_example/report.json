@@ -1,0 +1,48 @@
+{
+  "claim": "Effective groups are a conservative provenance audit, not proof of statistical independence.",
+  "declared_group_count": 2,
+  "declared_to_effective_group": {
+    "seed42": "effective-group-1",
+    "seed43": "effective-group-1"
+  },
+  "dependency_edges": [
+    {
+      "declared_groups": [
+        "seed42",
+        "seed43"
+      ],
+      "left_view": "ink9um-seed42-step75000",
+      "reasons": [
+        {
+          "field": "acquisition_id",
+          "reason": "shared_value",
+          "value": "same-surface-volume"
+        },
+        {
+          "field": "model_family_id",
+          "reason": "shared_value",
+          "value": "hybrid-3d2d"
+        },
+        {
+          "field": "training_data_id",
+          "reason": "shared_value",
+          "value": "ink9um-official-training"
+        }
+      ],
+      "right_view": "ink9um-seed43-step75000"
+    }
+  ],
+  "effective_group_count": 1,
+  "experiment_id": "ink9um-seed-independence-example-20260915",
+  "independence_gate_passed": false,
+  "minimum_effective_groups": 2,
+  "regime": "DEV",
+  "required_distinct_fields": [
+    "acquisition_id",
+    "model_family_id",
+    "training_data_id"
+  ],
+  "schema_version": "inksurf-independence-audit/1.0",
+  "status": "NO_GO_DEPENDENT_EVIDENCE",
+  "track": "A"
+}

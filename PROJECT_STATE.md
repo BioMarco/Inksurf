@@ -1959,3 +1959,40 @@ produce `NO_GO_SUBMISSION_CLAIM`, zero receipt confermative e
 `src/inksurf/claim_audit.py`, `tests/test_claim_audit.py`,
 `configs/progress_prize_claim_audit.json` e report in
 `results/progress_prize_claim_audit/`.
+
+Documentazione candidatura aggiunta: `docs/real_data_walkthrough.md` separa la
+verifica offline delle receipt dal rerun bounded da 21.435.514 byte e chiarisce
+che il kernel Kaggle locked non va sovrascritto. Il draft
+`docs/progress_prize_submission_draft.md` formula problema, vantaggio misurato,
+riproducibilità, limiti e richiesta di valutazione senza claim di ink o lettere.
+
+## 42. Audit operativo dell'indipendenza dichiarata
+
+**Data:** 15 settembre 2026. **Track/regime/tier:** Track A / DEV / tier non
+applicabile al test di provenance.
+
+È stato aggiunto `inksurf-independence-audit`, integrato anche nel validatore
+configurabile `inksurf-evidence-consistency`. Per gli esperimenti reali una
+stringa `independence_group` non è più sufficiente: una policy può richiedere
+che specifici assi di provenance siano distinti. Se un campo richiesto manca o
+coincide tra due gruppi dichiarati, questi vengono uniti prima del conteggio;
+se restano meno gruppi effettivi del minimo, il run si arresta prima di caricare
+le mappe.
+
+**Risultato verificato:** l'esempio congelato sui checkpoint ufficiali seed
+42/43 parte da 2 gruppi dichiarati e termina con 1 gruppo effettivo. Sono
+condivisi `acquisition_id`, `model_family_id` e `training_data_id`; il verdetto
+è `NO_GO_DEPENDENT_EVIDENCE`. La suite completa conta 106 test, tutti superati.
+
+**Interpretazione:** risultato robusto come guardrail software. È una regola
+conservativa di provenance e non dimostra da sola dipendenza statistica. Impedisce
+però che nomi di gruppo arbitrari trasformino repliche correlate in conferme
+indipendenti. Artefatti: `src/inksurf/independence_audit.py`,
+`configs/independence_audit_seed_example.json`, test e report JSON/Markdown in
+`results/independence_audit_seed_example/`.
+
+Prossimo passo più informativo: definire e validare un adapter di provenance per
+una seconda fonte semanticamente distinta (diversa acquisizione e diverso
+meccanismo/modello o riferimento), quindi congelare un confronto whole-region.
+Finché tale fonte non esiste, il claim ceiling resta diagnostico e non è ammesso
+un claim di inchiostro o struttura.
