@@ -1,0 +1,39 @@
+{
+  "expected_bytes": 110076716,
+  "experiment_id": "pherc0139-w029-second-tifxyz-download-20260915",
+  "files": [
+    {
+      "destination": "D:\\Vesuvius\\inksurf\\data\\ink9um_validation_pilot\\geometry_20260413113053\\meta.json",
+      "sha256": "2f8a8fbc65704976fe75c0ad8dda4619ddc51cdddf08322aedd40419fedd07bf",
+      "size_bytes": 410,
+      "status": "downloaded",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260413113053-1.129um.tifxyz/meta.json"
+    },
+    {
+      "destination": "D:\\Vesuvius\\inksurf\\data\\ink9um_validation_pilot\\geometry_20260413113053\\x.tif",
+      "sha256": "5811f3707e530a188b6674ba540b0562b5739c388af8fed3e99b8912ecfbb899",
+      "size_bytes": 36692102,
+      "status": "downloaded",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260413113053-1.129um.tifxyz/x.tif"
+    },
+    {
+      "destination": "D:\\Vesuvius\\inksurf\\data\\ink9um_validation_pilot\\geometry_20260413113053\\y.tif",
+      "sha256": "96e3f7d323c3af06355872a13a3aa23c3f5617bb2d75a559fc849dfc359b2990",
+      "size_bytes": 36692102,
+      "status": "downloaded",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260413113053-1.129um.tifxyz/y.tif"
+    },
+    {
+      "destination": "D:\\Vesuvius\\inksurf\\data\\ink9um_validation_pilot\\geometry_20260413113053\\z.tif",
+      "sha256": "e7fd92c1fbfcd4ec7cc0563fba3d7b37e0914e9923e2a1c5604d886835f6acf6",
+      "size_bytes": 36692102,
+      "status": "downloaded",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260413113053-1.129um.tifxyz/z.tif"
+    }
+  ],
+  "project_root": "D:\\Vesuvius\\inksurf",
+  "regime": "DEV",
+  "schema_version": "inksurf-bounded-http-download/1.0",
+  "track": "A",
+  "verified_bytes": 110076716
+}

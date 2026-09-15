@@ -1,0 +1,33 @@
+{
+  "schema_version": "inksurf-bounded-http-download/1.0",
+  "experiment_id": "pherc0139-w029-second-tifxyz-download-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "allowed_hosts": ["vesuvius-challenge-open-data.s3.amazonaws.com"],
+  "max_total_bytes": 117440512,
+  "output_root": "data/ink9um_validation_pilot/geometry_20260413113053",
+  "project_root_relative": "..",
+  "files": [
+    {
+      "destination": "meta.json",
+      "size_bytes": 410,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260413113053-1.129um.tifxyz/meta.json"
+    },
+    {
+      "destination": "x.tif",
+      "size_bytes": 36692102,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260413113053-1.129um.tifxyz/x.tif"
+    },
+    {
+      "destination": "y.tif",
+      "size_bytes": 36692102,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260413113053-1.129um.tifxyz/y.tif"
+    },
+    {
+      "destination": "z.tif",
+      "size_bytes": 36692102,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260413113053-1.129um.tifxyz/z.tif"
+    }
+  ],
+  "report_json": "results/pherc0139_w029_cross_model/second_tifxyz_download.json"
+}

@@ -223,7 +223,9 @@ diagnostic layer, not a First Letters submission.
 The current official-catalog preflight has identified a promising PHerc0139
 cross-energy, cross-model render pair on the same segment. It remains a
 candidate only: registration and training provenance are not yet sufficient to
-count two independent groups.
+count two independent groups. The first bounded overlap attempt is preserved as
+`NO_GO_CURRENT_ROI_OVERLAP`: the second render has no coverage on the 12
+existing evaluation chunks.
 
 Before submission:
 

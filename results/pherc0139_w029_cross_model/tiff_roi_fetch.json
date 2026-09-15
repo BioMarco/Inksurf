@@ -1,0 +1,80 @@
+{
+  "downloaded_compressed_bytes": 798383,
+  "experiment_id": "pherc0139-w029-cross-model-tiff-fetch-20260915",
+  "maximum_download_bytes": 1048576,
+  "outputs": [
+    {
+      "artifact_id": "volume-20260102150214-model-new-canon-autoresearch",
+      "maximum_by_roi": [
+        235,
+        187,
+        38,
+        166,
+        153,
+        235,
+        225,
+        237,
+        220,
+        216,
+        235,
+        74
+      ],
+      "nonzero_fraction_by_roi": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "output": "data/ink9um_validation_pilot/cross_model_rois/volume-20260102150214-model-new-canon-autoresearch.npz",
+      "roi_count": 12,
+      "sha256": "9aae24b392fcd738a7dc2c600f9c0e99e95c79dfa6b312917038d2818a9b2570"
+    },
+    {
+      "artifact_id": "volume-20260413113053-model-mrg20736-1um-s1z2",
+      "maximum_by_roi": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nonzero_fraction_by_roi": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "output": "data/ink9um_validation_pilot/cross_model_rois/volume-20260413113053-model-mrg20736-1um-s1z2.npz",
+      "roi_count": 12,
+      "sha256": "46ea96c3d9e6685cb016c29944a1b8c14165c7908bdf02465f417576b8539b9b"
+    }
+  ],
+  "regime": "DEV",
+  "schema_version": "inksurf-remote-tiff-roi-fetch/1.0",
+  "status": "bounded_tiles_decoded_registration_unverified",
+  "track": "A",
+  "warning": "Decoded ROIs must not be compared until the cross-TIFXYZ registration audit passes."
+}

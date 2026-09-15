@@ -1,0 +1,325 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "volume-20260102150214-model-new-canon-autoresearch",
+      "byte_ranges": [
+        {
+          "length": 61017,
+          "offset": 48415774,
+          "tile_index": 558
+        },
+        {
+          "length": 70977,
+          "offset": 48476791,
+          "tile_index": 559
+        },
+        {
+          "length": 60110,
+          "offset": 48887453,
+          "tile_index": 565
+        },
+        {
+          "length": 81115,
+          "offset": 48947563,
+          "tile_index": 566
+        },
+        {
+          "length": 101477,
+          "offset": 50071353,
+          "tile_index": 587
+        },
+        {
+          "length": 108698,
+          "offset": 50172830,
+          "tile_index": 588
+        },
+        {
+          "length": 127951,
+          "offset": 50860905,
+          "tile_index": 594
+        },
+        {
+          "length": 89547,
+          "offset": 50988856,
+          "tile_index": 595
+        },
+        {
+          "length": 81351,
+          "offset": 52905031,
+          "tile_index": 623
+        }
+      ],
+      "compression": "DEFLATE",
+      "etag": "c30895ac1afe7df3df883b2cc06860d3-8",
+      "mapped_rois_y0_y1_x0_x1": [
+        [
+          19968,
+          20480,
+          15360,
+          15872
+        ],
+        [
+          20992,
+          21504,
+          15360,
+          15872
+        ],
+        [
+          19456,
+          19968,
+          14848,
+          15360
+        ],
+        [
+          19968,
+          20480,
+          7168,
+          7680
+        ],
+        [
+          20992,
+          21504,
+          7168,
+          7680
+        ],
+        [
+          20992,
+          21504,
+          14336,
+          14848
+        ],
+        [
+          19968,
+          20480,
+          8192,
+          8704
+        ],
+        [
+          20480,
+          20992,
+          15360,
+          15872
+        ],
+        [
+          21504,
+          22016,
+          14848,
+          15360
+        ],
+        [
+          20480,
+          20992,
+          7168,
+          7680
+        ],
+        [
+          20480,
+          20992,
+          8192,
+          8704
+        ],
+        [
+          19456,
+          19968,
+          7168,
+          7680
+        ]
+      ],
+      "planned_compressed_bytes": 782243,
+      "shape_yx": [
+        28080,
+        28880
+      ],
+      "size_bytes": 63656391,
+      "tile_shape_yx": [
+        1024,
+        1024
+      ],
+      "unique_tiles": 9,
+      "url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/ink-detection/PHerc0139-20250108000004-2.399um-0.22m-78keV-volume-20260102150214-20260417190342-new_canon_autoresearch_recipe-tile256-stride128.tif"
+    },
+    {
+      "artifact_id": "volume-20260413113053-model-mrg20736-1um-s1z2",
+      "byte_ranges": [
+        {
+          "length": 1076,
+          "offset": 40714918,
+          "tile_index": 607
+        },
+        {
+          "length": 1076,
+          "offset": 40715994,
+          "tile_index": 608
+        },
+        {
+          "length": 1076,
+          "offset": 40717070,
+          "tile_index": 609
+        },
+        {
+          "length": 1076,
+          "offset": 40723526,
+          "tile_index": 615
+        },
+        {
+          "length": 1076,
+          "offset": 40724602,
+          "tile_index": 616
+        },
+        {
+          "length": 1076,
+          "offset": 40747198,
+          "tile_index": 637
+        },
+        {
+          "length": 1076,
+          "offset": 40748274,
+          "tile_index": 638
+        },
+        {
+          "length": 1076,
+          "offset": 40749350,
+          "tile_index": 639
+        },
+        {
+          "length": 1076,
+          "offset": 40754730,
+          "tile_index": 644
+        },
+        {
+          "length": 1076,
+          "offset": 40755806,
+          "tile_index": 645
+        },
+        {
+          "length": 1076,
+          "offset": 40756882,
+          "tile_index": 646
+        },
+        {
+          "length": 1076,
+          "offset": 40779478,
+          "tile_index": 667
+        },
+        {
+          "length": 1076,
+          "offset": 40787010,
+          "tile_index": 674
+        },
+        {
+          "length": 1076,
+          "offset": 40788086,
+          "tile_index": 675
+        },
+        {
+          "length": 1076,
+          "offset": 40789162,
+          "tile_index": 676
+        }
+      ],
+      "compression": "DEFLATE",
+      "etag": "84f95aefcb95d316315eeda4b8ded80c-5",
+      "mapped_rois_y0_y1_x0_x1": [
+        [
+          21233,
+          21779,
+          16338,
+          16884
+        ],
+        [
+          22322,
+          22868,
+          16338,
+          16884
+        ],
+        [
+          20689,
+          21234,
+          15793,
+          16339
+        ],
+        [
+          21233,
+          21779,
+          7624,
+          8170
+        ],
+        [
+          22322,
+          22868,
+          7624,
+          8170
+        ],
+        [
+          22322,
+          22868,
+          15249,
+          15794
+        ],
+        [
+          21233,
+          21779,
+          8713,
+          9259
+        ],
+        [
+          21778,
+          22323,
+          16338,
+          16884
+        ],
+        [
+          22867,
+          23412,
+          15793,
+          16339
+        ],
+        [
+          21778,
+          22323,
+          7624,
+          8170
+        ],
+        [
+          21778,
+          22323,
+          8713,
+          9259
+        ],
+        [
+          20689,
+          21234,
+          7624,
+          8170
+        ]
+      ],
+      "planned_compressed_bytes": 16140,
+      "shape_yx": [
+        29860,
+        30720
+      ],
+      "size_bytes": 41030186,
+      "tile_shape_yx": [
+        1024,
+        1024
+      ],
+      "unique_tiles": 15,
+      "url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/ink-detection/PHerc0139-20250108000004-1.129um-0.22m-59keV-volume-20260413113053-L1-20260709123958-mrg20736-1um-s1z2-tile256-stride128.tif"
+    }
+  ],
+  "experiment_id": "pherc0139-w029-cross-model-tiff-plan-20260915",
+  "maximum_planned_bytes": 16777216,
+  "planned_compressed_bytes": 798383,
+  "prediction_pixels_downloaded": 0,
+  "regime": "DEV",
+  "registration_warning": "Normalized canvas scaling is an I/O shortlist only; TIFXYZ registration must pass before pixel comparison.",
+  "roi_count": 12,
+  "schema_version": "inksurf-remote-tiff-roi-plan/1.0",
+  "source_canvas_shape_yx": [
+    28080,
+    28880
+  ],
+  "status": "tile_ranges_planned_registration_unverified",
+  "track": "A",
+  "within_budget": true
+}

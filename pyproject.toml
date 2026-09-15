@@ -65,6 +65,8 @@ inksurf-physical-fp-audit = "inksurf.physical_metrics:main"
 inksurf-ink9um-ct-support = "inksurf.ink9um_ct_support:main"
 inksurf-roi-geometry-audit = "inksurf.roi_geometry_audit:main"
 inksurf-physical-benchmark = "inksurf.physical_benchmark:main"
+inksurf-remote-tiff-roi-plan = "inksurf.remote_tiff_roi_plan:main"
+inksurf-remote-tiff-roi-fetch = "inksurf.remote_tiff_roi_fetch:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

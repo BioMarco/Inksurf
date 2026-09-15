@@ -2113,3 +2113,32 @@ le raster shape `28080x28880` e `29860x30720` richiedono registrazione fisica.
 Il prossimo passo è un piano I/O per le sole tile che coprono le 12 ROI DEV,
 seguito da confronto TIFXYZ; non è autorizzato chiamare queste fonti
 indipendenti prima dei due audit.
+
+## 47. Preflight tile-level del pair cross-model PHerc0139-w029
+
+**Data:** 15 settembre 2026. **Track/regime/tier:** Track A / DEV /
+registrazione ancora G1.
+
+È stato aggiunto un planner TIFF remoto che verifica size, ETag, shape, tiling,
+compressione e byte range senza leggere pixel. Per le 12 ROI correnti il piano
+richiede 9 tile dal render 2,399 µm e 15 tile dal render 1,129 µm level 1:
+798.383 byte compressi contro 104.686.577 byte dei TIFF completi. Il fetch
+atomico ha scaricato e decodificato soltanto tali range.
+
+Per preparare il controllo geometrico della seconda acquisizione è stato anche
+scaricato sotto cap il TIFXYZ 1,129 µm: 110.076.716 byte, SHA-256 per ogni asse,
+con 829 GB liberi prima del trasferimento. La griglia è `2986x3072`; il render
+usa 10 pixel per passo TIFXYZ, contro 20 nel render 2,399 µm. Il rapporto di
+scala dei canvas è coerente con la diversa risoluzione effettiva, ma non è
+ancora una registrazione G2.
+
+**Risultato verificato:** il primo render è non nullo in tutte le 12 ROI; il
+secondo è esattamente zero in tutte. Le tile nonblank del secondo occupano righe
+7-18, mentre le ROI mappate occupano righe 20-22. Verdetto:
+`NO_GO_CURRENT_ROI_OVERLAP`. Non sono stati calcolati consenso o disaccordo.
+
+**Interpretazione:** risultato negativo operativo, non artefatto da nascondere
+e non prova di assenza d'inchiostro. Le ROI correnti non possono testare la
+seconda fonte. Il prossimo pilot DEV va selezionato nell'intersezione di
+copertura usando soltanto metadata TIFF e validation-mask size; prediction e
+valori label devono restare esclusi dalla selezione. La suite conta 124 test.
