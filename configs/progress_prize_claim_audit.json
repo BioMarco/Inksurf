@@ -1,0 +1,59 @@
+{
+  "schema_version": "inksurf-claim-audit/1.0",
+  "experiment_id": "inksurf-progress-prize-claim-audit-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "evidence": [
+    {
+      "evidence_id": "canonical-compatibility",
+      "artifact": "results/ink_model_compatibility/kaggle_v2/compatibility_report.json",
+      "sha256": "4b27a6e050239fd1bdb78e71fc77d5a34a197b17dae50a66d8cfbb9e76d0b60f",
+      "expected_schema": "inksurf-ink-model-compatibility/1.0",
+      "role": "compatibility",
+      "independent_groups": 1,
+      "ground_truth_independent": false,
+      "permitted_claim": "pipeline compatibility"
+    },
+    {
+      "evidence_id": "pherc0139-cross-scan",
+      "artifact": "results/pherc0139_cross_scan_consistency/consistency_report.json",
+      "sha256": "b70fac542fffdd44a45fc000a662292fbd9644202100bb49d6fd8ce8a4a7b5e4",
+      "expected_schema": "inksurf-cross-scan-consistency/1.0",
+      "role": "repeatability",
+      "independent_groups": 1,
+      "ground_truth_independent": false,
+      "permitted_claim": "cross-scan repeatability under a shared model"
+    },
+    {
+      "evidence_id": "pherc0139-labeled-dev",
+      "artifact": "results/ink9um_validation_evaluation/evaluation_report.json",
+      "sha256": "11e518ea365df7139446734f880afc63683acdba933aaedcf11d3cc86eb54145",
+      "expected_schema": "inksurf-ink9um-validation-evaluation/1.0",
+      "role": "development",
+      "independent_groups": 1,
+      "ground_truth_independent": false,
+      "permitted_claim": "promising bounded DEV behavior"
+    },
+    {
+      "evidence_id": "pherc0814-locked",
+      "artifact": "results/ink9um_pherc0814_validation/evaluation_report.json",
+      "sha256": "cd53de34335aa5409c2a6a1cc6fd5588cc3c8dbd73d15b6777dd4a9404b8276f",
+      "expected_schema": "inksurf-ink9um-validation-evaluation/1.0",
+      "role": "locked_validation",
+      "independent_groups": 1,
+      "ground_truth_independent": false,
+      "permitted_claim": "negative locked result; no confirmation"
+    },
+    {
+      "evidence_id": "pherc0814-posthoc",
+      "artifact": "results/ink9um_pherc0814_validation/posthoc_disagreement_report.json",
+      "sha256": "5c00d96eedac3086c0ab7ec150d585bccaeb2d363f9fc883cf484522748d9681",
+      "expected_schema": "inksurf-replica-disagreement-audit/1.0",
+      "role": "post_hoc",
+      "independent_groups": 1,
+      "ground_truth_independent": false,
+      "permitted_claim": "diagnosis of signal-bearing seed disagreement"
+    }
+  ],
+  "output_report": "results/progress_prize_claim_audit/report.json"
+}

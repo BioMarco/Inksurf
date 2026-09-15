@@ -1923,3 +1923,39 @@ dall'indice Git e aggiunti a `.gitignore`; i file locali non sono stati
 cancellati. Stato e policy sono in `results/publication_readiness/report.md` e
 `docs/public_release_manifest.md`. Il passaggio a visibilità pubblica e l'invio
 del form restano azioni esterne soggette alla review del proprietario.
+
+## 41. Repository privata e demo fail-closed
+
+**Data:** 15 settembre 2026. **Track/regime/tier:** Track A / DEV sintetico /
+geometry tier non applicabile.
+
+La whitelist pubblicabile è stata inizializzata nella repository privata
+`BioMarco/Inksurf`. Commit iniziale `d5e6146`; policy fail-closed risultati
+`49ca41c`. GitHub Actions ha completato entrambi i workflow con esito `success`.
+Il repository non contiene `.npz`, `.npy`, immagini, checkpoint o dati CT. I
+nuovi output sotto `results/**` sono ignorati di default e richiedono un
+`git add -f` consapevole dopo audit.
+
+Il README è stato riscritto come interfaccia pubblica in inglese: problema,
+limiti, installazione, ledger delle evidenze e roadmap sono ora visibili senza
+leggere l'intera cronologia. È stato aggiunto `inksurf-demo`, un esempio
+sintetico deterministico che crea due repliche correlate con un artefatto
+comune e una seconda fonte indipendente. Il raggruppamento accetta tutti i 320
+pixel di riferimento e 0 dei 75 pixel dell'artefatto (`precision=recall=1,0`).
+È esclusivamente un behavior test del software, non evidenza sui papiri.
+
+Artefatti versionati: `src/inksurf/demo.py`, `tests/test_demo.py`, entry point
+`inksurf-demo`, `.github/workflows/tests.yml`, `CONTRIBUTING.md` e
+`docs/public_release_manifest.md`. Prossimo passo: comando reviewer-facing
+unificato che produca una matrice di claim e distingua automaticamente
+compatibilità, repeatability, indipendenza sufficiente e validazione fallita.
+
+Il comando unificato è ora implementato come `inksurf-claim-audit`. Verifica
+SHA-256, schema, ruolo, regime, tier, gate, numero di gruppi indipendenti e
+indipendenza della ground truth per ogni receipt. Sul ledger reale corrente
+produce `NO_GO_SUBMISSION_CLAIM`, zero receipt confermative e
+`software_guardrail_demonstrated=true`. Il claim ceiling machine-readable è
+“failure-diagnostic software; no validated ink or structural claim”. Aggiunti
+`src/inksurf/claim_audit.py`, `tests/test_claim_audit.py`,
+`configs/progress_prize_claim_audit.json` e report in
+`results/progress_prize_claim_audit/`.

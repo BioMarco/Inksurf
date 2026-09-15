@@ -58,6 +58,8 @@ inksurf-ink9um-validation-preflight = "inksurf.ink9um_validation_preflight:main"
 inksurf-ink9um-chunk-audit = "inksurf.ink9um_chunk_audit:main"
 inksurf-ink9um-validation-evaluation = "inksurf.ink9um_validation_evaluation:main"
 inksurf-replica-disagreement-audit = "inksurf.replica_disagreement_audit:main"
+inksurf-demo = "inksurf.demo:main"
+inksurf-claim-audit = "inksurf.claim_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
