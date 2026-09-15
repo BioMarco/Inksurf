@@ -1,0 +1,42 @@
+{
+  "schema_version": "inksurf-bounded-http-download/1.0",
+  "experiment_id": "ink-model-loader-assets-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "allowed_hosts": ["raw.githubusercontent.com"],
+  "max_total_bytes": 100000,
+  "output_root": "data/ink_model_compatibility/villa_inference",
+  "report_json": "results/ink_model_compatibility/loader_download_report.json",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/ScrollPrize/villa/76370e1a6908f0bc2eb7f92bc0397336ecbe3d96/ink-detection/optimized_inference/model_resnet3d_3d_decoder.py",
+      "destination": "model_resnet3d_3d_decoder.py",
+      "size_bytes": 7976,
+      "sha256": "7b2b2cfc6c7fb963a3da1bf128543ceadf8ad887f32a319bc0a38fb378f9e2ca"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ScrollPrize/villa/76370e1a6908f0bc2eb7f92bc0397336ecbe3d96/ink-detection/optimized_inference/models/resnetall.py",
+      "destination": "models/resnetall.py",
+      "size_bytes": 7855,
+      "sha256": "2b49ac430d77bae189cf002ed9c2748f940a6cd92b809a23db6f7dba381afbf6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ScrollPrize/villa/76370e1a6908f0bc2eb7f92bc0397336ecbe3d96/ink-detection/optimized_inference/models/non_local_helper.py",
+      "destination": "models/non_local_helper.py",
+      "size_bytes": 5782,
+      "sha256": "09910c134003051b0cb75bd1ede1c2da8bab7cc60bf56997ace018018a806ce5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ScrollPrize/villa/76370e1a6908f0bc2eb7f92bc0397336ecbe3d96/ink-detection/optimized_inference/inference.py",
+      "destination": "reference/inference.py",
+      "size_bytes": 25047,
+      "sha256": "af165d3a3afb84b0272ec94d7ec883b90cd750b83a6e54bee6874f9a04f022dc"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ScrollPrize/villa/76370e1a6908f0bc2eb7f92bc0397336ecbe3d96/ink-detection/optimized_inference/processing.py",
+      "destination": "reference/processing.py",
+      "size_bytes": 31979,
+      "sha256": "63bf641bf4f687c4ccfe16b91df3cceee5b4138dbab6e4265b0209233b81fc75"
+    }
+  ]
+}

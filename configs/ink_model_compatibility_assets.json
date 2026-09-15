@@ -1,0 +1,28 @@
+{
+  "schema_version": "inksurf-bounded-http-download/1.0",
+  "experiment_id": "ink-model-compatibility-assets-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "allowed_hosts": [
+    "huggingface.co",
+    "us.aws.cdn.hf.co",
+    "vesuvius-challenge-open-data.s3.amazonaws.com"
+  ],
+  "max_total_bytes": 1700000000,
+  "output_root": "data/ink_model_compatibility",
+  "report_json": "results/ink_model_compatibility/asset_download_report.json",
+  "files": [
+    {
+      "url": "https://huggingface.co/scrollprize/ink_canonical_2um/resolve/075855bc69317ef6febf39a0d9d687b27d2b7c29/r152_3ddec_v2_l5_epoch13.ckpt",
+      "destination": "r152_3ddec_v2_l5_epoch13.ckpt",
+      "size_bytes": 1549556213,
+      "sha256": "36dd0de84b7b7aa6590184192c7415466cd8a1ba7c1e59f42c6373846373c3e0"
+    },
+    {
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000000-w025_2025010863/ink-detection/PHerc0139-20250108000000-2.399um-0.22m-78keV-volume-20260102150214-20260417190342-new_canon_autoresearch_recipe-tile256-stride128.tif",
+      "destination": "published_ink_map.tif",
+      "size_bytes": 68354492,
+      "sha256": "d99dbd0698a41cc2106888eebc6bed76245cf5a9074a68d025066c89b982fa08"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "experiment_id": "track_a_dev_blind_review_20260911_v1",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G2",
+  "candidate_package": "results/track_a_dev_candidate_package_g2/candidate_package.json",
+  "prediction_tif": "data/track_a_benchmark/0139_w035_dev/prediction.tif",
+  "artifact_manifest": "results/track_a_dev_candidate_artifacts/artifact_manifest.json",
+  "context_halo_pixels": 64,
+  "seed": 20260911,
+  "response_options": [
+    "plausible_structure",
+    "imaging_or_model_artifact",
+    "no_coherent_signal",
+    "uncertain"
+  ],
+  "local_output_directory": "data/track_a_review_session/g2_v1",
+  "outputs": {
+    "report_json": "results/track_a_dev_review/review_queue_report.json",
+    "review_results_report_json": "results/track_a_dev_review/review_results_report.json"
+  }
+}

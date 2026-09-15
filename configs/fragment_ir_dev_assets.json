@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fragment_ir_dev_assets_20260910_v1",
+  "competition": "vesuvius-challenge-ink-detection",
+  "manifest": "results/fragment_ir_preflight/kaggle_file_manifest.json",
+  "fragment": "train/3",
+  "regime": "DEV",
+  "files": [
+    "train/3/inklabels.png",
+    "train/3/inklabels_rle.csv",
+    "train/3/ir.png",
+    "train/3/mask.png"
+  ],
+  "max_bytes": 16777216,
+  "minimum_free_bytes_after_download": 10737418240,
+  "output_directory": "data/fragment_ir_benchmark",
+  "output_report": "results/fragment_ir_preflight/dev_assets_download_report.json"
+}

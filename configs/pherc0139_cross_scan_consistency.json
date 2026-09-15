@@ -1,0 +1,37 @@
+{
+  "schema_version": "inksurf-cross-scan-consistency/1.0",
+  "experiment_id": "pherc0139-cross-scan-consistency-dev-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G2",
+  "input_reports": "results/pherc0139_cross_scan_inference/kaggle_v2/dual_inference_report.json",
+  "predictions": [
+    {
+      "volume_id": "20250820105138",
+      "path": "results/pherc0139_cross_scan_inference/kaggle_v2/prediction_20250820105138.npz",
+      "independence_group": "acquisition-20250820105138"
+    },
+    {
+      "volume_id": "20260319133554",
+      "path": "results/pherc0139_cross_scan_inference/kaggle_v2/prediction_20260319133554.npz",
+      "independence_group": "acquisition-20260319133554"
+    }
+  ],
+  "top_quantiles": [0.01, 0.05, 0.10],
+  "disagreement_abstention_threshold": 0.15,
+  "negative_control_shifts_yx": [
+    [-128, 0],
+    [128, 0],
+    [0, -128],
+    [0, 128]
+  ],
+  "go_criteria": {
+    "pearson_r_min": 0.50,
+    "top_5pct_overlap_enrichment_min": 2.0,
+    "pearson_margin_over_best_shift_min": 0.10,
+    "retained_fraction_at_disagreement_threshold_min": 0.50
+  },
+  "output_npz": "results/pherc0139_cross_scan_consistency/consistency_maps.npz",
+  "report_json": "results/pherc0139_cross_scan_consistency/consistency_report.json",
+  "interpretation": "Preregistered DEV repeatability gate. Passing does not establish ink or textual content."
+}

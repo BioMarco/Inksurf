@@ -1,0 +1,62 @@
+{
+  "experiment_id": "track_a_dev_candidate_package_g2_20260911_v1",
+  "schema_version": "inksurf-candidate-package/1.0",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G2",
+  "surface_id": "0139/w035_2026031718",
+  "coordinate_frame": {
+    "name": "PHerc0139 parent-volume voxel frame 20260102150214",
+    "axes": "X,Y,Z",
+    "surface_raster_axes": "Y,X",
+    "bounds_convention": "half-open",
+    "level": "parent volume level 0"
+  },
+  "candidate_table": "results/track_a_dev_structural_features/structural_regions.csv",
+  "eligibility_field": "eligible",
+  "ranking_score": "prediction_mean",
+  "inksurf_score": "inksurf_mean",
+  "candidate_limit": 20,
+  "submission_claim": "Ranked DEV regions from the frozen external ink-prediction baseline, with G2 geometry and CT support; the current masks fail the preregistered stability criterion and are not verified physical ink.",
+  "geometry": {
+    "audit_report": "results/track_a_dev_geometry/tifxyz_geometry_audit.json",
+    "coordinate_files": {
+      "x": "data/track_a_benchmark/0139_w035_dev/x.tif",
+      "y": "data/track_a_benchmark/0139_w035_dev/y.tif",
+      "z": "data/track_a_benchmark/0139_w035_dev/z.tif"
+    }
+  },
+  "candidate_artifact_manifest": "results/track_a_dev_candidate_artifacts/artifact_manifest.json",
+  "provenance_files": [
+    "configs/track_a_dev_raw_baseline.json",
+    "configs/track_a_dev_structural_features.json",
+    "configs/track_a_dev_ct_support_audit.json",
+    "results/track_a_benchmark_preflight/benchmark_manifest.json",
+    "results/track_a_benchmark_preflight/dev_geometry_download_report.json",
+    "results/track_a_dev_geometry/tifxyz_geometry_audit.json",
+    "results/track_a_dev_geometry/ct_support_audit.json",
+    "results/track_a_dev_candidate_artifacts/artifact_manifest.json",
+    "results/track_a_dev_candidate_artifacts/stability_report.json",
+    "results/track_a_dev_structural_features/structural_regions.csv"
+  ],
+  "available_artifacts": {
+    "prediction": "data/track_a_benchmark/0139_w035_dev/prediction.tif",
+    "supervision_mask": "data/track_a_benchmark/0139_w035_dev/supervision_mask.tif",
+    "tifxyz_x": "data/track_a_benchmark/0139_w035_dev/x.tif",
+    "tifxyz_y": "data/track_a_benchmark/0139_w035_dev/y.tif",
+    "tifxyz_z": "data/track_a_benchmark/0139_w035_dev/z.tif",
+    "ct_support_report": "results/track_a_dev_geometry/ct_support_audit.json",
+    "candidate_artifact_manifest": "results/track_a_dev_candidate_artifacts/artifact_manifest.json",
+    "stability_report": "results/track_a_dev_candidate_artifacts/stability_report.json"
+  },
+  "missing_submission_artifacts": [
+    "external self-intersection/winding QA",
+    "passing structural stability criterion",
+    "human review record"
+  ],
+  "outputs": {
+    "package_json": "results/track_a_dev_candidate_package_g2/candidate_package.json",
+    "candidates_csv": "results/track_a_dev_candidate_package_g2/candidates.csv",
+    "validation_report_json": "results/track_a_dev_candidate_package_g2/validation_report.json"
+  }
+}

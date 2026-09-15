@@ -1,0 +1,26 @@
+{
+  "schema_version": "inksurf-seating-io-plan/1.0",
+  "experiment_id": "pherc0139-seating-reproduction-plan-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "mesh": {
+    "voxel_um": 2.403,
+    "x": {"path": "data/seating_reproduction/pherc0139/mesh/x.tif", "sha256": "9a53bb46bd36acdccddaa1d2cc853498ee5d53987bec4c193be5609b1ecb5b54"},
+    "y": {"path": "data/seating_reproduction/pherc0139/mesh/y.tif", "sha256": "c63bc56a8bee114bb7265aac10807bf54e0d29acc5b9f2f8b6b3249e99174568"},
+    "z": {"path": "data/seating_reproduction/pherc0139/mesh/z.tif", "sha256": "be4d1a378f059be75195050d97f04d79812080b4ebe43de70b46a360e18ed049"}
+  },
+  "crop_size_mm": 20.0,
+  "sample_count": 50,
+  "seed": 0,
+  "level": 2,
+  "probe_span_level_voxels": 60,
+  "chunk_shape_zyx": [128, 128, 128],
+  "volumes": [
+    {"volume_id": "20250820105138", "shape_zyx": [4849, 6527, 6527]},
+    {"volume_id": "20260319133554", "shape_zyx": [4842, 6527, 6527]}
+  ],
+  "outputs": {
+    "report_json": "results/seating_reproduction_pherc0139/io_plan.json",
+    "chunk_manifest_csv": "results/seating_reproduction_pherc0139/chunk_manifest.csv"
+  }
+}

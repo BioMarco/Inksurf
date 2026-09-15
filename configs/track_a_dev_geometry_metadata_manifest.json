@@ -1,0 +1,41 @@
+{
+  "experiment_id": "track_a_dev_geometry_metadata_20260911_v1",
+  "bucket_id": "scrollprize/datasets",
+  "dataset_url": "https://huggingface.co/buckets/scrollprize/datasets/tree/ink/0139/w035_2026031718",
+  "snapshot_sha256": "90827a1394c2fc068940c6863350b2860d036b80a85537ea85742d2b4d359425",
+  "files": [
+    {
+      "surface_key": "0139_w035_dev",
+      "scroll_id": "0139",
+      "regime": "DEV",
+      "external_domain": false,
+      "stage": "A2",
+      "role": "surface_meta",
+      "path": "ink/0139/w035_2026031718/meta.json",
+      "size_bytes": 416,
+      "xet_hash": "6bd39cb60d59364dd3cfe3039958dacea4cb194eb37e6ebd7946f52d3adac74e"
+    },
+    {
+      "surface_key": "0139_w035_dev",
+      "scroll_id": "0139",
+      "regime": "DEV",
+      "external_domain": false,
+      "stage": "A2",
+      "role": "surface_volume_zattrs",
+      "path": "ink/0139/w035_2026031718/w035_2026031718.zarr/.zattrs",
+      "size_bytes": 3274,
+      "xet_hash": "a903bb1a34935b6361987e33651ffc1117c7507a09f387ce1b745fac24e5fea2"
+    },
+    {
+      "surface_key": "0139_w035_dev",
+      "scroll_id": "0139",
+      "regime": "DEV",
+      "external_domain": false,
+      "stage": "A2",
+      "role": "surface_volume_zarray",
+      "path": "ink/0139/w035_2026031718/w035_2026031718.zarr/0/.zarray",
+      "size_bytes": 368,
+      "xet_hash": "c3cef518e72904afa5ed1a9e4182d1d7b432f1c56624b9fb7ad3ef8702bf6811"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "claim": "A bounded DEV seating measurement is geometry QA, not evidence of ink.",
+  "crop_origin_row_col": [
+    329,
+    295
+  ],
+  "crop_pixels": 417,
+  "experiment_id": "pherc0139-seating-reproduction-20260914",
+  "regime": "DEV",
+  "results": [
+    {
+      "chunks_read": 113,
+      "contrast": 15.978723526000977,
+      "coverage": 0.94,
+      "gap_level_voxels": 10.0,
+      "score": 15.020000114440917,
+      "surface_mean": 97.2127685546875,
+      "volume_id": "20250820105138"
+    },
+    {
+      "chunks_read": 113,
+      "contrast": 21.924999237060547,
+      "coverage": 0.8,
+      "gap_level_voxels": 10.0,
+      "score": 17.53999938964844,
+      "surface_mean": 84.32499694824219,
+      "volume_id": "20260319133554"
+    }
+  ],
+  "sample_count": 50,
+  "schema_version": "inksurf-seating-reproduction/1.0",
+  "seed": 0,
+  "status": "bounded_dev_reproduction_complete",
+  "track": "A"
+}

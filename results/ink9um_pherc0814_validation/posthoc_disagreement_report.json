@@ -1,0 +1,105 @@
+{
+  "analysis_type": "post_hoc_diagnostic",
+  "confirmatory_reuse_allowed": false,
+  "disagreement_ap": 0.6380790757375567,
+  "disagreement_label_pearson_r": 0.4752224432004893,
+  "experiment_id": "ink9um-pherc0814-46527-posthoc-disagreement-20260915",
+  "independence_group": "ink9um-official-step75000-family",
+  "interpretation_guardrail": "Within-family disagreement is descriptive only. It must not drive abstention unless a new DEV analysis and a separate locked partition demonstrate that larger disagreement predicts error rather than signal.",
+  "mean_disagreement_negative": 0.04385627806186676,
+  "mean_disagreement_positive": 0.15735460817813873,
+  "model_ids": [
+    "seed42",
+    "seed43"
+  ],
+  "negative_disagreement_ap": 0.1932184300093093,
+  "pixels": 106207,
+  "positive_prevalence": 0.29882211153690436,
+  "quantile_bins": [
+    {
+      "bin": 0,
+      "lower": 0.0,
+      "mean_ensemble_score": 0.2843829393386841,
+      "pixels": 10621,
+      "positive_prevalence": 0.11656152904622917,
+      "upper": 0.003157666325569153
+    },
+    {
+      "bin": 1,
+      "lower": 0.003157666325569153,
+      "mean_ensemble_score": 0.2829347848892212,
+      "pixels": 10621,
+      "positive_prevalence": 0.11185387439977404,
+      "upper": 0.006506872177124024
+    },
+    {
+      "bin": 2,
+      "lower": 0.006506872177124024,
+      "mean_ensemble_score": 0.2830030918121338,
+      "pixels": 10620,
+      "positive_prevalence": 0.1027306967984934,
+      "upper": 0.010090243816375733
+    },
+    {
+      "bin": 3,
+      "lower": 0.010090243816375733,
+      "mean_ensemble_score": 0.2889590859413147,
+      "pixels": 10621,
+      "positive_prevalence": 0.11477262028057622,
+      "upper": 0.01449001431465149
+    },
+    {
+      "bin": 4,
+      "lower": 0.01449001431465149,
+      "mean_ensemble_score": 0.30377259850502014,
+      "pixels": 10620,
+      "positive_prevalence": 0.1349340866290019,
+      "upper": 0.021468698978424072
+    },
+    {
+      "bin": 5,
+      "lower": 0.021468698978424072,
+      "mean_ensemble_score": 0.34419557452201843,
+      "pixels": 10621,
+      "positive_prevalence": 0.1838809904905376,
+      "upper": 0.038119503855705325
+    },
+    {
+      "bin": 6,
+      "lower": 0.038119503855705325,
+      "mean_ensemble_score": 0.3982190787792206,
+      "pixels": 10621,
+      "positive_prevalence": 0.36088880519725075,
+      "upper": 0.08228184580802926
+    },
+    {
+      "bin": 7,
+      "lower": 0.08228184580802926,
+      "mean_ensemble_score": 0.361794650554657,
+      "pixels": 10620,
+      "positive_prevalence": 0.49463276836158193,
+      "upper": 0.15105016231536866
+    },
+    {
+      "bin": 8,
+      "lower": 0.15105016231536866,
+      "mean_ensemble_score": 0.3790678083896637,
+      "pixels": 10621,
+      "positive_prevalence": 0.6541756896714057,
+      "upper": 0.23699299693107612
+    },
+    {
+      "bin": 9,
+      "lower": 0.23699299693107612,
+      "mean_ensemble_score": 0.4467402398586273,
+      "pixels": 10621,
+      "positive_prevalence": 0.7137745974955277,
+      "upper": 0.6023414731025696
+    }
+  ],
+  "regime": "DEV",
+  "schema_version": "inksurf-replica-disagreement-audit/1.0",
+  "source_partition_previous_regime": "VALIDATION",
+  "status": "diagnostic_complete_no_threshold_fitted",
+  "track": "A"
+}

@@ -1,0 +1,24 @@
+{
+  "experiment_id": "track_a_dev_structural_ablation_20260910_v1",
+  "regions_csv": "results/track_a_dev_structural_features/structural_regions.csv",
+  "output_report": "results/track_a_dev_structural_features/structural_ablation_report.json",
+  "region_size": 256,
+  "positive_region_min_ink_pixels": 128,
+  "baseline_score": "prediction_max",
+  "review_baseline_score": "prediction_mean",
+  "score_columns": [
+    "prediction_max",
+    "inksurf_mean",
+    "inksurf_p95",
+    "inksurf_p99",
+    "inksurf_max",
+    "inksurf_component_max"
+  ],
+  "review_fractions": [0.01, 0.05, 0.1],
+  "bootstrap": {
+    "method": "spatial block resampling",
+    "block_size": 1024,
+    "samples": 2000,
+    "seed": 20260910
+  }
+}

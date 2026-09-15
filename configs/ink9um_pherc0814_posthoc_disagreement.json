@@ -1,0 +1,14 @@
+{
+  "schema_version": "inksurf-replica-disagreement-audit/1.0",
+  "experiment_id": "ink9um-pherc0814-46527-posthoc-disagreement-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "analysis_type": "post_hoc_diagnostic",
+  "source_partition_previous_regime": "VALIDATION",
+  "confirmatory_reuse_allowed": false,
+  "independence_group": "ink9um-official-step75000-family",
+  "predictions": "results/ink9um_pherc0814_validation/inference/predictions.npz",
+  "derived_root": "data/ink9um_pherc0814_validation/derived",
+  "bins": 10,
+  "output_report": "results/ink9um_pherc0814_validation/posthoc_disagreement_report.json"
+}

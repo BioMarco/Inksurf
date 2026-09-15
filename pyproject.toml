@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inksurf"
+version = "0.1.0"
+description = "Surface-aware evidence consistency and false-positive control for Vesuvius Challenge"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.26", "requests>=2.31"]
+
+[project.optional-dependencies]
+catalog = ["huggingface_hub>=1.4,<2"]
+benchmark = ["tifffile>=2024.1", "zarr>=2.17", "imagecodecs>=2024.1"]
+structure = ["scipy>=1.12", "scikit-image>=0.23", "scikit-learn>=1.5"]
+fragment = ["kaggle>=2.2,<3", "pillow>=10"]
+
+[project.scripts]
+inksurf-roi-preflight = "inksurf.roi_preflight:main"
+inksurf-tifxyz-catalog-audit = "inksurf.tifxyz_catalog_audit:main"
+inksurf-benchmark-preflight = "inksurf.benchmark_preflight:main"
+inksurf-benchmark-download = "inksurf.benchmark_download:main"
+inksurf-benchmark-input-audit = "inksurf.benchmark_input_audit:main"
+inksurf-benchmark-baseline = "inksurf.benchmark_baseline:main"
+inksurf-structural-features = "inksurf.structural_features:main"
+inksurf-fragment-preflight = "inksurf.fragment_preflight:main"
+inksurf-fragment-download = "inksurf.fragment_download:main"
+inksurf-fragment-asset-audit = "inksurf.fragment_asset_audit:main"
+inksurf-fragment-volume-download = "inksurf.fragment_volume_download:main"
+inksurf-fragment-depth-baseline = "inksurf.fragment_depth_baseline:main"
+inksurf-fragment-shallow-baseline = "inksurf.fragment_shallow_baseline:main"
+inksurf-fragment-pixel-audit = "inksurf.fragment_pixel_audit:main"
+inksurf-fragment-local-pairs = "inksurf.fragment_local_pairs:main"
+inksurf-fragment-profile-model = "inksurf.fragment_profile_model:main"
+inksurf-candidate-package = "inksurf.candidate_package:main"
+inksurf-tifxyz-geometry-audit = "inksurf.tifxyz_geometry_audit:main"
+inksurf-surface-volume-preflight = "inksurf.surface_volume_preflight:main"
+inksurf-ct-support-audit = "inksurf.ct_support_audit:main"
+inksurf-candidate-artifacts = "inksurf.candidate_artifacts:main"
+inksurf-review-queue = "inksurf.review_queue:main"
+inksurf-review-results = "inksurf.review_results:main"
+inksurf-evidence-preflight = "inksurf.evidence_preflight:main"
+inksurf-evidence-consistency = "inksurf.evidence_consistency:main"
+inksurf-surface-artifact-audit = "inksurf.surface_artifact_audit:main"
+inksurf-seating-import = "inksurf.seating_import:main"
+inksurf-bounded-http-download = "inksurf.bounded_http_download:main"
+inksurf-seating-io-plan = "inksurf.seating_io_plan:main"
+inksurf-zarr-chunk-download = "inksurf.zarr_chunk_download:main"
+inksurf-seating-reproduce = "inksurf.seating_reproduce:main"
+inksurf-zarr-window-plan = "inksurf.zarr_window_plan:main"
+inksurf-ink-model-compatibility = "inksurf.ink_model_compatibility:main"
+inksurf-cross-scan-render-plan = "inksurf.cross_scan_render_plan:main"
+inksurf-cross-scan-render = "inksurf.cross_scan_render:main"
+inksurf-cross-scan-consistency = "inksurf.cross_scan_consistency:main"
+inksurf-ink9um-validation-preflight = "inksurf.ink9um_validation_preflight:main"
+inksurf-ink9um-chunk-audit = "inksurf.ink9um_chunk_audit:main"
+inksurf-ink9um-validation-evaluation = "inksurf.ink9um_validation_evaluation:main"
+inksurf-replica-disagreement-audit = "inksurf.replica_disagreement_audit:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

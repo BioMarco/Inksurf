@@ -1,0 +1,156 @@
+{
+  "artifact_pairs": 2,
+  "artifact_pairs_csv_sha256": "297d77eed992d8c580680900e5a0ef015ecf8b94c4db239897b81ced4ac44edb",
+  "claim": "Physical extents make partial overlap plausible, but local Zarr scale and zero translation do not define cross-scan registration.",
+  "experiment_id": "inksurf-surface-artifact-phase0-20260914",
+  "global_transforms_found": 0,
+  "metadata_bytes_read": 14562,
+  "metadata_objects_read": 8,
+  "regime": "DEV",
+  "schema_version": "inksurf-surface-artifact-audit/1.0",
+  "sources": {
+    "s3://vesuvius-challenge-open-data/PHercParis4/segments/20260623161921-w104-106/surface-volumes/45.532um-11.0m-74keV-volume-20260310170716.zarr/": {
+      "attrs_sha256": "9358af06b995ce5eff2fd4b9f2413232f8394822298c55fac470ce87d93a4207",
+      "axes": [
+        "z",
+        "y",
+        "x"
+      ],
+      "chunks": [
+        6,
+        128,
+        128
+      ],
+      "dtype": "|u1",
+      "physical_extent_um": [
+        273.192,
+        120204.48,
+        447124.24
+      ],
+      "scale_um": [
+        45.532,
+        45.532,
+        45.532
+      ],
+      "shape": [
+        6,
+        2640,
+        9820
+      ],
+      "translation_um": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zarray_sha256": "441ee73ace43ecc438df1e880a069ff9bef6711684c42812d90f57ee7e3e5f24"
+    },
+    "s3://vesuvius-challenge-open-data/PHercParis4/segments/20260623170305-w122-123/surface-volumes/2.4um-0.22m-78keV-volume-20260411134726.zarr/": {
+      "attrs_sha256": "bdd7449cce7d49c653e3ba5d83208c07f9151f061ff487dc7eea799bfdd9c8d0",
+      "axes": [
+        "z",
+        "y",
+        "x"
+      ],
+      "chunks": [
+        109,
+        128,
+        128
+      ],
+      "dtype": "|u1",
+      "physical_extent_um": [
+        261.6,
+        116352.0,
+        328512.0
+      ],
+      "scale_um": [
+        2.4,
+        2.4,
+        2.4
+      ],
+      "shape": [
+        109,
+        48480,
+        136880
+      ],
+      "translation_um": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zarray_sha256": "e15fb01b51312b4df0271f5a6f653edfac381217c5d77554c9ade960185ed249"
+    },
+    "s3://vesuvius-challenge-open-data/PHercParis4/segments/20260701183141-w104-106/surface-volumes/2.4um-0.22m-78keV-volume-20260411134726.zarr/": {
+      "attrs_sha256": "fce7faeb4405ac708af3a5e2fb6c4ab3b2c29dceaac2e4eddd4a0a8b4120b11c",
+      "axes": [
+        "z",
+        "y",
+        "x"
+      ],
+      "chunks": [
+        109,
+        128,
+        128
+      ],
+      "dtype": "|u1",
+      "physical_extent_um": [
+        261.6,
+        183168.0,
+        437952.0
+      ],
+      "scale_um": [
+        2.4,
+        2.4,
+        2.4
+      ],
+      "shape": [
+        109,
+        76320,
+        182480
+      ],
+      "translation_um": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zarray_sha256": "b97bd9e7b36c8a54f43b8f19f26afe8b401d7f8598cd59cbdb5fbddd4291e55d"
+    },
+    "s3://vesuvius-challenge-open-data/PHercParis4/segments/20260701183148-w122-123/surface-volumes/45.532um-11.0m-74keV-volume-20260310170716.zarr/": {
+      "attrs_sha256": "a37dba53e28ac33c71c17e61bc9dd84f08fcd2c2dc116591fe10417d5b71401a",
+      "axes": [
+        "z",
+        "y",
+        "x"
+      ],
+      "chunks": [
+        6,
+        128,
+        128
+      ],
+      "dtype": "|u1",
+      "physical_extent_um": [
+        273.192,
+        190323.76,
+        329651.68
+      ],
+      "scale_um": [
+        45.532,
+        45.532,
+        45.532
+      ],
+      "shape": [
+        6,
+        4180,
+        7240
+      ],
+      "translation_um": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zarray_sha256": "7529d5b4e768547fdd904b16f340addee1b36568349ba38e35ceecb4dd365d6e"
+    }
+  },
+  "status": "conditional_go_transform_required",
+  "track": "A",
+  "volumetric_chunk_bytes_read": 0
+}

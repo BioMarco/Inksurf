@@ -1,0 +1,42 @@
+{
+  "experiment_id": "track_a_dev_blind_review_20260914_v2",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G2",
+  "surface_id": "0139/w035_2026031718",
+  "closed_at": "2026-09-14",
+  "status": "closed_no_go",
+  "classification": "methodological_artifact",
+  "branch_closed": "raw_prediction_threshold_skeleton_lay_human_review",
+  "candidate_count": 20,
+  "completed_reviews": 0,
+  "human_metrics": {
+    "yield": "not_measured",
+    "review_time": "not_measured",
+    "false_positives": "not_measured"
+  },
+  "physical_scale": {
+    "candidate_shape_yx_pixels": [256, 256],
+    "context_halo_each_side_pixels": 64,
+    "preview_shape_yx_pixels": [384, 384],
+    "parent_volume_voxel_size_um": 2.399,
+    "reference_pixels_per_tifxyz_grid_step_yx": [20.0, 20.0],
+    "median_tifxyz_grid_spacing_voxels_uv": [20.00538536522466, 19.982173354000068],
+    "approx_candidate_size_mm_yx": [0.614309, 0.613596],
+    "approx_preview_size_mm_yx": [0.921464, 0.920394],
+    "interpretation": "local tangential approximation; not an exact geodesic surface measurement"
+  },
+  "evidence": {
+    "stable_candidates": 0,
+    "total_candidates": 20,
+    "median_mask_iou_high": 0.0,
+    "median_high_threshold_skeleton_retention": 0.0,
+    "independent_human_visible_stroke_evidence": "not_established",
+    "ui_v2_resolved_visualization_defect": true,
+    "ui_v2_resolved_evidence_deficit": false
+  },
+  "decision": "Stop this branch. Do not request further lay review and do not unlock validation.",
+  "project_status": "paused_pending_explicit_pivot_or_archive_decision",
+  "validation_files_accessed": 0,
+  "supersedes_status_from": "results/track_a_dev_review_v2/review_queue_report.json"
+}

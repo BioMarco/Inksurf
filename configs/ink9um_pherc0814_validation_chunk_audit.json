@@ -1,0 +1,16 @@
+{
+  "schema_version": "inksurf-ink9um-chunk-audit/1.0",
+  "experiment_id": "ink9um-pherc0814-46527-validation-chunk-audit-20260915",
+  "track": "A",
+  "regime": "VALIDATION",
+  "geometry_tier": "G1",
+  "freeze_state": "frozen_before_ground_truth",
+  "manifest": "results/ink9um_pherc0814_validation/chunk_manifest.json",
+  "download_report": "results/ink9um_pherc0814_validation/download_report.json",
+  "cache_root": "data/ink9um_pherc0814_validation",
+  "source_centered_planes": 84,
+  "z_pool": 4,
+  "label_plane": 10,
+  "derived_root": "data/ink9um_pherc0814_validation/derived",
+  "report_json": "results/ink9um_pherc0814_validation/chunk_audit_report.json"
+}

@@ -1,0 +1,21 @@
+{
+  "experiment_id": "fragment_ir_dev_pixel_audit_20260911_v1",
+  "regime": "DEV",
+  "inklabels": "data/fragment_ir_benchmark/train/3/inklabels.png",
+  "mask": "data/fragment_ir_benchmark/train/3/mask.png",
+  "feature_maps": {
+    "depth_mean": "data/fragment_ir_benchmark/derived/train3_depth_baseline/depth_mean.npy",
+    "depth_max": "data/fragment_ir_benchmark/derived/train3_depth_baseline/depth_max.npy",
+    "depth_std": "data/fragment_ir_benchmark/derived/train3_depth_baseline/depth_std.npy",
+    "central_contrast": "data/fragment_ir_benchmark/derived/train3_depth_baseline/central_contrast.npy"
+  },
+  "block_size": 1024,
+  "max_pairs_per_block": 1000,
+  "control_exclusion_radius": 3,
+  "bootstrap_samples": 2000,
+  "seed": 20260911,
+  "outputs": {
+    "samples_csv": "results/fragment_ir_pixel_audit/matched_pixels.csv",
+    "report_json": "results/fragment_ir_pixel_audit/pixel_audit_report.json"
+  }
+}

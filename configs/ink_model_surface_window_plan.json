@@ -1,0 +1,14 @@
+{
+  "schema_version": "inksurf-zarr-window-plan/1.0",
+  "experiment_id": "ink-model-surface-window-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "volume_id": "published_surface_20260102150214",
+  "level": 0,
+  "shape_zyx": [109, 28320, 26480],
+  "chunks_zyx": [109, 128, 128],
+  "start_zyx": [0, 24576, 18432],
+  "size_zyx": [109, 512, 512],
+  "report_json": "results/ink_model_compatibility/surface_window_plan.json",
+  "chunk_manifest_csv": "results/ink_model_compatibility/surface_chunk_manifest.csv"
+}

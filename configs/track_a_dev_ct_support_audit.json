@@ -1,0 +1,21 @@
+{
+  "experiment_id": "track_a_dev_ct_support_audit_20260911_v1",
+  "track": "A",
+  "regime": "DEV",
+  "surface_id": "0139/w035_2026031718",
+  "candidate_package": "results/track_a_dev_candidate_package_g1/candidate_package.json",
+  "chunk_manifest": "results/track_a_dev_geometry/ct_support_chunk_manifest.json",
+  "download_report": "results/track_a_dev_geometry/ct_support_download_report.json",
+  "zarray_metadata": "data/track_a_geometry_metadata/0139_w035_dev/surface_volume_zarray.bin",
+  "supervision_mask": "data/track_a_benchmark/0139_w035_dev/supervision_mask.tif",
+  "central_depth_range_half_open": [24, 41],
+  "criteria": {
+    "minimum_any_depth_support_fraction": 0.995,
+    "minimum_central_depth_support_fraction": 0.95,
+    "require_every_candidate_to_pass": true
+  },
+  "outputs": {
+    "candidates_csv": "results/track_a_dev_geometry/ct_support_candidates.csv",
+    "report_json": "results/track_a_dev_geometry/ct_support_audit.json"
+  }
+}

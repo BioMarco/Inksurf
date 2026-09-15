@@ -1,0 +1,52 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+.git.sandbox-owner-backup/
+build/
+dist/
+
+# Heavy local caches and downloaded chunks.
+cache/
+results/**/cache/
+data/track_a_benchmark/
+data/track_a_geometry_metadata/
+data/track_a_ct_support/
+data/track_a_candidate_artifacts/
+data/track_a_review_session/
+data/fragment_ir_benchmark/
+data/seating_reproduction/
+data/ink_model_compatibility/
+data/cross_scan_render/
+data/ink9um_validation_pilot/
+data/ink9um_pherc0814_validation/
+results/ink_model_compatibility/kaggle_v1/
+
+# Data-bearing inference arrays and legacy visual crops stay local. Aggregate
+# JSON/CSV/Markdown receipts remain publishable after the governance review.
+results/**/*.npz
+results/**/*.npy
+results/gp_visual_probe/
+
+# Candidate-level coordinate tables are unnecessary for the public software
+# release and may reveal locations. Aggregate reports remain versionable.
+results/T2_stage*.csv
+results/geometric_probe/*.csv
+results/geometric_validation/geometric_validation_features.csv
+results/geometric_validation/matched_pairs.csv
+results/gp_night_benchmark/gp_vs_control.csv
+results/structural_roi_preflight/candidate_centers.csv
+results/tifxyz_catalog_audit/segment_shortlist.csv
+results/track_a_dev_candidate_artifacts/*.csv
+results/track_a_dev_candidate_package_*/candidate_package.json
+results/track_a_dev_candidate_package_*/candidates.csv
+results/track_a_dev_geometry/*candidates.csv
+results/track_a_dev_input_audit*/regions.csv
+results/track_a_dev_structural_features/structural_regions.csv
+# Sample-level DEV coordinates derived from IR labels. Keep locally for exact
+# reruns, but do not publish them with the code repository.
+results/fragment_ir_pixel_audit/matched_pixels.csv
+results/fragment_ir_profile_model/local_pairs.csv
+results/fragment_ir_profile_model/profile_crossfit_predictions.csv
+*.tmp

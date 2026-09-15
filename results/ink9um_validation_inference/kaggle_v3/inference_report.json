@@ -1,0 +1,43 @@
+{
+  "device": "Tesla T4",
+  "elapsed_seconds": 30.04267009200001,
+  "experiment_id": "ink9um-pherc0139-w016-bounded-dev-inference-20260915",
+  "geometry_tier": "G1",
+  "input_chunks": 12,
+  "input_crop_from_21": [
+    2,
+    19
+  ],
+  "interpretation": "Correlated model-replica stability on a bounded DEV subset; not independent evidence or a prize claim.",
+  "models": [
+    {
+      "checkpoint_sha256": "e635558ae6a1a807a7e5ec1e83adfd45bc3c0ac53883ea43f1d4e085d62a9cab",
+      "missing_keys": 0,
+      "model_id": "seed42",
+      "prediction_max": 0.925499677658081,
+      "prediction_mean": 0.377056747674942,
+      "prediction_min": 0.18257121741771698,
+      "seconds": 1.4238650390000203,
+      "state_key": "model",
+      "unexpected_keys": 0
+    },
+    {
+      "checkpoint_sha256": "2aeaa85a35ef28d7bc7bf3e848c4a6a91385e9132710927fdba41133c4ecb28f",
+      "missing_keys": 0,
+      "model_id": "seed43",
+      "prediction_max": 0.9278878569602966,
+      "prediction_mean": 0.3520210087299347,
+      "prediction_min": 0.15662017464637756,
+      "seconds": 0.11695784500000173,
+      "state_key": "model",
+      "unexpected_keys": 0
+    }
+  ],
+  "normalization": "official robust_mad p01-p99 per patch",
+  "output_sha256": "ee614cb90eb102b35ec84cf903f3c1f03711fbeaa4f97cccae0f4ed667b12b5f",
+  "regime": "DEV",
+  "schema_version": "inksurf-ink9um-validation-inference/1.0",
+  "status": "complete",
+  "track": "A",
+  "villa_commit": "3ea17f54a9b3d5fd1aaf73e1d2c8386dbaa9f30e"
+}

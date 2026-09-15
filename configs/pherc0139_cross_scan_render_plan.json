@@ -1,0 +1,28 @@
+{
+  "schema_version": "inksurf-cross-scan-render-plan/1.0",
+  "experiment_id": "pherc0139-cross-scan-render-plan-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "current_geometry_tier": "G1",
+  "target_geometry_tier": "G2",
+  "mesh": {
+    "voxel_um": 2.403,
+    "x": "data/seating_reproduction/pherc0139/mesh/x.tif",
+    "y": "data/seating_reproduction/pherc0139/mesh/y.tif",
+    "z": "data/seating_reproduction/pherc0139/mesh/z.tif"
+  },
+  "seating_crop_origin_row_col": [329, 295],
+  "seating_crop_pixels": 417,
+  "render_pixels": 512,
+  "surface_grid_step_voxels": 19.982515631843444,
+  "normal_offsets_voxels": [-54, 54],
+  "chunk_shape_zyx": [128, 128, 128],
+  "volumes": [
+    {"volume_id": "20250820105138", "shape_zyx": [19393, 26105, 26105]},
+    {"volume_id": "20260319133554", "shape_zyx": [19368, 26105, 26105]}
+  ],
+  "outputs": {
+    "report_json": "results/pherc0139_cross_scan_render/render_plan.json",
+    "chunk_manifest_csv": "results/pherc0139_cross_scan_render/chunk_manifest.csv"
+  }
+}

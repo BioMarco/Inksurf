@@ -1,0 +1,41 @@
+{
+  "experiment_id": "fragment_ir_dev_candidate_package_20260911_v1",
+  "schema_version": "inksurf-candidate-package/1.0",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G0",
+  "surface_id": "kaggle-vesuvius-challenge-ink-detection/train/3",
+  "coordinate_frame": {
+    "name": "fragment-3 image plane",
+    "axes": "Y,X",
+    "bounds_convention": "half-open",
+    "level": "competition native"
+  },
+  "candidate_table": "results/fragment_ir_depth_structure/all_structural_regions.csv",
+  "eligibility_field": "eligible",
+  "ranking_score": "depth_max_mean",
+  "candidate_limit": 20,
+  "provenance_files": [
+    "configs/fragment_ir_dev_depth_baseline.json",
+    "results/fragment_ir_depth_baseline/depth_baseline_report.json",
+    "results/fragment_ir_depth_baseline/depth_region_eval_report.json",
+    "results/fragment_ir_depth_structure/all_structural_regions.csv"
+  ],
+  "available_artifacts": {
+    "continuous_score_map": "data/fragment_ir_benchmark/derived/train3_depth_baseline/depth_max.npy",
+    "support_diagnostics": "results/fragment_ir_pixel_audit/pixel_audit_report.json"
+  },
+  "missing_submission_artifacts": [
+    "verified UV bounds",
+    "verified XYZ bounds",
+    "component mask",
+    "component skeleton",
+    "G2 CT-support verification",
+    "human review record"
+  ],
+  "outputs": {
+    "package_json": "results/fragment_ir_candidate_package/candidate_package.json",
+    "candidates_csv": "results/fragment_ir_candidate_package/candidates.csv",
+    "validation_report_json": "results/fragment_ir_candidate_package/validation_report.json"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "experiment_id": "fragment_ir_dev_profile_model_20260911_v1",
+  "regime": "DEV",
+  "geometry_tier": "G0",
+  "pairs_csv": "results/fragment_ir_profile_model/local_pairs.csv",
+  "surface_volume_directory": "data/fragment_ir_benchmark/train/3/surface_volume",
+  "surface_volume_layers": [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+  "baseline_map": "data/fragment_ir_benchmark/derived/train3_depth_baseline/depth_std.npy",
+  "folds": 4,
+  "spatial_buffer_pixels": 64,
+  "seed": 20260911,
+  "bootstrap": {
+    "samples": 1000,
+    "seed": 20260911
+  },
+  "models": {
+    "logistic": {
+      "C": 1.0,
+      "max_iter": 1000
+    },
+    "hist_gradient_boosting": {
+      "learning_rate": 0.05,
+      "max_iter": 100,
+      "max_leaf_nodes": 15,
+      "l2_regularization": 1.0
+    }
+  },
+  "go_criteria": {
+    "minimum_auc_gain": 0.02,
+    "minimum_average_precision_gain": 0.02,
+    "require_positive_auc_ci_lower": true,
+    "require_positive_average_precision_ci_lower": true
+  },
+  "outputs": {
+    "predictions_csv": "results/fragment_ir_profile_model/profile_crossfit_predictions.csv",
+    "report_json": "results/fragment_ir_profile_model/profile_model_report.json"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "inksurf-ink-model-compatibility/1.0",
+  "experiment_id": "canonical-ink-compatibility-pherc0139-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G1",
+  "surface": {
+    "cache_root": "data/ink_model_compatibility/surface_chunks",
+    "volume_id": "published_surface_20260102150214",
+    "level": 0,
+    "shape_zyx": [109, 28320, 26480],
+    "chunks_zyx": [109, 128, 128],
+    "start_zyx": [0, 24576, 18432],
+    "size_zyx": [109, 512, 512]
+  },
+  "checkpoint": {
+    "path": "data/ink_model_compatibility/r152_3ddec_v2_l5_epoch13.ckpt",
+    "sha256": "36dd0de84b7b7aa6590184192c7415466cd8a1ba7c1e59f42c6373846373c3e0"
+  },
+  "loader": {
+    "root": "data/ink_model_compatibility/villa_inference",
+    "villa_commit": "76370e1a6908f0bc2eb7f92bc0397336ecbe3d96",
+    "model_loader_sha256": "7b2b2cfc6c7fb963a3da1bf128543ceadf8ad887f32a319bc0a38fb378f9e2ca",
+    "resnetall_sha256": "2b49ac430d77bae189cf002ed9c2748f940a6cd92b809a23db6f7dba381afbf6",
+    "non_local_helper_sha256": "09910c134003051b0cb75bd1ede1c2da8bab7cc60bf56997ace018018a806ce5"
+  },
+  "published_map": {
+    "path": "data/ink_model_compatibility/published_ink_map.tif",
+    "sha256": "d99dbd0698a41cc2106888eebc6bed76245cf5a9074a68d025066c89b982fa08",
+    "window_yx": [24576, 18432, 512, 512]
+  },
+  "inference": {
+    "layer_start": 24,
+    "layer_end": 86,
+    "reverse_layers": false,
+    "tile_size": 256,
+    "stride": 128,
+    "max_clip_value": 200,
+    "cpu_threads": 8,
+    "cpu_autocast": true,
+    "allow_cpu_multitile": false
+  },
+  "evaluation_crop_yxyx": [128, 128, 384, 384],
+  "acceptance_pearson_r_gt": 0.5,
+  "output_npz": "results/ink_model_compatibility/local_prediction.npz",
+  "report_json": "results/ink_model_compatibility/compatibility_report.json"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "marcopontesilli/inksurf-pherc0139-cross-scan-inference",
+  "title": "InkSurf PHerc0139 cross-scan inference",
+  "code_file": "kernel.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "marcopontesilli/inksurf-pherc0139-cross-scan-dev"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

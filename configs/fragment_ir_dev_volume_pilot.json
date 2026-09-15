@@ -1,0 +1,31 @@
+{
+  "experiment_id": "fragment_ir_dev_volume_pilot_20260910_v1",
+  "freeze_state": "frozen_before_download",
+  "fragment": "train/3",
+  "regime": "DEV",
+  "coordinate_order": "depth,Y,X; Kaggle filenames encode depth",
+  "surface_volume_layers_inclusive": [24, 39],
+  "surface_volume_file_count": 16,
+  "expected_bytes": 1277567568,
+  "max_download_bytes": 1342177280,
+  "minimum_free_bytes_after_download": 107374182400,
+  "competition": "vesuvius-challenge-ink-detection",
+  "manifest": "results/fragment_ir_preflight/kaggle_file_manifest.json",
+  "output_directory": "data/fragment_ir_benchmark",
+  "output_report": "results/fragment_ir_preflight/dev_volume_download_report.json",
+  "rationale": "Central 16 of 65 layers provide a bounded CPU-first pilot around the nominal surface while avoiding the full 5.19 GB stack.",
+  "planned_baselines": [
+    "depth_mean",
+    "depth_max",
+    "depth_standard_deviation",
+    "central_minus_outer_contrast",
+    "spatially_cross_fitted_shallow_classifier"
+  ],
+  "planned_structural_tests": [
+    "orientation_coherence",
+    "component_continuity",
+    "skeleton_stability_under_threshold_perturbation",
+    "review_enrichment_against_strongest_raw_baseline"
+  ],
+  "validation_lock": "No train/1 or train/2 data may be downloaded or inspected during this pilot."
+}

@@ -1,0 +1,64 @@
+{
+  "experiment_id": "geometric_validation_extended_20260910",
+  "status": "recovered_from_executed_script",
+  "recovered_script_source": "/tmp/inksurf_geometric_validation.py",
+  "recovered_script_sha256": "f20a9d629b8d90722c2a61a2fe4af04b8f2234eb3b60ff213511a562d5c43f43",
+  "coordinate_order": "Z,Y,X",
+  "level": 3,
+  "level0_to_level3_scale": 8,
+  "source_csv": "results/gp_night_benchmark/gp_vs_control.csv",
+  "outputs": {
+    "features": "results/geometric_validation/geometric_validation_features.csv",
+    "matched_pairs": "results/geometric_validation/matched_pairs.csv",
+    "report": "results/geometric_validation/geometric_validation_report.txt",
+    "state": "results/geometric_validation/state.json",
+    "cache": "results/geometric_validation/cache"
+  },
+  "data": {
+    "ink3d_url": "s3://vesuvius-challenge-open-data/PHercParis4/representations/predictions/ink-3d/20260411134726-ink3d-20260428123845-v3-78k-fullsup.zarr/3",
+    "surface_url": "s3://vesuvius-challenge-open-data/PHercParis4/representations/predictions/surfaces/20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr/3",
+    "observed_shape_zyx": [9473, 4087, 4087],
+    "observed_chunk_shape_zyx": [256, 256, 256],
+    "dtype": "uint8"
+  },
+  "selection": {
+    "requested_per_class": 500,
+    "actual_gp": 500,
+    "actual_control": 490,
+    "source_surface_fraction_min_inclusive": 0.2,
+    "source_surface_fraction_max_exclusive": 0.6,
+    "source_surface_bin_width": 0.05,
+    "per_bin_rule": "ceil(requested_per_class / number_of_nonempty_bins), without redistribution from undersupplied bins",
+    "seed": 20260910
+  },
+  "patch": {
+    "radius_level3_voxels": 32,
+    "shape_zyx": [64, 64, 64],
+    "ink_threshold_uint8": 128,
+    "surface_threshold_uint8": 128,
+    "bounds": "half-open [center-radius, center+radius) on each Z,Y,X axis"
+  },
+  "matching": {
+    "algorithm": "greedy nearest surface_fraction without replacement, GP sorted by surface_fraction",
+    "caliper_absolute_fraction": 0.005,
+    "actual_pairs": 429
+  },
+  "cross_validation": {
+    "random": {"type": "StratifiedKFold", "folds": 10, "shuffle": true, "seed": 20260910},
+    "spatial": {"type": "StratifiedGroupKFold", "folds": 5, "shuffle": true, "seed": 20260910},
+    "spatial_group": "floor(Z/256)_floor(Y/256)_floor(X/256) at level 3",
+    "spatial_buffer_voxels": 0,
+    "stored_fold_assignments": false
+  },
+  "cache": {
+    "enabled": true,
+    "format": "one .npy per array and patch center",
+    "chunk_aware": false,
+    "manifest": false,
+    "checksum_validation": false,
+    "atomic_writes": false
+  },
+  "ct_support_used": false,
+  "surface_geometry": "volumetric Surface Prediction; not verified TIFXYZ or mesh",
+  "ground_truth_used": "regional label GP versus CONTROL; not voxel/letter ink ground truth"
+}

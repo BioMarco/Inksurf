@@ -1,0 +1,136 @@
+{
+  "abstention_ap_gain": 0.08549664890134245,
+  "abstention_fraction_target": 0.2,
+  "best_raw_baseline": "depth_std17",
+  "bootstrap_replicates": 2000,
+  "disagreement_cutoff": 0.25769928097724915,
+  "ensemble_ap_gain_over_best_raw": 0.47101843335077487,
+  "ensemble_metrics": {
+    "average_precision": 0.7237096054878299,
+    "mean_margin": 0.24991437792778015,
+    "negative_mean": 0.3282248079776764,
+    "positive_mean": 0.5781391859054565
+  },
+  "experiment_id": "ink9um-pherc0139-w016-bounded-dev-evaluation-20260915",
+  "geometry_tier": "G1",
+  "go_checks": {
+    "ensemble_ap_gain": true,
+    "positive_to_negative_control_score_margin": true,
+    "regional_ap_gain_ci95": true
+  },
+  "interpretation": "Bounded selected DEV stress test using transferred/pseudo labels; correlated seed replicas form one model family and are not independent confirmations.",
+  "model_metrics": {
+    "seed42": {
+      "average_precision": 0.5869007840127168,
+      "mean_margin": 0.21058830618858337,
+      "negative_mean": 0.33307501673698425,
+      "positive_mean": 0.5436633229255676
+    },
+    "seed43": {
+      "average_precision": 0.7177893208225177,
+      "mean_margin": 0.2892403304576874,
+      "negative_mean": 0.32337459921836853,
+      "positive_mean": 0.6126149296760559
+    }
+  },
+  "negative_control_mean_score": 0.248813658952713,
+  "negative_only_chunks": 6,
+  "pixels": 81524,
+  "positive_label_mean_score": 0.5781391859054565,
+  "positive_prevalence": 0.23819979392571514,
+  "positive_to_negative_control_score_margin": 0.32932552695274353,
+  "raw_baselines": {
+    "central_slice": {
+      "average_precision": 0.23813523992475488,
+      "mean_margin": 0.2375030517578125,
+      "negative_mean": 69.83999633789062,
+      "positive_mean": 70.07749938964844
+    },
+    "depth_max17": {
+      "average_precision": 0.24335559335930226,
+      "mean_margin": 0.766876220703125,
+      "negative_mean": 136.85638427734375,
+      "positive_mean": 137.62326049804688
+    },
+    "depth_std17": {
+      "average_precision": 0.25269117213705505,
+      "mean_margin": 0.3929901123046875,
+      "negative_mean": 35.96289825439453,
+      "positive_mean": 36.35588836669922
+    }
+  },
+  "regime": "DEV",
+  "regional_ap": [
+    {
+      "ap_gain": 0.3563084420839635,
+      "baseline_ap": 0.37535572404532036,
+      "chunk_yx": [
+        39,
+        14
+      ],
+      "ensemble_ap": 0.7316641661292839
+    },
+    {
+      "ap_gain": 0.49753224430899584,
+      "baseline_ap": 0.4059158435923477,
+      "chunk_yx": [
+        39,
+        30
+      ],
+      "ensemble_ap": 0.9034480879013436
+    },
+    {
+      "ap_gain": 0.19540920728002253,
+      "baseline_ap": 0.4104448397855708,
+      "chunk_yx": [
+        40,
+        14
+      ],
+      "ensemble_ap": 0.6058540470655933
+    },
+    {
+      "ap_gain": 0.396540367603135,
+      "baseline_ap": 0.36747960277709907,
+      "chunk_yx": [
+        40,
+        30
+      ],
+      "ensemble_ap": 0.7640199703802341
+    },
+    {
+      "ap_gain": 0.011305137577854948,
+      "baseline_ap": 0.0003479789533103642,
+      "chunk_yx": [
+        41,
+        14
+      ],
+      "ensemble_ap": 0.011653116531165311
+    },
+    {
+      "ap_gain": 0.40867812919694135,
+      "baseline_ap": 0.30415737413741717,
+      "chunk_yx": [
+        41,
+        30
+      ],
+      "ensemble_ap": 0.7128355033343585
+    }
+  ],
+  "regional_mean_ap_gain": 0.3109622546751522,
+  "regional_mean_ap_gain_ci95_chunk_bootstrap": [
+    0.1723732787956364,
+    0.4255219658508611
+  ],
+  "retained_ensemble_metrics": {
+    "average_precision": 0.8092062543891724,
+    "mean_margin": 0.31885072588920593,
+    "negative_mean": 0.29739853739738464,
+    "positive_mean": 0.6162492632865906
+  },
+  "retained_fraction": 0.7999975467347039,
+  "schema_version": "inksurf-ink9um-validation-evaluation/1.0",
+  "seed_prediction_mae": 0.12606456875801086,
+  "seed_prediction_pearson_r": 0.5260082048157739,
+  "status": "GO_BOUNDED_DEV",
+  "track": "A"
+}

@@ -1,0 +1,24 @@
+{
+  "claim": "Imported measurements are third-party evidence. A pair cannot enter InkSurf VALIDATION or DISCOVERY until the seating result is independently reproduced.",
+  "cross_scan_pairs_passing_gate": 0,
+  "cross_scan_pairs_screened": 131,
+  "experiment_id": "inksurf-seating-import-20260914",
+  "gate": {
+    "maximum_voxel_um": 4.0,
+    "minimum_coverage": 0.8,
+    "minimum_score": 15.0
+  },
+  "regime": "DEV",
+  "rows_imported": 172,
+  "rows_passing_individual_gate": 3,
+  "schema_version": "inksurf-seating-import/1.0",
+  "scrolls_imported": 14,
+  "source": {
+    "bytes": 54548,
+    "sha256": "415af67f50e4feb144d591c3dcc85b55dc876836997aaabb72c92d0daabd43a0",
+    "upstream_commit": "c836a52c3dd8e555269c0f8289c40260c7c36e1d",
+    "url": "https://raw.githubusercontent.com/axiosdevs/herculaneum-scroll-tools/c836a52c3dd8e555269c0f8289c40260c7c36e1d/ink/seating.json"
+  },
+  "status": "no_go_no_strict_cross_scan_pair",
+  "track": "A"
+}

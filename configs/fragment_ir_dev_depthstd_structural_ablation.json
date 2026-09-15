@@ -1,0 +1,28 @@
+{
+  "experiment_id": "fragment_ir_dev_depthstd_structural_ablation_20260911_v1",
+  "regions_csv": "results/fragment_ir_depth_structure/all_structural_regions.csv",
+  "region_size": 256,
+  "positive_region_min_ink_pixels": 128,
+  "baseline_score": "depth_max_mean",
+  "review_baseline_scores": {
+    "0.01": "central_contrast_max",
+    "0.05": "neg_depth_mean_p95",
+    "0.1": "neg_depth_mean_p95"
+  },
+  "score_columns": [
+    "depthstd_structure_mean",
+    "depthstd_structure_p95",
+    "depthstd_structure_p99",
+    "depthstd_structure_max",
+    "depthstd_structure_component_max"
+  ],
+  "review_fractions": [0.01, 0.05, 0.10],
+  "bootstrap": {
+    "method": "spatial_block_resampling",
+    "block_size": 1024,
+    "samples": 2000,
+    "seed": 20260911
+  },
+  "output_report": "results/fragment_ir_depth_structure/depthstd_structural_ablation_report.json",
+  "reference_warning": "DEV-only targeted ablation against IR-aligned hand labels. Parameters used mask-only quantiles; map family was selected by a declared matched DEV audit."
+}

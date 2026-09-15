@@ -1,0 +1,77 @@
+{
+  "blockers": [
+    "same-surface overlap across scans is not established by catalog metadata",
+    "cross-scan transforms and registration error are not yet verified",
+    "the same-label cross-volume candidates provide zero independent ink-output pairs",
+    "a held-out evaluation unit has not yet been frozen"
+  ],
+  "catalog": {
+    "bytes": 751244,
+    "catalog_updated": "2026-06-15",
+    "sha256": "b464f82279ed5cecba4a3a4c9838aa56e212ab23918114b9f19252ea5564fafc",
+    "url": "https://raw.githubusercontent.com/ScrollPrize/villa/2c477013ed05d0823f193d8eeccf25e93293503f/scrollprize.org/static/data_browser/index.json"
+  },
+  "claim": "The official catalog contains plausible DEV sources for a bounded consistency pilot; this does not establish co-registration, ink evidence, or prize readiness.",
+  "discovery_files_accessed": 0,
+  "downloaded_volumetric_bytes": 0,
+  "experiment_id": "inksurf-evidence-phase0-20260914",
+  "independent_ink_output_pairs": 0,
+  "metadata_ready_samples": [
+    "PHercParis4",
+    "PHerc1667",
+    "PHerc0139"
+  ],
+  "regime": "DEV",
+  "same_label_cross_volume_artifact_pairs": 2,
+  "samples": [
+    {
+      "has_ink3d": true,
+      "has_surface_prediction": true,
+      "ink_outputs_present": 80,
+      "ink_segment_count": 80,
+      "ink_segment_entries": 81,
+      "known_text_dev": true,
+      "legal_notice_present": true,
+      "metadata_ready": true,
+      "prediction_count": 4,
+      "qualified_scan_pairs": 20,
+      "sample_id": "PHercParis4",
+      "scan_count": 7,
+      "segment_count": 81
+    },
+    {
+      "has_ink3d": false,
+      "has_surface_prediction": false,
+      "ink_outputs_present": 19,
+      "ink_segment_count": 19,
+      "ink_segment_entries": 19,
+      "known_text_dev": true,
+      "legal_notice_present": false,
+      "metadata_ready": true,
+      "prediction_count": 1,
+      "qualified_scan_pairs": 6,
+      "sample_id": "PHerc1667",
+      "scan_count": 4,
+      "segment_count": 20
+    },
+    {
+      "has_ink3d": false,
+      "has_surface_prediction": true,
+      "ink_outputs_present": 38,
+      "ink_segment_count": 38,
+      "ink_segment_entries": 38,
+      "known_text_dev": true,
+      "legal_notice_present": false,
+      "metadata_ready": true,
+      "prediction_count": 4,
+      "qualified_scan_pairs": 9,
+      "sample_id": "PHerc0139",
+      "scan_count": 5,
+      "segment_count": 38
+    }
+  ],
+  "schema_version": "inksurf-evidence-preflight/1.0",
+  "status": "conditional_go_raw_evidence_only",
+  "track": "A",
+  "validation_files_accessed": 0
+}

@@ -1,0 +1,28 @@
+{
+  "experiment_id": "tifxyz_catalog_audit_20260910_v1",
+  "catalog_url": "https://raw.githubusercontent.com/ScrollPrize/villa/main/scrollprize.org/static/data_browser/index.json",
+  "scroll_id": "PHercParis4",
+  "volume_id": "20260411134726",
+  "voxel_size_um": 2.4,
+  "candidate_report": "results/structural_roi_preflight/preflight_report.json",
+  "candidate_level": 3,
+  "coordinate_conventions": {
+    "candidate_array_order": "Z,Y,X",
+    "tifxyz_meta_bbox_order": "X,Y,Z",
+    "candidate_frame": "PHercParis4-20260411134726"
+  },
+  "network_limits": {
+    "max_requests": 100,
+    "catalog_max_bytes": 2097152,
+    "meta_max_bytes": 65536,
+    "total_max_bytes": 8388608,
+    "timeout_seconds": 20,
+    "retries": 2
+  },
+  "shortlist_per_candidate": 5,
+  "outputs": {
+    "directory": "results/tifxyz_catalog_audit",
+    "report_json": "catalog_audit_report.json",
+    "shortlist_csv": "segment_shortlist.csv"
+  }
+}

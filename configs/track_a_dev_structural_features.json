@@ -1,0 +1,20 @@
+{
+  "experiment_id": "track_a_dev_structural_features_20260910_v1",
+  "regions_csv": "results/track_a_dev_input_audit_256/regions.csv",
+  "prediction_tif": "data/track_a_benchmark/0139_w035_dev/prediction.tif",
+  "supervision_mask_tif": "data/track_a_benchmark/0139_w035_dev/supervision_mask.tif",
+  "output_regions_csv": "results/track_a_dev_structural_features/structural_regions.csv",
+  "output_report": "results/track_a_dev_structural_features/structural_features_report.json",
+  "halo": 32,
+  "parameters": {
+    "intensity_low": 32,
+    "intensity_high": 235,
+    "gradient_sigma": 1.2,
+    "tensor_sigma": 3.0,
+    "contrast_sigma": 8.0,
+    "component_threshold": 232,
+    "min_component_pixels": 16,
+    "closing_radius": 1,
+    "min_skeleton_pixels": 8
+  }
+}

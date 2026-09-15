@@ -1,0 +1,43 @@
+{
+  "device": "Tesla T4",
+  "elapsed_seconds": 33.433970087000034,
+  "experiment_id": "ink9um-pherc0814-46527-locked-inference-20260915",
+  "geometry_tier": "G1",
+  "input_chunks": 12,
+  "input_crop_from_21": [
+    2,
+    19
+  ],
+  "interpretation": "Locked cross-scroll validation of one correlated model family; upstream online-validation exposure remains a documented dependency.",
+  "models": [
+    {
+      "checkpoint_sha256": "e635558ae6a1a807a7e5ec1e83adfd45bc3c0ac53883ea43f1d4e085d62a9cab",
+      "missing_keys": 0,
+      "model_id": "seed42",
+      "prediction_max": 0.8759993314743042,
+      "prediction_mean": 0.3151732385158539,
+      "prediction_min": 0.18535663187503815,
+      "seconds": 1.456990908000023,
+      "state_key": "model",
+      "unexpected_keys": 0
+    },
+    {
+      "checkpoint_sha256": "2aeaa85a35ef28d7bc7bf3e848c4a6a91385e9132710927fdba41133c4ecb28f",
+      "missing_keys": 0,
+      "model_id": "seed43",
+      "prediction_max": 0.9259026646614075,
+      "prediction_mean": 0.3253914415836334,
+      "prediction_min": 0.17050801217556,
+      "seconds": 0.11795067500003142,
+      "state_key": "model",
+      "unexpected_keys": 0
+    }
+  ],
+  "normalization": "official robust_mad p01-p99 per patch",
+  "output_sha256": "d1ca90a888af3305e0b2b81720029b1f1cb112d86a660c49f0a84f420ac7a1cb",
+  "regime": "VALIDATION",
+  "schema_version": "inksurf-ink9um-validation-inference/1.0",
+  "status": "complete",
+  "track": "A",
+  "villa_commit": "3ea17f54a9b3d5fd1aaf73e1d2c8386dbaa9f30e"
+}

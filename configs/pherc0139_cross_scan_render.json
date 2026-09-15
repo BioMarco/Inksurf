@@ -1,0 +1,9 @@
+{
+  "schema_version": "inksurf-cross-scan-render/1.0",
+  "experiment_id": "pherc0139-cross-scan-render-20260915",
+  "track": "A", "regime": "DEV", "geometry_tier": "G2",
+  "plan_config": "configs/pherc0139_cross_scan_render_plan.json",
+  "cache_root": "data/cross_scan_render/pherc0139/chunks",
+  "output_root": "data/cross_scan_render/pherc0139/renders",
+  "report_json": "results/pherc0139_cross_scan_render/render_report.json"
+}

@@ -1,0 +1,33 @@
+{
+  "experiment_id": "fragment_ir_dev_structural_ablation_20260911_v1",
+  "regions_csv": "results/fragment_ir_depth_structure/combined_structural_regions.csv",
+  "region_size": 256,
+  "positive_region_min_ink_pixels": 128,
+  "baseline_score": "depth_max_mean",
+  "review_baseline_scores": {
+    "0.01": "central_contrast_max",
+    "0.05": "neg_depth_mean_p95",
+    "0.1": "neg_depth_mean_p95"
+  },
+  "score_columns": [
+    "depthmax_structure_mean",
+    "depthmax_structure_p95",
+    "depthmax_structure_p99",
+    "depthmax_structure_max",
+    "depthmax_structure_component_max",
+    "contrast_structure_mean",
+    "contrast_structure_p95",
+    "contrast_structure_p99",
+    "contrast_structure_max",
+    "contrast_structure_component_max"
+  ],
+  "review_fractions": [0.01, 0.05, 0.10],
+  "bootstrap": {
+    "method": "spatial_block_resampling",
+    "block_size": 1024,
+    "samples": 2000,
+    "seed": 20260911
+  },
+  "output_report": "results/fragment_ir_depth_structure/structural_ablation_report.json",
+  "reference_warning": "DEV-only structural ablation against IR-aligned hand labels. Score construction excluded labels, IR and all VALIDATION data."
+}

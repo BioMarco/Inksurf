@@ -1,0 +1,10 @@
+{
+  "experiment_id": "fragment_ir_kaggle_preflight_20260910_v1",
+  "competition": "vesuvius-challenge-ink-detection",
+  "page_size": 200,
+  "max_pages": 10,
+  "outputs": {
+    "report_json": "results/fragment_ir_preflight/kaggle_preflight_report.json",
+    "manifest_json": "results/fragment_ir_preflight/kaggle_file_manifest.json"
+  }
+}

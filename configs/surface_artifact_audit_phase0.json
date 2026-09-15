@@ -1,0 +1,12 @@
+{
+  "schema_version": "inksurf-surface-artifact-audit/1.0",
+  "experiment_id": "inksurf-surface-artifact-phase0-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "artifact_pairs_csv": "results/evidence_preflight_phase0/artifact_pairs.csv",
+  "max_bytes_per_object": 65536,
+  "outputs": {
+    "report_json": "results/surface_artifact_audit_phase0/report.json",
+    "pairs_csv": "results/surface_artifact_audit_phase0/pair_geometry.csv"
+  }
+}

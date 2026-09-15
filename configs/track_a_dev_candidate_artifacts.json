@@ -1,0 +1,23 @@
+{
+  "experiment_id": "track_a_dev_candidate_artifacts_20260911_v1",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G2",
+  "candidate_package": "results/track_a_dev_candidate_package_g2/candidate_package.json",
+  "prediction_tif": "data/track_a_benchmark/0139_w035_dev/prediction.tif",
+  "supervision_mask_tif": "data/track_a_benchmark/0139_w035_dev/supervision_mask.tif",
+  "thresholds": [224, 232, 240],
+  "primary_threshold": 232,
+  "closing_radius": 1,
+  "minimum_component_pixels": 16,
+  "stability_criteria": {
+    "minimum_mask_iou_each_perturbation": 0.5,
+    "minimum_high_threshold_skeleton_retention": 0.5
+  },
+  "local_artifact_directory": "data/track_a_candidate_artifacts/g2_v1",
+  "outputs": {
+    "manifest_json": "results/track_a_dev_candidate_artifacts/artifact_manifest.json",
+    "candidates_csv": "results/track_a_dev_candidate_artifacts/stability_candidates.csv",
+    "report_json": "results/track_a_dev_candidate_artifacts/stability_report.json"
+  }
+}

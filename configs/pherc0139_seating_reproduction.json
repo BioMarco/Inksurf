@@ -1,0 +1,23 @@
+{
+  "schema_version": "inksurf-seating-reproduction/1.0",
+  "experiment_id": "pherc0139-seating-reproduction-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "mesh": {
+    "x": "data/seating_reproduction/pherc0139/mesh/x.tif",
+    "y": "data/seating_reproduction/pherc0139/mesh/y.tif",
+    "z": "data/seating_reproduction/pherc0139/mesh/z.tif"
+  },
+  "crop_pixels": 417,
+  "sample_count": 50,
+  "seed": 0,
+  "level": 2,
+  "probe_span_level_voxels": 60,
+  "chunk_shape_zyx": [128, 128, 128],
+  "cache_root": "data/seating_reproduction/pherc0139/chunks",
+  "volumes": [
+    {"volume_id": "20250820105138"},
+    {"volume_id": "20260319133554"}
+  ],
+  "report_json": "results/seating_reproduction_pherc0139/reproduction_report.json"
+}

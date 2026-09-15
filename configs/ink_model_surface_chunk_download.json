@@ -1,0 +1,16 @@
+{
+  "schema_version": "inksurf-zarr-chunk-download/1.0",
+  "experiment_id": "ink-model-surface-chunks-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "chunk_manifest_csv": "results/ink_model_compatibility/surface_chunk_manifest.csv",
+  "chunk_manifest_sha256": "c21a1f65ed4c57475e012d5f781d266b85e30c868e0a9d361a3ce042418e6540",
+  "max_total_bytes": 30000000,
+  "workers": 8,
+  "allowed_hosts": ["vesuvius-challenge-open-data.s3.amazonaws.com"],
+  "volume_base_urls": {
+    "published_surface_20260102150214": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000000-w025_2025010863/surface-volumes/2.399um-0.22m-78keV-volume-20260102150214.zarr"
+  },
+  "cache_root": "data/ink_model_compatibility/surface_chunks",
+  "report_json": "results/ink_model_compatibility/surface_chunk_download_report.json"
+}

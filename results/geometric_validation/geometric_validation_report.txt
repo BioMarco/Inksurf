@@ -1,0 +1,60 @@
+
+==============================================================================================================
+UNIVARIATE AUC
+==============================================================================================================
+ink_max                      AUC=0.7575 abs=0.7575 GP > CTRL
+dist_le_1                    AUC=0.7134 abs=0.7134 GP > CTRL
+dist_mean                    AUC=0.3076 abs=0.6924 GP < CTRL
+ink_surface_ratio            AUC=0.6798 abs=0.6798 GP > CTRL
+dist_median                  AUC=0.3351 abs=0.6649 GP < CTRL
+dist_le_2                    AUC=0.6623 abs=0.6623 GP > CTRL
+dist_p90                     AUC=0.3494 abs=0.6506 GP < CTRL
+dist_p95                     AUC=0.3739 abs=0.6261 GP < CTRL
+surface_decay                AUC=0.6230 abs=0.6230 GP > CTRL
+dist_le_3                    AUC=0.6196 abs=0.6196 GP > CTRL
+positive_ink_mean            AUC=0.6159 abs=0.6159 GP > CTRL
+ink_band2_mean               AUC=0.4008 abs=0.5992 GP < CTRL
+ink_band1_mean               AUC=0.4388 abs=0.5612 GP < CTRL
+n_components                 AUC=0.4475 abs=0.5525 GP < CTRL
+ink_fraction                 AUC=0.5525 abs=0.5525 GP > CTRL
+ink_surface_mean             AUC=0.4727 abs=0.5273 GP < CTRL
+largest_component_frac       AUC=0.5002 abs=0.5002 GP > CTRL
+
+==============================================================================================================
+STRICT MATCHED ANALYSIS
+==============================================================================================================
+Matched pairs: 429
+ink_fraction                 AUC=0.5790 abs=0.5790
+ink_max                      AUC=0.7478 abs=0.7478
+positive_ink_mean            AUC=0.6310 abs=0.6310
+n_components                 AUC=0.4551 abs=0.5449
+largest_component_frac       AUC=0.4990 abs=0.5010
+dist_mean                    AUC=0.2886 abs=0.7114
+dist_median                  AUC=0.3232 abs=0.6768
+dist_p90                     AUC=0.3257 abs=0.6743
+dist_p95                     AUC=0.3456 abs=0.6544
+dist_le_1                    AUC=0.7290 abs=0.7290
+dist_le_2                    AUC=0.6871 abs=0.6871
+dist_le_3                    AUC=0.6502 abs=0.6502
+surface_decay                AUC=0.6257 abs=0.6257
+ink_surface_mean             AUC=0.4921 abs=0.5079
+ink_band1_mean               AUC=0.4608 abs=0.5392
+ink_band2_mean               AUC=0.4250 abs=0.5750
+ink_surface_ratio            AUC=0.6651 abs=0.6651
+
+==============================================================================================================
+MACHINE LEARNING
+==============================================================================================================
+Features: ink_max, positive_ink_mean, n_components, largest_component_frac, dist_mean, dist_p90, dist_le_1, dist_le_2, surface_decay, ink_surface_mean, ink_band1_mean, ink_band2_mean, ink_surface_ratio
+Random CV Logistic AUC = 0.8104
+Spatial CV Logistic AUC = 0.8081
+Random CV Nonlinear AUC = 0.8197
+Spatial CV Nonlinear AUC = 0.8109
+
+==============================================================================================================
+INKSURF DECISION
+==============================================================================================================
+Best univariate geometry AUC = 0.7575
+Spatial Logistic AUC = 0.8081
+Spatial Nonlinear AUC = 0.8109
+RESULT: GO FORTE — la geometria locale contiene segnale discriminante robusto.

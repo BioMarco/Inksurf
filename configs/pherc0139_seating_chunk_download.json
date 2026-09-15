@@ -1,0 +1,17 @@
+{
+  "schema_version": "inksurf-zarr-chunk-download/1.0",
+  "experiment_id": "pherc0139-seating-chunks-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "chunk_manifest_csv": "results/seating_reproduction_pherc0139/chunk_manifest.csv",
+  "chunk_manifest_sha256": "945fa949d3177c87cbb79158bb4e0b76df377d762bbd4b8cb6e0258e1d1774da",
+  "max_total_bytes": 500000000,
+  "workers": 8,
+  "allowed_hosts": ["vesuvius-challenge-open-data.s3.amazonaws.com"],
+  "volume_base_urls": {
+    "20250820105138": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20250820105138-2.403um-0.2m-77keV-masked.zarr",
+    "20260319133554": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20260319133554-2.403um-0.2m-77keV-masked.zarr"
+  },
+  "cache_root": "data/seating_reproduction/pherc0139/chunks",
+  "report_json": "results/seating_reproduction_pherc0139/chunk_download_report.json"
+}

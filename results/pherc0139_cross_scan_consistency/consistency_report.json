@@ -1,0 +1,83 @@
+{
+  "agreement": {
+    "pearson_r": 0.9953403017084711,
+    "spearman_rho": 0.962281469674533
+  },
+  "best_shifted_pearson_r": 0.6426283320028678,
+  "disagreement_threshold": 0.15,
+  "experiment_id": "pherc0139-cross-scan-consistency-dev-20260915",
+  "geometry_tier": "G2",
+  "go_checks": {
+    "pearson_margin_over_best_shift": true,
+    "pearson_r": true,
+    "retained_fraction": true,
+    "top_5pct_overlap_enrichment": true
+  },
+  "interpretation": "Repeatability gate only; no ink or textual-content claim. Shared checkpoint errors remain dependent.",
+  "negative_control_shifts": [
+    {
+      "pearson_r": 0.6426283320028678,
+      "shift_yx": [
+        -128,
+        0
+      ]
+    },
+    {
+      "pearson_r": 0.5777122378009141,
+      "shift_yx": [
+        128,
+        0
+      ]
+    },
+    {
+      "pearson_r": 0.31567626148923245,
+      "shift_yx": [
+        0,
+        -128
+      ]
+    },
+    {
+      "pearson_r": 0.3272072730018687,
+      "shift_yx": [
+        0,
+        128
+      ]
+    }
+  ],
+  "pearson_margin_over_best_shift": 0.35271196970560326,
+  "regime": "DEV",
+  "retained_fraction": 1.0,
+  "schema_version": "inksurf-cross-scan-consistency/1.0",
+  "status": "GO_REPEATABILITY",
+  "top_overlap": [
+    {
+      "intersection_pixels": 2454,
+      "jaccard": 0.8926882502728265,
+      "overlap_enrichment_vs_independence": 94.34832756632065,
+      "overlap_fraction": 0.009434832756632065,
+      "quantile": 0.01,
+      "threshold_first": 0.921623170375824,
+      "threshold_second": 0.9225083589553833
+    },
+    {
+      "intersection_pixels": 12690,
+      "jaccard": 0.9527027027027027,
+      "overlap_enrichment_vs_independence": 19.51557093425605,
+      "overlap_fraction": 0.048788927335640137,
+      "quantile": 0.05,
+      "threshold_first": 0.8262408971786499,
+      "threshold_second": 0.833544135093689
+    },
+    {
+      "intersection_pixels": 24931,
+      "jaccard": 0.9203366680202296,
+      "overlap_enrichment_vs_independence": 9.585159554017684,
+      "overlap_fraction": 0.09585159554017686,
+      "quantile": 0.1,
+      "threshold_first": 0.2857167422771454,
+      "threshold_second": 0.28464287519454956
+    }
+  ],
+  "track": "A",
+  "valid_pixels": 260100
+}

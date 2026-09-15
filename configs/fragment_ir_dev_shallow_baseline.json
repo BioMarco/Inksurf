@@ -1,0 +1,33 @@
+{
+  "experiment_id": "fragment_ir_dev_shallow_baseline_20260911_v1",
+  "regime": "DEV",
+  "regions_csv": "results/fragment_ir_depth_baseline/depth_regions.csv",
+  "positive_region_min_ink_pixels": 128,
+  "feature_columns": [
+    "depth_mean_mean", "depth_mean_p95", "depth_mean_max",
+    "depth_max_mean", "depth_max_p95", "depth_max_max",
+    "depth_std_mean", "depth_std_p95", "depth_std_max",
+    "central_contrast_mean", "central_contrast_p95", "central_contrast_max"
+  ],
+  "folds": 5,
+  "region_size": 256,
+  "buffer_columns": 1,
+  "logistic_c": 1.0,
+  "class_weight": "balanced",
+  "seed": 20260911,
+  "ap_baseline_score": "depth_max_mean",
+  "review_baseline_scores": {
+    "0.01": "central_contrast_max",
+    "0.05": "neg_depth_mean_p95",
+    "0.1": "neg_depth_mean_p95"
+  },
+  "bootstrap": {
+    "block_size": 1024,
+    "samples": 2000,
+    "seed": 20260911
+  },
+  "outputs": {
+    "predictions_csv": "results/fragment_ir_shallow_baseline/crossfit_regions.csv",
+    "report_json": "results/fragment_ir_shallow_baseline/shallow_baseline_report.json"
+  }
+}

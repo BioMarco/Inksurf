@@ -1,0 +1,27 @@
+{
+  "experiment_id": "fragment_ir_dev_depth_region_eval_20260911_v1",
+  "regions_csv": "results/fragment_ir_depth_baseline/depth_regions.csv",
+  "region_size": 256,
+  "positive_region_min_ink_pixels": 128,
+  "baseline_score": "chance_score",
+  "review_baseline_score": null,
+  "score_columns": [
+    "depth_mean_mean", "depth_mean_p95", "depth_mean_max",
+    "neg_depth_mean_mean", "neg_depth_mean_p95", "neg_depth_mean_max",
+    "depth_max_mean", "depth_max_p95", "depth_max_max",
+    "neg_depth_max_mean", "neg_depth_max_p95", "neg_depth_max_max",
+    "depth_std_mean", "depth_std_p95", "depth_std_max",
+    "neg_depth_std_mean", "neg_depth_std_p95", "neg_depth_std_max",
+    "central_contrast_mean", "central_contrast_p95", "central_contrast_max",
+    "neg_central_contrast_mean", "neg_central_contrast_p95", "neg_central_contrast_max"
+  ],
+  "review_fractions": [0.01, 0.05, 0.10],
+  "bootstrap": {
+    "method": "spatial_block_resampling",
+    "block_size": 1024,
+    "samples": 2000,
+    "seed": 20260911
+  },
+  "output_report": "results/fragment_ir_depth_baseline/depth_region_eval_report.json",
+  "reference_warning": "DEV-only selection against IR-aligned hand labels. This is independent physical-ink reference evidence, but not held-out generalisation evidence."
+}

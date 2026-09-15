@@ -1,0 +1,17 @@
+{
+  "schema_version": "inksurf-zarr-chunk-download/1.0",
+  "experiment_id": "pherc0139-cross-scan-render-chunks-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "chunk_manifest_csv": "results/pherc0139_cross_scan_render/chunk_manifest.csv",
+  "chunk_manifest_sha256": "3d53a11b1bd5abce54bd02088dcfa63d9af9a60181203b41827c97cd4206cbf5",
+  "max_total_bytes": 250000000,
+  "workers": 8,
+  "allowed_hosts": ["vesuvius-challenge-open-data.s3.amazonaws.com"],
+  "volume_base_urls": {
+    "20250820105138": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20250820105138-2.403um-0.2m-77keV-masked.zarr",
+    "20260319133554": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20260319133554-2.403um-0.2m-77keV-masked.zarr"
+  },
+  "cache_root": "data/cross_scan_render/pherc0139/chunks",
+  "report_json": "results/pherc0139_cross_scan_render/chunk_download_report.json"
+}

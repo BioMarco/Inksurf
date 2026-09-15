@@ -1,0 +1,34 @@
+{
+  "experiment_id": "track_a_dev_tifxyz_geometry_audit_20260911_v1",
+  "track": "A",
+  "regime": "DEV",
+  "surface_id": "0139/w035_2026031718",
+  "coordinate_order": "X,Y,Z",
+  "coordinate_files": {
+    "x": "data/track_a_benchmark/0139_w035_dev/x.tif",
+    "y": "data/track_a_benchmark/0139_w035_dev/y.tif",
+    "z": "data/track_a_benchmark/0139_w035_dev/z.tif"
+  },
+  "reference_raster": "data/track_a_benchmark/0139_w035_dev/prediction.tif",
+  "supervision_mask": "data/track_a_benchmark/0139_w035_dev/supervision_mask.tif",
+  "source_download_report": "results/track_a_benchmark_preflight/dev_geometry_download_report.json",
+  "expected_grid_spacing_voxels": 20.0,
+  "spacing_relative_tolerance": 0.15,
+  "maximum_jump_factor": 3.0,
+  "parent_volume": {
+    "catalog_url": "https://raw.githubusercontent.com/ScrollPrize/villa/main/scrollprize.org/static/data_browser/index.json",
+    "scroll_id": "PHerc0139",
+    "segment_label": "w035",
+    "target_volume_id": "20260102150214",
+    "zarr_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20260102150214-2.399um-0.2m-78keV-masked.zarr/",
+    "zarray_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20260102150214-2.399um-0.2m-78keV-masked.zarr/0/.zarray",
+    "catalog_max_bytes": 2097152,
+    "metadata_max_bytes": 65536,
+    "timeout_seconds": 20
+  },
+  "ct_support": "results/track_a_dev_geometry/ct_support_audit.json",
+  "external_self_intersection_qa": null,
+  "outputs": {
+    "report_json": "results/track_a_dev_geometry/tifxyz_geometry_audit.json"
+  }
+}

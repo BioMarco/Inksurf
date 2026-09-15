@@ -1,0 +1,22 @@
+{
+  "schema_version": "inksurf-ink9um-validation-evaluation/1.0",
+  "experiment_id": "ink9um-pherc0139-w016-bounded-dev-evaluation-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G1",
+  "predictions": "results/ink9um_validation_inference/kaggle_v3/predictions.npz",
+  "inference_report": "results/ink9um_validation_inference/kaggle_v3/inference_report.json",
+  "chunk_audit_report": "results/ink9um_validation_preflight/chunk_audit_report.json",
+  "bootstrap_units": "whole selected chunks",
+  "bootstrap_replicates": 2000,
+  "seed": 0,
+  "abstention_fraction": 0.20,
+  "raw_baselines": ["depth_std17", "depth_max17", "central_slice"],
+  "go_criteria": {
+    "ensemble_ap_gain_over_best_raw_min": 0.05,
+    "ensemble_ap_gain_ci95_lower_gt": 0.0,
+    "positive_to_negative_control_score_margin_min": 0.10
+  },
+  "output_report": "results/ink9um_validation_evaluation/evaluation_report.json",
+  "interpretation": "Frozen DEV stress subset selected by validation-mask coverage proxy; not representative or confirmatory."
+}

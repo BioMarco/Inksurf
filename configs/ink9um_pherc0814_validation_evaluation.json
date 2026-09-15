@@ -1,0 +1,27 @@
+{
+  "schema_version": "inksurf-ink9um-validation-evaluation/1.0",
+  "experiment_id": "ink9um-pherc0814-46527-locked-evaluation-20260915",
+  "track": "A",
+  "regime": "VALIDATION",
+  "geometry_tier": "G1",
+  "freeze_state": "frozen_before_ground_truth",
+  "validation_partition_id": "ink9um-pherc0814-46527-top12-v1",
+  "method_source_sha256": "d43326870c5edb1e80a74861a49bc82e47c87f4d065ffe167ad5b5e6224a6581",
+  "predictions": "results/ink9um_pherc0814_validation/inference/predictions.npz",
+  "inference_report": "results/ink9um_pherc0814_validation/inference/inference_report.json",
+  "chunk_audit_report": "results/ink9um_pherc0814_validation/chunk_audit_report.json",
+  "derived_root": "data/ink9um_pherc0814_validation/derived",
+  "bootstrap_units": "whole selected chunks",
+  "bootstrap_replicates": 2000,
+  "seed": 0,
+  "abstention_fraction": 0.20,
+  "raw_baselines": ["depth_std17", "depth_max17", "central_slice"],
+  "go_criteria": {
+    "ensemble_ap_gain_over_best_raw_min": 0.05,
+    "ensemble_ap_gain_ci95_lower_gt": 0.0,
+    "positive_to_negative_control_score_margin_min": 0.10,
+    "abstention_ap_gain_min": 0.05
+  },
+  "output_report": "results/ink9um_pherc0814_validation/evaluation_report.json",
+  "interpretation": "Locked cross-scroll method confirmation. Upstream checkpoint selection used this online-validation case, so residual upstream leakage remains explicit."
+}

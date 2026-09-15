@@ -1,0 +1,29 @@
+{
+  "schema_version": "inksurf-evidence-preflight/1.0",
+  "experiment_id": "inksurf-evidence-phase0-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "catalog": {
+    "url": "https://raw.githubusercontent.com/ScrollPrize/villa/2c477013ed05d0823f193d8eeccf25e93293503f/scrollprize.org/static/data_browser/index.json",
+    "sha256": "b464f82279ed5cecba4a3a4c9838aa56e212ab23918114b9f19252ea5564fafc",
+    "max_bytes": 1048576,
+    "upstream_commit": "2c477013ed05d0823f193d8eeccf25e93293503f"
+  },
+  "development_targets": [
+    "PHercParis4",
+    "PHerc1667",
+    "PHerc0139"
+  ],
+  "gate": {
+    "minimum_scans": 2,
+    "minimum_segments": 1,
+    "minimum_ink_segments": 1,
+    "minimum_qualified_pairs": 1,
+    "minimum_pair_dimensions": 1
+  },
+  "outputs": {
+    "report_json": "results/evidence_preflight_phase0/report.json",
+    "pairs_csv": "results/evidence_preflight_phase0/scan_pairs.csv",
+    "artifact_pairs_csv": "results/evidence_preflight_phase0/artifact_pairs.csv"
+  }
+}

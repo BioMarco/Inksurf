@@ -1,0 +1,18 @@
+{
+  "experiment_id": "track_a_dev_ct_support_preflight_20260911_v1",
+  "track": "A",
+  "regime": "DEV",
+  "surface_id": "0139/w035_2026031718",
+  "candidate_package": "results/track_a_dev_candidate_package_g1/candidate_package.json",
+  "bucket_id": "scrollprize/datasets",
+  "remote_array_prefix": "ink/0139/w035_2026031718/w035_2026031718.zarr/0",
+  "local_zarray_metadata": "data/track_a_geometry_metadata/0139_w035_dev/surface_volume_zarray.bin",
+  "depth_range_half_open": [0, 65],
+  "stage": "G2_CT",
+  "maximum_download_bytes": 67108864,
+  "minimum_free_space_multiplier": 2,
+  "outputs": {
+    "manifest_json": "results/track_a_dev_geometry/ct_support_chunk_manifest.json",
+    "report_json": "results/track_a_dev_geometry/ct_support_preflight.json"
+  }
+}

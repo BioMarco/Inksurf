@@ -1,0 +1,81 @@
+{
+  "experiment_id": "track_a_benchmark_preflight_20260910_v1",
+  "bucket_id": "scrollprize/datasets",
+  "dataset_url": "https://huggingface.co/buckets/scrollprize/datasets/tree/ink",
+  "annotation_semantics": {
+    "name": "reference ink annotations",
+    "warning": "The public ink labels are not absolute physical ground truth: the official description says they start from hand annotation and are refined through iterative pseudo-labelling.",
+    "use": "Evaluate only inside the published supervision mask; report this limitation with every score."
+  },
+  "split_policy": {
+    "unit": "entire published surface/wrap directory",
+    "development": "Only 0139/w035 may be used for parameter selection, thresholds or ablations.",
+    "validation": "0139/w039 and Paris4/w02 remain unopened and immutable until code, metrics and DEV choices are frozen.",
+    "leakage_controls": [
+      "No random pixel or overlapping-tile split.",
+      "No threshold, morphology or ranking-weight selection on VALIDATION.",
+      "Report 0139/w039 and the external Paris4 holdout separately; do not pool away a domain failure."
+    ]
+  },
+  "evaluation": {
+    "primary_unit": "non-overlapping 512x512 surface regions clipped by the supervision mask",
+    "primary_metrics": ["average_precision", "top_1_percent_enrichment", "precision_at_fixed_review_area"],
+    "structural_metrics": ["component_recall", "component_fragmentation", "skeleton_length_precision", "threshold_stability"],
+    "secondary_metrics": ["pixel_average_precision", "roc_auc"],
+    "baselines": ["raw_prediction", "morphology_only", "surface_support_only"],
+    "uncertainty": "surface-block bootstrap confidence intervals; blocks are never split between resamples",
+    "freeze_gate": "Validation access is allowed only after implementation tests, DEV ablations, score direction, thresholds and report schema are frozen."
+  },
+  "surfaces": [
+    {
+      "key": "0139_w035_dev",
+      "scroll_id": "0139",
+      "regime": "DEV",
+      "external_domain": false,
+      "prefix": "ink/0139/w035_2026031718",
+      "files": {
+        "prediction": "preds/tile256_stride128_layers1_63_hann_rev_ep29.tif",
+        "ink_labels": "w035_2026031718_inklabels.tif",
+        "supervision_mask": "w035_2026031718_supervision_mask.tif",
+        "x": "x.tif",
+        "y": "y.tif",
+        "z": "z.tif"
+      }
+    },
+    {
+      "key": "0139_w039_validation",
+      "scroll_id": "0139",
+      "regime": "VALIDATION",
+      "external_domain": false,
+      "prefix": "ink/0139/w039_2026030210",
+      "files": {
+        "prediction": "preds/tile256_stride128_layers1_63_hann_rev_ep29.tif",
+        "ink_labels": "w039_2026030210_inklabels.tif",
+        "supervision_mask": "w039_2026030210_supervision_mask.tif",
+        "x": "x.tif",
+        "y": "y.tif",
+        "z": "z.tif"
+      }
+    },
+    {
+      "key": "paris4_w02_external_validation",
+      "scroll_id": "phercparis4",
+      "regime": "VALIDATION",
+      "external_domain": true,
+      "prefix": "ink/phercparis4/w02_20231031143852",
+      "files": {
+        "prediction": "preds/tile256_stride128_layers1_63_hann_fwd.tif",
+        "ink_labels": "w02_20231031143852_inklabels.tif",
+        "supervision_mask": "w02_20231031143852_supervision_mask.tif",
+        "x": "x.tif",
+        "y": "y.tif",
+        "z": "z.tif"
+      }
+    }
+  ],
+  "outputs": {
+    "directory": "results/track_a_benchmark_preflight",
+    "manifest_json": "benchmark_manifest.json",
+    "files_csv": "benchmark_files.csv"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "checkpoint_sha256": "36dd0de84b7b7aa6590184192c7415466cd8a1ba7c1e59f42c6373846373c3e0",
+  "device": "Tesla T4",
+  "elapsed_seconds": 42.41058764000002,
+  "experiment_id": "pherc0139-cross-scan-inference-dev-20260915",
+  "geometry_tier": "G2",
+  "interpretation": "Cross-acquisition repeatability pilot only; no ink or letter claim. Shared model errors remain a dependency.",
+  "layers": [
+    24,
+    86
+  ],
+  "max_clip_value": 200,
+  "regime": "DEV",
+  "results": [
+    {
+      "independence_group": "acquisition-20250820105138",
+      "input_sha256": "71a636abe4f2717257e8f686ab88e6183014bc33c093cf9866bf6a153549879c",
+      "output_sha256": "b51eda2b3f149c2942ea16b4be84b046842f1ac060984813545983bc21e32c72",
+      "prediction_max": 0.9324493408203125,
+      "prediction_mean": 0.19804798066616058,
+      "prediction_min": 0.0,
+      "tile_seconds": [
+        1.509729311000001,
+        0.20575395899999194,
+        0.1929552550000153,
+        0.19424440099999174,
+        0.190754615000003,
+        0.19499778699997705,
+        0.19461208699999588,
+        0.19848817000001873,
+        0.19411856400000715
+      ],
+      "tiles": 9,
+      "valid_fraction": 0.9922027587890625,
+      "volume_id": "20250820105138"
+    },
+    {
+      "independence_group": "acquisition-20260319133554",
+      "input_sha256": "bf54383a694c3594ed742e695b99d6b0af480e679c1b0f7555c0a577f3302fd5",
+      "output_sha256": "369bebd75938f79769a0255772e9217333b598796b23fa5199487a2f8e7de017",
+      "prediction_max": 0.9354248642921448,
+      "prediction_mean": 0.20075517892837524,
+      "prediction_min": 0.0,
+      "tile_seconds": [
+        0.1974425520000409,
+        0.19410614800000303,
+        0.19372253799997452,
+        0.19470925299998498,
+        0.19324341800000866,
+        0.19513942300000053,
+        0.19408771299998762,
+        0.19392951100002165,
+        0.19407230000001618
+      ],
+      "tiles": 9,
+      "valid_fraction": 0.9922027587890625,
+      "volume_id": "20260319133554"
+    }
+  ],
+  "reverse_layers": true,
+  "schema_version": "inksurf-cross-scan-inference/1.0",
+  "status": "complete",
+  "stride": 128,
+  "tile_size": 256,
+  "track": "A",
+  "villa_commit": "76370e1a6908f0bc2eb7f92bc0397336ecbe3d96"
+}

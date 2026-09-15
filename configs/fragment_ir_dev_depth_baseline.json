@@ -1,0 +1,20 @@
+{
+  "experiment_id": "fragment_ir_dev_depth_baseline_20260911_v1",
+  "fragment": "train/3",
+  "regime": "DEV",
+  "layer_directory": "data/fragment_ir_benchmark/train/3/surface_volume",
+  "layer_range_inclusive": [24, 39],
+  "inklabels": "data/fragment_ir_benchmark/train/3/inklabels.png",
+  "mask": "data/fragment_ir_benchmark/train/3/mask.png",
+  "band_rows": 256,
+  "region_size": 256,
+  "min_valid_fraction": 0.5,
+  "positive_region_min_ink_pixels": 128,
+  "pixel_histogram_bins": 4096,
+  "central_layer_offsets": [6, 9],
+  "map_directory": "data/fragment_ir_benchmark/derived/train3_depth_baseline",
+  "outputs": {
+    "report_json": "results/fragment_ir_depth_baseline/depth_baseline_report.json",
+    "regions_csv": "results/fragment_ir_depth_baseline/depth_regions.csv"
+  }
+}

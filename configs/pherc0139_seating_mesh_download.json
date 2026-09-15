@@ -1,0 +1,32 @@
+{
+  "schema_version": "inksurf-bounded-http-download/1.0",
+  "experiment_id": "pherc0139-seating-mesh-20260914",
+  "track": "A",
+  "regime": "DEV",
+  "allowed_hosts": [
+    "vesuvius-challenge-open-data.s3.amazonaws.com"
+  ],
+  "max_total_bytes": 24000000,
+  "output_root": "data/seating_reproduction/pherc0139",
+  "report_json": "results/seating_reproduction_pherc0139/mesh_download_report.json",
+  "files": [
+    {
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000000-w025_2025010863/mesh/20250108000000-on-20260319133554-2.403um.tifxyz/x.tif",
+      "destination": "mesh/x.tif",
+      "size_bytes": 7554170,
+      "sha256": "9a53bb46bd36acdccddaa1d2cc853498ee5d53987bec4c193be5609b1ecb5b54"
+    },
+    {
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000000-w025_2025010863/mesh/20250108000000-on-20260319133554-2.403um.tifxyz/y.tif",
+      "destination": "mesh/y.tif",
+      "size_bytes": 7554170,
+      "sha256": "c63bc56a8bee114bb7265aac10807bf54e0d29acc5b9f2f8b6b3249e99174568"
+    },
+    {
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000000-w025_2025010863/mesh/20250108000000-on-20260319133554-2.403um.tifxyz/z.tif",
+      "destination": "mesh/z.tif",
+      "size_bytes": 7554170,
+      "sha256": "be4d1a378f059be75195050d97f04d79812080b4ebe43de70b46a360e18ed049"
+    }
+  ]
+}

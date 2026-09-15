@@ -1,0 +1,17 @@
+{
+  "experiment_id": "track_a_dev_input_audit_20260910_256_v1",
+  "surface_key": "0139_w035_dev",
+  "inputs": {
+    "prediction": "data/track_a_benchmark/0139_w035_dev/prediction.tif",
+    "ink_labels": "data/track_a_benchmark/0139_w035_dev/ink_labels.tif",
+    "supervision_mask": "data/track_a_benchmark/0139_w035_dev/supervision_mask.tif"
+  },
+  "region_size": 256,
+  "min_valid_fraction": 0.5,
+  "diagnostic_positive_pixel_thresholds": [1, 16, 32, 64, 128, 256],
+  "outputs": {
+    "directory": "results/track_a_dev_input_audit_256",
+    "report_json": "input_audit_report.json",
+    "regions_csv": "regions.csv"
+  }
+}

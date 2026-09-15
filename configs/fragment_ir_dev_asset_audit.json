@@ -1,0 +1,11 @@
+{
+  "experiment_id": "fragment_ir_dev_asset_audit_20260910_v1",
+  "fragment": "train/3",
+  "regime": "DEV",
+  "inputs": {
+    "ir": "data/fragment_ir_benchmark/train/3/ir.png",
+    "inklabels": "data/fragment_ir_benchmark/train/3/inklabels.png",
+    "mask": "data/fragment_ir_benchmark/train/3/mask.png"
+  },
+  "output_report": "results/fragment_ir_preflight/dev_asset_audit_report.json"
+}

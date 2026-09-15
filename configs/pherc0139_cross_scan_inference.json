@@ -1,0 +1,39 @@
+{
+  "schema_version": "inksurf-cross-scan-inference/1.0",
+  "experiment_id": "pherc0139-cross-scan-inference-dev-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G2",
+  "surface_id": "PHerc0139-20250108000000-on-20260319133554-2.403um",
+  "input_shape_zyx": [109, 512, 512],
+  "inputs": [
+    {
+      "volume_id": "20250820105138",
+      "path": "data/cross_scan_render/pherc0139/renders/20250820105138.npy",
+      "sha256": "71a636abe4f2717257e8f686ab88e6183014bc33c093cf9866bf6a153549879c",
+      "independence_group": "acquisition-20250820105138"
+    },
+    {
+      "volume_id": "20260319133554",
+      "path": "data/cross_scan_render/pherc0139/renders/20260319133554.npy",
+      "sha256": "bf54383a694c3594ed742e695b99d6b0af480e679c1b0f7555c0a577f3302fd5",
+      "independence_group": "acquisition-20260319133554"
+    }
+  ],
+  "model": {
+    "checkpoint_sha256": "36dd0de84b7b7aa6590184192c7415466cd8a1ba7c1e59f42c6373846373c3e0",
+    "villa_commit": "76370e1a6908f0bc2eb7f92bc0397336ecbe3d96",
+    "loader_sha256": "7b2b2cfc6c7fb963a3da1bf128543ceadf8ad887f32a319bc0a38fb378f9e2ca"
+  },
+  "inference": {
+    "layer_start": 24,
+    "layer_end": 86,
+    "reverse_layers": true,
+    "tile_size": 256,
+    "stride": 128,
+    "max_clip_value": 200,
+    "blend_window": "hann",
+    "autocast": true
+  },
+  "interpretation": "Cross-acquisition repeatability pilot only. No ink or letter claim. The shared checkpoint is a residual dependency between both outputs."
+}

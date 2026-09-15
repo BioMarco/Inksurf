@@ -1,0 +1,70 @@
+{
+  "experiment_id": "structural_roi_preflight_20260910_v1",
+  "gp_chunk_mask": {
+    "path": "results/grand_prize_chunk_coords.npy",
+    "coordinate_order": "Z,Y,X",
+    "frame": "PHercParis4-20230205180739_masked level 0 chunk indices",
+    "chunk_shape_zyx_l0": [128, 128, 128],
+    "expected_sha256": "927268c7f787cdaa49cb9a112b5aec0d48a9148d067f806c90d4b018b5f3e106"
+  },
+  "transform": {
+    "source_frame": "PHercParis4-20230205180739_masked level 0 Z,Y,X",
+    "destination_frame": "PHercParis4-20260411134726 level 0 Z,Y,X",
+    "matrix_zyx": [
+      [3.26113192, -0.0430053155, 0.0234621175, 29400.7294],
+      [0.0469460556, 2.52585108, -2.05228272, 15821.0804],
+      [-0.00893849999, -2.05174152, -2.52748174, 33653.8570],
+      [0.0, 0.0, 0.0, 1.0]
+    ]
+  },
+  "target_arrays": {
+    "level": 3,
+    "level0_to_level3_scale": 8,
+    "shape_zyx_l3": [9473, 4087, 4087],
+    "chunk_shape_zyx_l3": [256, 256, 256],
+    "dtype": "uint8",
+    "array_count_for_budget": 2,
+    "arrays_for_budget": ["Ink3D", "Surface Prediction"],
+    "ct_budget": "pending: resolve CT level, shape, chunk shape, dtype, and ROI coverage before any CT read"
+  },
+  "proposal": {
+    "method": "GP occupancy density only; deterministic bin count plus spatial non-maximum suppression",
+    "candidate_count": 5,
+    "density_bin_shape_zyx_l3": [512, 512, 512],
+    "minimum_separation_l3_voxels": 768,
+    "provisional_roi_shape_zyx_l3": [512, 512, 512]
+  },
+  "freeze_gate": {
+    "required_before_data_scan": [
+      "resolve a published TIFXYZ/mesh and immutable URL/version",
+      "verify finite XYZ coverage and recompute bounds from pixels rather than trusting meta.json alone",
+      "declare TIFXYZ XYZ level-0 frame and conversion to array Z,Y,X level 3",
+      "verify local CT support and reject sheet jumps",
+      "freeze a UV rectangle of 4 cm^2 or smaller without consulting the Grand Prize banner",
+      "write cache manifest with chunk keys, expected bytes, read verification, and resume state"
+    ]
+  },
+  "evaluation": {
+    "blind_until_freeze": true,
+    "baselines": ["raw Ink3D", "Surface-only", "matched morphology-only"],
+    "metrics": [
+      "average precision at region level",
+      "top-k enrichment with bootstrap confidence interval",
+      "component continuity and skeleton length",
+      "stability to score threshold and surface-offset perturbations",
+      "human review yield and time per accepted candidate"
+    ],
+    "go_criteria": {
+      "top_1_percent_enrichment_vs_raw_ink3d": 2.0,
+      "minimum_absolute_ap_gain_vs_raw_ink3d": 0.10,
+      "continuity_beyond_patch_scale_required": true,
+      "perturbation_stability_required": true,
+      "held_out_whole_regions_with_buffer_required": true
+    }
+  },
+  "outputs": {
+    "directory": "results/structural_roi_preflight",
+    "report_json": "preflight_report.json",
+    "candidates_csv": "candidate_centers.csv"
+  }
+}

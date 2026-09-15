@@ -1,0 +1,146 @@
+{
+  "abstention_ap_gain": -0.07472711762182471,
+  "abstention_fraction_target": 0.2,
+  "best_raw_baseline": "central_slice",
+  "bootstrap_replicates": 2000,
+  "disagreement_cutoff": 0.1510501652956009,
+  "ensemble_ap_gain_over_best_raw": 0.2855638835082234,
+  "ensemble_metrics": {
+    "average_precision": 0.5971800685533042,
+    "mean_margin": 0.1241077184677124,
+    "negative_mean": 0.3002214729785919,
+    "positive_mean": 0.4243291914463043
+  },
+  "experiment_id": "ink9um-pherc0814-46527-locked-evaluation-20260915",
+  "geometry_tier": "G1",
+  "go_checks": {
+    "abstention_ap_gain": false,
+    "ensemble_ap_gain": true,
+    "positive_to_negative_control_score_margin": true,
+    "regional_ap_gain_ci95": false
+  },
+  "interpretation": "Bounded selected DEV stress test using transferred/pseudo labels; correlated seed replicas form one model family and are not independent confirmations.",
+  "model_metrics": {
+    "seed42": {
+      "average_precision": 0.5595434765023087,
+      "mean_margin": 0.1270478367805481,
+      "negative_mean": 0.3056151568889618,
+      "positive_mean": 0.4326629936695099
+    },
+    "seed43": {
+      "average_precision": 0.5379219131685061,
+      "mean_margin": 0.12116760015487671,
+      "negative_mean": 0.29482772946357727,
+      "positive_mean": 0.415995329618454
+    }
+  },
+  "negative_control_mean_score": 0.3171531558036804,
+  "negative_only_chunks": 5,
+  "pixels": 106207,
+  "positive_label_mean_score": 0.4243291914463043,
+  "positive_prevalence": 0.29882211153690436,
+  "positive_to_negative_control_score_margin": 0.1071760356426239,
+  "raw_baselines": {
+    "central_slice": {
+      "average_precision": 0.31161618504508076,
+      "mean_margin": 0.93341064453125,
+      "negative_mean": 104.41832733154297,
+      "positive_mean": 105.35173797607422
+    },
+    "depth_max17": {
+      "average_precision": 0.2950365682949179,
+      "mean_margin": 0.992767333984375,
+      "negative_mean": 153.49624633789062,
+      "positive_mean": 154.489013671875
+    },
+    "depth_std17": {
+      "average_precision": 0.29131015449542985,
+      "mean_margin": 0.2547454833984375,
+      "negative_mean": 39.566001892089844,
+      "positive_mean": 39.82074737548828
+    }
+  },
+  "regime": "VALIDATION",
+  "regional_ap": [
+    {
+      "ap_gain": 0.02522068731489263,
+      "baseline_ap": 0.14080473907280522,
+      "chunk_yx": [
+        13,
+        4
+      ],
+      "ensemble_ap": 0.16602542638769785
+    },
+    {
+      "ap_gain": 0.8012242897558657,
+      "baseline_ap": 0.1179753355594109,
+      "chunk_yx": [
+        13,
+        5
+      ],
+      "ensemble_ap": 0.9191996253152765
+    },
+    {
+      "ap_gain": -0.16511826187375944,
+      "baseline_ap": 0.723733752072862,
+      "chunk_yx": [
+        14,
+        2
+      ],
+      "ensemble_ap": 0.5586154901991025
+    },
+    {
+      "ap_gain": -0.0435375317071694,
+      "baseline_ap": 0.5232695841644588,
+      "chunk_yx": [
+        14,
+        6
+      ],
+      "ensemble_ap": 0.4797320524572894
+    },
+    {
+      "ap_gain": 0.30951841302265803,
+      "baseline_ap": 0.6234135902080346,
+      "chunk_yx": [
+        15,
+        2
+      ],
+      "ensemble_ap": 0.9329320032306926
+    },
+    {
+      "ap_gain": -0.04888816456307876,
+      "baseline_ap": 0.6229081006193884,
+      "chunk_yx": [
+        15,
+        3
+      ],
+      "ensemble_ap": 0.5740199360563096
+    },
+    {
+      "ap_gain": 0.28073404827785753,
+      "baseline_ap": 0.7113264904826823,
+      "chunk_yx": [
+        15,
+        5
+      ],
+      "ensemble_ap": 0.9920605387605398
+    }
+  ],
+  "regional_mean_ap_gain": 0.1655933543181809,
+  "regional_mean_ap_gain_ci95_chunk_bootstrap": [
+    -0.04106931095291861,
+    0.40776588257520596
+  ],
+  "retained_ensemble_metrics": {
+    "average_precision": 0.5224529509314795,
+    "mean_margin": 0.14913031458854675,
+    "negative_mean": 0.2882043719291687,
+    "positive_mean": 0.43733468651771545
+  },
+  "retained_fraction": 0.7999943506548532,
+  "schema_version": "inksurf-ink9um-validation-evaluation/1.0",
+  "seed_prediction_mae": 0.07777208834886551,
+  "seed_prediction_pearson_r": 0.6297265103808731,
+  "status": "NO_GO_BOUNDED_DEV",
+  "track": "A"
+}

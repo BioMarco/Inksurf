@@ -1,0 +1,23 @@
+{
+  "experiment_id": "fragment_ir_dev_depthmax_structure_20260911_v1",
+  "regions_csv": "results/fragment_ir_depth_baseline/depth_regions.csv",
+  "prediction_npy": "data/fragment_ir_benchmark/derived/train3_depth_baseline/depth_max.npy",
+  "supervision_mask_png": "data/fragment_ir_benchmark/train/3/mask.png",
+  "output_regions_csv": "results/fragment_ir_depth_structure/depthmax_structural_regions.csv",
+  "output_report": "results/fragment_ir_depth_structure/depthmax_structural_report.json",
+  "score_prefix": "depthmax_structure",
+  "score_inputs": ["depth_max_map", "fragment_mask"],
+  "halo": 32,
+  "parameters": {
+    "intensity_low": 26541.0,
+    "intensity_high": 55943.0,
+    "gradient_sigma": 1.2,
+    "tensor_sigma": 3.0,
+    "contrast_sigma": 8.0,
+    "component_threshold": 48543.0,
+    "min_component_pixels": 16,
+    "closing_radius": 1,
+    "min_skeleton_pixels": 8
+  },
+  "parameter_source": "label-blind stride-8 mask-only p05/p95/p99 quantiles"
+}

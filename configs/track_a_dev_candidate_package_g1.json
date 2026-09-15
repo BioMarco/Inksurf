@@ -1,0 +1,56 @@
+{
+  "experiment_id": "track_a_dev_candidate_package_g1_20260911_v1",
+  "schema_version": "inksurf-candidate-package/1.0",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G1",
+  "surface_id": "0139/w035_2026031718",
+  "coordinate_frame": {
+    "name": "PHerc0139 parent-volume voxel frame",
+    "axes": "X,Y,Z",
+    "surface_raster_axes": "Y,X",
+    "bounds_convention": "half-open",
+    "level": "published TIFXYZ native frame"
+  },
+  "candidate_table": "results/track_a_dev_structural_features/structural_regions.csv",
+  "eligibility_field": "eligible",
+  "ranking_score": "prediction_mean",
+  "inksurf_score": "inksurf_mean",
+  "candidate_limit": 20,
+  "geometry": {
+    "audit_report": "results/track_a_dev_geometry/tifxyz_geometry_audit.json",
+    "coordinate_files": {
+      "x": "data/track_a_benchmark/0139_w035_dev/x.tif",
+      "y": "data/track_a_benchmark/0139_w035_dev/y.tif",
+      "z": "data/track_a_benchmark/0139_w035_dev/z.tif"
+    }
+  },
+  "provenance_files": [
+    "configs/track_a_dev_raw_baseline.json",
+    "configs/track_a_dev_structural_features.json",
+    "results/track_a_benchmark_preflight/benchmark_manifest.json",
+    "results/track_a_benchmark_preflight/dev_geometry_download_report.json",
+    "results/track_a_dev_geometry/tifxyz_geometry_audit.json",
+    "results/track_a_dev_structural_features/structural_regions.csv"
+  ],
+  "available_artifacts": {
+    "prediction": "data/track_a_benchmark/0139_w035_dev/prediction.tif",
+    "supervision_mask": "data/track_a_benchmark/0139_w035_dev/supervision_mask.tif",
+    "tifxyz_x": "data/track_a_benchmark/0139_w035_dev/x.tif",
+    "tifxyz_y": "data/track_a_benchmark/0139_w035_dev/y.tif",
+    "tifxyz_z": "data/track_a_benchmark/0139_w035_dev/z.tif"
+  },
+  "missing_submission_artifacts": [
+    "component mask",
+    "component skeleton",
+    "parent-volume bounds verification",
+    "G2 CT-support verification",
+    "self-intersection/winding QA",
+    "human review record"
+  ],
+  "outputs": {
+    "package_json": "results/track_a_dev_candidate_package_g1/candidate_package.json",
+    "candidates_csv": "results/track_a_dev_candidate_package_g1/candidates.csv",
+    "validation_report_json": "results/track_a_dev_candidate_package_g1/validation_report.json"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "discovery_files_accessed": 0,
+  "experiment_id": "ink9um-pherc0139-w016-dev-preflight-20260915",
+  "geometry_tier": "G1",
+  "limitations": [
+    "Official online-validation data is classified DEV, not confirmatory validation.",
+    "Labels are transferred annotations/pseudo-labels, not independent IR ground truth.",
+    "Compressed validation-chunk size is a deterministic coverage proxy, not an ink score."
+  ],
+  "listed_annotation_objects": 9414,
+  "metadata_bytes_transferred": 2900698,
+  "planned_annotation_bytes": 5242,
+  "planned_source_raw_bytes": 21430272,
+  "regime": "DEV",
+  "schema_version": "inksurf-ink9um-validation-preflight/1.0",
+  "selected_chunk_count": 12,
+  "status": "bounded_download_ready",
+  "track": "A",
+  "validation_files_accessed": 0
+}

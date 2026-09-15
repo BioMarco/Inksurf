@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fragment_ir_dev_local_pairs_20260911_v1",
+  "regime": "DEV",
+  "inklabels": "data/fragment_ir_benchmark/train/3/inklabels.png",
+  "mask": "data/fragment_ir_benchmark/train/3/mask.png",
+  "block_size": 1024,
+  "max_pairs_per_block": 500,
+  "control_exclusion_radius": 3,
+  "minimum_pair_distance": 8,
+  "maximum_pair_distance": 64,
+  "attempts_per_ink": 96,
+  "seed": 20260911,
+  "outputs": {
+    "pairs_csv": "results/fragment_ir_profile_model/local_pairs.csv",
+    "report_json": "results/fragment_ir_profile_model/local_pairs_report.json"
+  }
+}

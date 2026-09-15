@@ -1,0 +1,30 @@
+{
+  "schema_version": "inksurf-ink9um-validation-inference/1.0",
+  "experiment_id": "ink9um-pherc0139-w016-bounded-dev-inference-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G1",
+  "input_report": "results/ink9um_validation_preflight/chunk_audit_report.json",
+  "villa_commit": "3ea17f54a9b3d5fd1aaf73e1d2c8386dbaa9f30e",
+  "models": [
+    {
+      "id": "hybrid_3d2d-seed42-step075000",
+      "url": "https://huggingface.co/scrollprize/ink_9um/resolve/main/hybrid_3d2d-seed42/step-075000.pth",
+      "sha256": "e635558ae6a1a807a7e5ec1e83adfd45bc3c0ac53883ea43f1d4e085d62a9cab",
+      "bytes": 138360039,
+      "independence_group": "ink9um-hybrid-replicates"
+    },
+    {
+      "id": "hybrid_3d2d-seed43-step075000",
+      "url": "https://huggingface.co/scrollprize/ink_9um/resolve/main/hybrid_3d2d-seed43/step-075000.pth",
+      "sha256": "2aeaa85a35ef28d7bc7bf3e848c4a6a91385e9132710927fdba41133c4ecb28f",
+      "bytes": 138360231,
+      "independence_group": "ink9um-hybrid-replicates"
+    }
+  ],
+  "input_depth": 17,
+  "input_crop_from_21": [2, 19],
+  "normalization": "official robust_mad p01-p99 per patch",
+  "batch_size": 2,
+  "interpretation": "Replicate stability and bounded labeled DEV benchmark only; the two seeds are one correlated model family."
+}

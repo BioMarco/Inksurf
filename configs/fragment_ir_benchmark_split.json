@@ -1,0 +1,43 @@
+{
+  "experiment_id": "fragment_ir_split_20260910_v1",
+  "source_manifest_sha256": "112e8fecd80a34736f21c2a8f356568cdb759f722ffb6cc50c809dbbc77586df",
+  "assignments": [
+    {
+      "fragment": "train/3",
+      "regime": "DEV",
+      "surface_volume_bytes": 5190118245,
+      "status": "lightweight_assets_available_volume_locked"
+    },
+    {
+      "fragment": "train/1",
+      "regime": "VALIDATION",
+      "surface_volume_bytes": 6732161910,
+      "status": "locked_not_downloaded_not_inspected"
+    },
+    {
+      "fragment": "train/2",
+      "regime": "VALIDATION_SECONDARY",
+      "surface_volume_bytes": 18326629425,
+      "status": "locked_not_downloaded_not_inspected"
+    }
+  ],
+  "excluded": [
+    {
+      "fragment": "test/a",
+      "reason": "hidden competition labels"
+    },
+    {
+      "fragment": "test/b",
+      "reason": "hidden competition labels"
+    }
+  ],
+  "frozen_primary_metrics": [
+    "pixel_f0_5",
+    "pixel_average_precision",
+    "region_average_precision",
+    "review_enrichment_top_1pct",
+    "review_enrichment_top_5pct",
+    "review_enrichment_top_10pct"
+  ],
+  "rule": "A prediction used on VALIDATION must come from a model that did not train or pseudo-label on that fragment."
+}

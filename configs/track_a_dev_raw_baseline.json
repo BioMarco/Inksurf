@@ -1,0 +1,22 @@
+{
+  "experiment_id": "track_a_dev_raw_baseline_20260910_v1",
+  "regions_csv": "results/track_a_dev_input_audit_256/regions.csv",
+  "output_report": "results/track_a_dev_raw_baseline/raw_baseline_report.json",
+  "region_size": 256,
+  "positive_region_min_ink_pixels": 128,
+  "baseline_score": "prediction_max",
+  "review_baseline_score": "prediction_mean",
+  "score_columns": [
+    "prediction_mean",
+    "prediction_p95",
+    "prediction_p99",
+    "prediction_max"
+  ],
+  "review_fractions": [0.01, 0.05, 0.1],
+  "bootstrap": {
+    "method": "spatial block resampling",
+    "block_size": 1024,
+    "samples": 2000,
+    "seed": 20260910
+  }
+}
