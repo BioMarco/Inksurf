@@ -1,0 +1,75 @@
+{
+  "affine_source_um_to_target_um": [
+    [
+      1.0009622408547216,
+      -0.0008551133075846884,
+      -0.00056054378932755
+    ],
+    [
+      0.0011723419075971298,
+      1.001371614728164,
+      0.0018340316885760433
+    ],
+    [
+      0.00048473338023430346,
+      -0.001607761267196528,
+      1.0013802268462195
+    ],
+    [
+      -13820.956566742103,
+      -11099.017232724029,
+      -27446.988197241855
+    ]
+  ],
+  "coordinate_order": "X,Y,Z",
+  "coordinate_sets": [
+    {
+      "volume_id": "20260102150214",
+      "voxel_um": 2.399
+    },
+    {
+      "volume_id": "20260413113053",
+      "voxel_um": 1.129
+    }
+  ],
+  "download_report": "results/pherc0139_w045_cross_model/tifxyz_download.json",
+  "download_report_sha256": "cc00d19cae8aa85b53cf632c2d4966dfa8bcb9198d64145fb86bb55250bcc9b9",
+  "experiment_id": "pherc0139-w045-cross-tifxyz-registration-20260915",
+  "gates": {
+    "maximum_median_residual_um": 50.0,
+    "maximum_p90_residual_um": 150.0,
+    "passes": true
+  },
+  "geometry_tier": "G1",
+  "holdout_count": 4230,
+  "holdout_residual_um": {
+    "max": 26.593004646446776,
+    "min": 1.2471537190077957,
+    "p50": 9.606674691504,
+    "p90": 15.342393743114593,
+    "p95": 16.860987612017897,
+    "p99": 20.105451010377536
+  },
+  "limitation": "This tests shared normalized UV plus a global affine between scan frames; it does not prove local non-rigid registration or ink validity.",
+  "regime": "DEV",
+  "sample_stride_vertices": 8,
+  "schema_version": "inksurf-cross-tifxyz-registration/1.0",
+  "source_grid_shape_yx": [
+    1164,
+    1604
+  ],
+  "spatial_split": {
+    "block_vertices": 128,
+    "fold_count": 5,
+    "holdout_fold": 0
+  },
+  "status": "GO_UV_CORRESPONDENCE",
+  "target_grid_shape_yx": [
+    2476,
+    3412
+  ],
+  "threshold_note": "DEV operational gates frozen before coordinate arrays were loaded; 50 um median is conservative relative to the published 29 um community cross-scan MAD.",
+  "track": "A",
+  "train_count": 18096,
+  "valid_correspondence_count": 22326
+}

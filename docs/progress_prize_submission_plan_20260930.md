@@ -61,6 +61,13 @@ Next implementation sequence:
    dual-energy outputs;
 5. prepare the open-source walkthrough and submission draft for owner review.
 
+The first provenance-correct cross-model candidate has now been audited end to
+end. Its TIFXYZ correspondence passes, but it has zero labeled common-support
+pixels, so score comparison is blocked. The remaining bounded search is a
+metadata census of all `ink_9um` source declarations; if that finds no eligible
+pair, the cross-model confirmation route stops and the submission remains an
+auditor/validator contribution.
+
 ## Stop conditions
 
 - no G2 surface or reproducible seating;

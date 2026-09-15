@@ -44,6 +44,7 @@ result is preserved rather than retuned.
 | Geometry checks | TIFXYZ bounds, coordinates, CT support and surface seating utilities |
 | Bounded I/O | Chunk-aware plans, byte limits, manifests, hashes, resume and atomic output |
 | Physical burden | False-positive area and reviewable regions per negative cm² on G2/G3 surfaces |
+| Cross-model eligibility | Verifies label provenance, TIFXYZ correspondence and common raster support before score comparison |
 | Reproducibility | Frozen JSON configs, seeds, source versions and machine-readable reports |
 
 The historical threshold/component/skeleton micro-patch review path is closed
@@ -165,6 +166,7 @@ These experiments are receipts for specific claims, not a ladder in which every
 | PHerc0139 bounded labels | DEV / G1 | Ensemble AP `0.72371`; abstained AP `0.80921` | Promising development result |
 | PHerc0814 locked labels | VALIDATION / G1 | Ensemble AP `0.59718`; 2/4 gates passed | `NO-GO` for seed-disagreement abstention |
 | PHerc0139 physical burden | DEV / bounded G2 | Top-5% precision `0.9375`; false area `0.4216%` of negative area | Promising DEV diagnostic; pseudo-label reference |
+| PHerc0139-w045 cross-model eligibility | DEV / G1 | UV holdout residual p50 `9.61 µm`, but 0 labeled common-support pixels | `NO-GO`; score comparison prohibited |
 
 Detailed reports:
 
@@ -173,6 +175,7 @@ Detailed reports:
 - [bounded DEV benchmark](results/ink9um_validation_evaluation/report.md)
 - [locked PHerc0814 validation](results/ink9um_pherc0814_validation/report.md)
 - [bounded physical-area diagnostic](results/pherc0139_w016_physical_benchmark/report.md)
+- [cross-model eligibility audit](results/pherc0139_w045_cross_model/report.md)
 - [naive workflow versus InkSurf](docs/method_comparison.md)
 - [bounded real-data walkthrough](docs/real_data_walkthrough.md)
 - [Progress Prize submission draft](docs/progress_prize_submission_draft.md)
@@ -229,6 +232,12 @@ existing evaluation chunks. A second, metadata-only search inside the second
 render's nonblank coverage found no non-empty transferred-label chunk and is
 preserved as `NO_GO_NO_LABELED_OVERLAP`; no source, prediction or label pixels
 were downloaded by that failed preflight.
+
+The correctly provenance-matched `ink_9um` case maps to PHerc0139-w045. Its
+two TIFXYZ grids have strong spatial-holdout UV correspondence (median residual
+`9.61 µm`), but the second ink output overlaps zero supervised pixels even
+under a permissive support policy. The hash-bound decision is therefore
+`NO_GO_NO_LABELED_COMMON_SUPPORT`, and no score agreement was computed.
 
 Before submission:
 

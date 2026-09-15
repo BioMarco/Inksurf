@@ -44,7 +44,10 @@ def run(config_path: Path) -> dict:
         raise ValueError("VALIDATION chunk audit requires a frozen protocol")
     manifest = json.loads((root / cfg["manifest"]).read_text(encoding="utf-8"))
     download = json.loads((root / cfg["download_report"]).read_text(encoding="utf-8"))
-    indexed = {Path(item["destination"]).resolve(): item for item in download["files"]}
+    indexed = {
+        ((root / item["destination"]).resolve() if not Path(item["destination"]).is_absolute() else Path(item["destination"]).resolve()): item
+        for item in download["files"]
+    }
     cache = root / cfg["cache_root"]
     rows = []
     for entry in manifest["selected_chunks"]:
@@ -55,8 +58,12 @@ def run(config_path: Path) -> dict:
             raise RuntimeError(f"unverified source chunk {y},{x}")
         source = np.fromfile(source_path, dtype=np.uint8).reshape(109, 128, 128)
         pooled = pool_centered(source, 21, int(cfg["z_pool"]))
+        annotation_kinds = cfg.get("annotation_array_kinds", ["inklabels", "supervision_mask", "validation_mask"])
+        evaluation_mask_kind = cfg.get("evaluation_mask_kind", "validation_mask")
+        if "inklabels" not in annotation_kinds or evaluation_mask_kind not in annotation_kinds:
+            raise ValueError("inklabels and the evaluation mask must be declared annotation arrays")
         annotations = {}
-        for kind in ("inklabels", "supervision_mask", "validation_mask"):
+        for kind in annotation_kinds:
             path = cache / "annotations" / kind / f"0.{y}.{x}"
             recorded = indexed.get(path.resolve())
             if recorded is None or _sha256(path) != recorded["sha256"]:
@@ -64,8 +71,8 @@ def run(config_path: Path) -> dict:
             annotations[kind] = decode_annotation(path)
         plane = int(cfg["label_plane"])
         label = annotations["inklabels"][plane] > 0
-        validation = annotations["validation_mask"][plane] > 0
-        supervision = annotations["supervision_mask"][plane] > 0
+        validation = annotations[evaluation_mask_kind][plane] > 0
+        supervision = annotations.get("supervision_mask", annotations[evaluation_mask_kind])[plane] > 0
         out = root / cfg["derived_root"] / f"chunk_{y}_{x}.npz"
         atomic_npz(out, volume=pooled, inklabels=label, validation_mask=validation, supervision_mask=supervision)
         valid_count = int(validation.sum())
@@ -74,6 +81,7 @@ def run(config_path: Path) -> dict:
             "derived": str(out.relative_to(root)).replace("\\", "/"),
             "source_sha256": _sha256(source_path),
             "validation_pixels": valid_count,
+            "evaluation_mask_kind": evaluation_mask_kind,
             "ink_pixels_in_validation": int((label & validation).sum()),
             "ink_prevalence_in_validation": float((label & validation).sum() / valid_count) if valid_count else None,
             "supervision_pixels_in_validation": int((supervision & validation).sum()),
@@ -93,11 +101,15 @@ def run(config_path: Path) -> dict:
         "total_validation_pixels": total_valid,
         "total_ink_pixels_in_validation": total_ink,
         "ink_prevalence_in_validation": float(total_ink / total_valid) if total_valid else None,
+        "evaluation_mask_kind": cfg.get("evaluation_mask_kind", "validation_mask"),
         "visual_files_inspected": 0,
         "limitation": (
             "Locally locked validation with transferred/pseudo labels; upstream online-validation exposure prevents fully independent confirmation."
             if regime == "VALIDATION"
-            else "Transferred annotation/pseudo-label benchmark and official online-validation case; DEV evidence only."
+            else cfg.get(
+                "limitation",
+                "Transferred annotation/pseudo-label benchmark; DEV evidence only.",
+            )
         ),
     }
     _atomic_json(root / cfg["report_json"], report)

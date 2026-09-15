@@ -67,6 +67,9 @@ inksurf-roi-geometry-audit = "inksurf.roi_geometry_audit:main"
 inksurf-physical-benchmark = "inksurf.physical_benchmark:main"
 inksurf-remote-tiff-roi-plan = "inksurf.remote_tiff_roi_plan:main"
 inksurf-remote-tiff-roi-fetch = "inksurf.remote_tiff_roi_fetch:main"
+inksurf-cross-model-support-audit = "inksurf.cross_model_support_audit:main"
+inksurf-cross-tifxyz-registration = "inksurf.cross_tifxyz_registration:main"
+inksurf-cross-model-candidate-decision = "inksurf.cross_model_candidate_decision:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,0 +1,308 @@
+{
+  "center_supported_chunk_count": 0,
+  "chunks": [
+    {
+      "chunk_yx": [
+        7,
+        30
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        28,
+        21
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        5,
+        29
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        6,
+        31
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        6,
+        30
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        28,
+        23
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        28,
+        22
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        6,
+        29
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        7,
+        31
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        28,
+        20
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        5,
+        30
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        5,
+        31
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        },
+        "center": {
+          "eligible_ink_pixels": 0,
+          "eligible_pixels": 0,
+          "evaluation_coverage": 0.0
+        }
+      }
+    }
+  ],
+  "experiment_id": "pherc0139-w045-cross-model-common-support-audit-20260915",
+  "geometry_tier": "G1",
+  "interpretation_limit": "Support only. Normalized raster mapping is not G2 registration and no score agreement was measured.",
+  "minimum_supported_chunks": 4,
+  "regime": "DEV",
+  "roi_count": 12,
+  "schema_version": "inksurf-cross-model-support-audit/1.0",
+  "status": "NO_GO_INSUFFICIENT_COMMON_SUPPORT",
+  "threshold_note": "Operational DEV stop rule set after tile fetch; not a preregistered confirmatory gate.",
+  "totals": {
+    "all": {
+      "eligible_ink_pixels": 0,
+      "eligible_pixels": 0,
+      "ink_prevalence": null
+    },
+    "any": {
+      "eligible_ink_pixels": 0,
+      "eligible_pixels": 0,
+      "ink_prevalence": null
+    },
+    "center": {
+      "eligible_ink_pixels": 0,
+      "eligible_pixels": 0,
+      "ink_prevalence": null
+    }
+  },
+  "track": "A"
+}

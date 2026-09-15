@@ -2171,3 +2171,52 @@ Prize resta correttamente posizionato come validator/auditor, non detector
 confermato. Artefatti: report JSON/Markdown in
 `results/pherc0139_w029_overlap_preflight_v2/`. La suite completa conta 126
 test, tutti superati.
+
+## 49. Candidate decision cross-model PHerc0139-w045
+
+**Data:** 15 settembre 2026. **Track/regime/tier:** Track A / DEV / G1 per il
+confronto cross-scan; nessun claim d'inchiostro.
+
+Gli attributi ufficiali di `ink_9um` hanno corretto una falsa associazione per
+nome: la reference `pherc0139-w029` dichiara come sorgente il segmento
+`20260126000000-w045_2026012619`, non il segmento w029 corrente. Il preflight
+ora verifica obbligatoriamente `source_surface_volume` e livello dichiarati
+negli `.zattrs`, supporta supervision mask senza validation mask e annulla i
+manifest precedenti quando una selezione fallisce.
+
+Sul segmento w045 esistono due render ufficiali, da volumi e modelli distinti.
+La selezione esaustiva metadata-only ha trovato 12 chunk supervisionati che
+intersecano almeno una tile nonblank del secondo render. Sono stati verificati
+21.433.437 byte di source/annotazioni e 1.188.581 byte di sole tile TIFF. I 12
+chunk contengono 101.342 pixel supervisionati e 30.460 positivi trasferiti.
+
+**Registrazione verificata:** i TIFXYZ 2,399 e 1,129 µm, 123.783.643 byte
+complessivi verificati con SHA-256, contengono 22.326 corrispondenze UV valide.
+Un affine stimato su 18.096 punti e valutato su 4.230 punti in blocchi spaziali
+tenuti fuori produce residuo mediano `9,6067 µm`, p90 `15,3424 µm` e massimo
+`26,5930 µm`, superando i gate DEV congelati di 50/150 µm. Verdetto geometrico:
+`GO_UV_CORRESPONDENCE`. Questo non dimostra una registrazione locale non rigida
+G2 né validita dell'inchiostro.
+
+**Risultato negativo robusto:** il primo ink render è nonzero in tutte le 12
+ROI; il secondo è nonzero in sole 2. Dopo proiezione sulla griglia 128x128,
+nessun pixel del secondo render interseca la supervision mask, anche con la
+policy permissiva `any`. I pixel eleggibili comuni sono quindi zero per le
+policy `all`, `center` e `any`. Il decision audit legato agli hash restituisce
+`NO_GO_NO_LABELED_COMMON_SUPPORT`; nessun confronto di score è stato eseguito.
+
+**Interpretazione:** risultato robusto come audit di eleggibilità e artefatto
+metodologico evitato, non come valutazione dei modelli. La buona corrispondenza
+UV rende improbabile che lo zero dipenda da un semplice errore globale di scala
+o orientamento. Non è lecito spostare le ROI dopo aver visto le prediction.
+Questo pair non puo sostenere il benchmark etichettato InkSurf; resta inoltre
+non verificata l'indipendenza del training. Artefatti aggregati in
+`results/pherc0139_w045_supervision_preflight/` e
+`results/pherc0139_w045_cross_model/`. La suite completa conta 138 test, tutti
+superati.
+
+Prossimo passo piu informativo: censire automaticamente la provenienza di tutte
+le reference `ink_9um` tramite `.zattrs`, quindi incrociare gli esatti segmenti
+sorgente con render multipli e supporto etichettato. Se il censimento non trova
+un pair ammissibile, fermare la ricerca di conferma cross-model e finalizzare il
+Progress Prize come validator di provenance, registration e support eligibility.

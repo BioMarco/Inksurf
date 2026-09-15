@@ -1,0 +1,185 @@
+{
+  "chunks": [
+    {
+      "chunk_yx": [
+        7,
+        30
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_7_30.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 519,
+      "ink_prevalence_in_validation": 0.13604193971166448,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "1c9d4dc79b49fbadf4d6fa24c3186c922620512a3fbd0c23d3c056bed61ef506",
+      "supervision_pixels_in_validation": 3815,
+      "validation_pixels": 3815
+    },
+    {
+      "chunk_yx": [
+        28,
+        21
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_28_21.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "5263ca04fb9e59dded1ec03788523f6fe7cd1e78b02c6f4ae1f8b4e128e8b706",
+      "supervision_pixels_in_validation": 14625,
+      "validation_pixels": 14625
+    },
+    {
+      "chunk_yx": [
+        5,
+        29
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_5_29.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 2937,
+      "ink_prevalence_in_validation": 0.356995259511365,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "c35d5a828b2a0450904e957cbf2e2a20d4a4c320d0888019134c3bd311ad2d6c",
+      "supervision_pixels_in_validation": 8227,
+      "validation_pixels": 8227
+    },
+    {
+      "chunk_yx": [
+        6,
+        31
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_6_31.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 446,
+      "ink_prevalence_in_validation": 0.04959964412811388,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "b06b01e5b556ef10afece57ca083278aed824beccf084ec1171dfbae2c63ca28",
+      "supervision_pixels_in_validation": 8992,
+      "validation_pixels": 8992
+    },
+    {
+      "chunk_yx": [
+        6,
+        30
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_6_30.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 8965,
+      "ink_prevalence_in_validation": 0.6495906093761321,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "8b7a5995784b016182c04d5320d8fb68a12515f7e179d9c814b10acba172400e",
+      "supervision_pixels_in_validation": 13801,
+      "validation_pixels": 13801
+    },
+    {
+      "chunk_yx": [
+        28,
+        23
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_28_23.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "e62d0ed2862411f7fd9152e92f7a426b0bb0ff0771601144f77faaa360d044c2",
+      "supervision_pixels_in_validation": 3613,
+      "validation_pixels": 3613
+    },
+    {
+      "chunk_yx": [
+        28,
+        22
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_28_22.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 0.9999970935639881,
+      "source_sha256": "29e17476d5e1aa5648aa244a48d63c39f5bc4281a9304c9b9a58f34664955c6c",
+      "supervision_pixels_in_validation": 13559,
+      "validation_pixels": 13559
+    },
+    {
+      "chunk_yx": [
+        6,
+        29
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_6_29.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "9f84df5c6ce1b64e5573d4062c2cc57a9ff77d32ec24d82f89366ba75ca2102f",
+      "supervision_pixels_in_validation": 956,
+      "validation_pixels": 956
+    },
+    {
+      "chunk_yx": [
+        7,
+        31
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_7_31.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "26099de40382d9f518a92a4711bf0a7af78d2cd173d4391e373c83fa4b32bba6",
+      "supervision_pixels_in_validation": 316,
+      "validation_pixels": 316
+    },
+    {
+      "chunk_yx": [
+        28,
+        20
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_28_20.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "faf22d26fce6eb49b1701f8f4e3638d80cca940ee1666049742802264dd68b14",
+      "supervision_pixels_in_validation": 670,
+      "validation_pixels": 670
+    },
+    {
+      "chunk_yx": [
+        5,
+        30
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_5_30.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 9134,
+      "ink_prevalence_in_validation": 0.5574951171875,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "89114663493ee1190622c06565346d3f33c832f0234f1cef880c4178c1923487",
+      "supervision_pixels_in_validation": 16384,
+      "validation_pixels": 16384
+    },
+    {
+      "chunk_yx": [
+        5,
+        31
+      ],
+      "derived": "data/pherc0139_w045_supervision_pilot/derived/chunk_5_31.npz",
+      "evaluation_mask_kind": "supervision_mask",
+      "ink_pixels_in_validation": 8459,
+      "ink_prevalence_in_validation": 0.51629638671875,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "e3d264564b1319b65dc3ef33164adcc92721bcd022d07cca36b8d9975064a80b",
+      "supervision_pixels_in_validation": 16384,
+      "validation_pixels": 16384
+    }
+  ],
+  "evaluation_mask_kind": "supervision_mask",
+  "experiment_id": "pherc0139-w045-cross-model-supervision-chunk-audit-20260915",
+  "geometry_tier": "G1",
+  "ink_prevalence_in_validation": 0.30056639892640763,
+  "limitation": "Official training/supervision data with transferred annotations; DEV evidence only and not an independent reference.",
+  "preparation": "official level-2 XY; centered 84 Z planes; rounded 4x Z mean pooling; 21x128x128 uint8",
+  "regime": "DEV",
+  "schema_version": "inksurf-ink9um-chunk-audit/1.0",
+  "status": "bounded_chunks_ready_for_inference",
+  "total_ink_pixels_in_validation": 30460,
+  "total_validation_pixels": 101342,
+  "track": "A",
+  "visual_files_inspected": 0
+}

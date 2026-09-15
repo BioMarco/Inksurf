@@ -1,0 +1,34 @@
+{
+  "schema_version": "inksurf-cross-tifxyz-registration/1.0",
+  "experiment_id": "pherc0139-w045-cross-tifxyz-registration-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G1",
+  "download_report": "results/pherc0139_w045_cross_model/tifxyz_download.json",
+  "download_report_sha256": "cc00d19cae8aa85b53cf632c2d4966dfa8bcb9198d64145fb86bb55250bcc9b9",
+  "coordinate_sets": [
+    {
+      "volume_id": "20260102150214",
+      "voxel_um": 2.399,
+      "x": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260102150214/x.tif",
+      "y": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260102150214/y.tif",
+      "z": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260102150214/z.tif"
+    },
+    {
+      "volume_id": "20260413113053",
+      "voxel_um": 1.129,
+      "x": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260413113053/x.tif",
+      "y": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260413113053/y.tif",
+      "z": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260413113053/z.tif"
+    }
+  ],
+  "sample_stride_vertices": 8,
+  "spatial_block_vertices": 128,
+  "spatial_fold_count": 5,
+  "holdout_fold": 0,
+  "minimum_holdout_points": 1000,
+  "maximum_median_residual_um": 50.0,
+  "maximum_p90_residual_um": 150.0,
+  "threshold_note": "DEV operational gates frozen before coordinate arrays were loaded; 50 um median is conservative relative to the published 29 um community cross-scan MAD.",
+  "output_report": "results/pherc0139_w045_cross_model/cross_tifxyz_registration.json"
+}

@@ -21,6 +21,8 @@ data/ink_model_compatibility/
 data/cross_scan_render/
 data/ink9um_validation_pilot/
 data/ink9um_pherc0814_validation/
+data/pherc0139_w045_supervision_pilot/
+data/pherc0139_w045_supervision_8roi_pilot/
 results/ink_model_compatibility/kaggle_v1/
 
 # Data-bearing inference arrays and legacy visual crops stay local. Aggregate

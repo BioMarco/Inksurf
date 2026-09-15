@@ -1,0 +1,30 @@
+{
+  "schema_version": "inksurf-remote-tiff-roi-plan/1.0",
+  "experiment_id": "pherc0139-w045-cross-model-exhaustive-tiff-plan-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "roi_manifest": "results/pherc0139_w045_supervision_preflight/chunk_manifest.json",
+  "roi_manifest_sha256": "09cd5d7c62c35a5fdd539f9a8d37d3400e5a267ccccdd03ab2990ab1e1c47559",
+  "roi_list_key": "selected_chunks",
+  "source_canvas_shape_yx": [23280, 32080],
+  "chunk_level_to_canvas_scale": 4,
+  "chunk_pixels": 128,
+  "maximum_planned_bytes": 16777216,
+  "artifacts": [
+    {
+      "artifact_id": "volume-20260102150214-model-new-canon-autoresearch",
+      "url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/ink-detection/PHerc0139-20260126000000-2.399um-0.22m-78keV-volume-20260102150214-20260417190342-new_canon_autoresearch_recipe-tile256-stride128.tif",
+      "size_bytes": 69661736,
+      "etag": "76036e8a4842635173f921a83b608796-9",
+      "shape_yx": [23280, 32080]
+    },
+    {
+      "artifact_id": "volume-20260413113053-model-mrg20736-1um-s1z2",
+      "url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/ink-detection/PHerc0139-20260126000000-1.129um-0.22m-59keV-volume-20260413113053-L1-20260709123958-mrg20736-1um-s1z2-tile256-stride128.tif",
+      "size_bytes": 50049737,
+      "etag": "fe823af190af4c35df3d775b3bc63cca-6",
+      "shape_yx": [24760, 34120]
+    }
+  ],
+  "output_report": "results/pherc0139_w045_cross_model/tiff_roi_plan.json"
+}

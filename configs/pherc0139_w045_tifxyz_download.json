@@ -1,0 +1,22 @@
+{
+  "schema_version": "inksurf-bounded-http-download/1.0",
+  "experiment_id": "pherc0139-w045-cross-scan-tifxyz-download-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "allowed_hosts": ["vesuvius-challenge-open-data.s3.amazonaws.com"],
+  "max_total_bytes": 134217728,
+  "output_root": "data/pherc0139_w045_supervision_pilot/geometry",
+  "project_root_relative": "..",
+  "portable_report_paths": true,
+  "files": [
+    {"destination": "volume_20260102150214/meta.json", "size_bytes": 412, "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/mesh/20260126000000-on-20260102150214-2.399um.tifxyz/meta.json"},
+    {"destination": "volume_20260102150214/x.tif", "size_bytes": 7468358, "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/mesh/20260126000000-on-20260102150214-2.399um.tifxyz/x.tif"},
+    {"destination": "volume_20260102150214/y.tif", "size_bytes": 7468358, "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/mesh/20260126000000-on-20260102150214-2.399um.tifxyz/y.tif"},
+    {"destination": "volume_20260102150214/z.tif", "size_bytes": 7468358, "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/mesh/20260126000000-on-20260102150214-2.399um.tifxyz/z.tif"},
+    {"destination": "volume_20260413113053/meta.json", "size_bytes": 411, "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/mesh/20260126000000-on-20260413113053-1.129um.tifxyz/meta.json"},
+    {"destination": "volume_20260413113053/x.tif", "size_bytes": 33792582, "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/mesh/20260126000000-on-20260413113053-1.129um.tifxyz/x.tif"},
+    {"destination": "volume_20260413113053/y.tif", "size_bytes": 33792582, "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/mesh/20260126000000-on-20260413113053-1.129um.tifxyz/y.tif"},
+    {"destination": "volume_20260413113053/z.tif", "size_bytes": 33792582, "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/mesh/20260126000000-on-20260413113053-1.129um.tifxyz/z.tif"}
+  ],
+  "report_json": "results/pherc0139_w045_cross_model/tifxyz_download.json"
+}

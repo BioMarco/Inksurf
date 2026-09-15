@@ -1,0 +1,11 @@
+{
+  "schema_version": "inksurf-remote-tiff-roi-fetch/1.0",
+  "experiment_id": "pherc0139-w045-cross-model-exhaustive-tiff-fetch-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "plan_report": "results/pherc0139_w045_cross_model/tiff_roi_plan.json",
+  "plan_sha256": "437c3b0b5a302a164b501252ff05d619c5bd04e4c2a8a84a73b339fa3c508d48",
+  "maximum_download_bytes": 2097152,
+  "output_directory": "data/pherc0139_w045_supervision_pilot/cross_model_rois",
+  "output_report": "results/pherc0139_w045_cross_model/tiff_roi_fetch.json"
+}

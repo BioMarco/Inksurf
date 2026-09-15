@@ -1,6 +1,8 @@
+import tempfile
 import unittest
+from pathlib import Path
 
-from inksurf.bounded_http_download import validate_manifest
+from inksurf.bounded_http_download import report_destination, validate_manifest
 
 
 class BoundedHttpDownloadTests(unittest.TestCase):
@@ -27,6 +29,12 @@ class BoundedHttpDownloadTests(unittest.TestCase):
         }
         with self.assertRaises(ValueError):
             validate_manifest(manifest)
+
+    def test_portable_destination_is_relative_to_project_root(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            destination = root / "data" / "chunk.bin"
+            self.assertEqual(report_destination(root, destination, True), "data/chunk.bin")
 
 
 if __name__ == "__main__":

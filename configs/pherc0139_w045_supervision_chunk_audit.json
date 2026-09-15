@@ -1,0 +1,18 @@
+{
+  "schema_version": "inksurf-ink9um-chunk-audit/1.0",
+  "experiment_id": "pherc0139-w045-cross-model-supervision-chunk-audit-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G1",
+  "manifest": "results/pherc0139_w045_supervision_preflight/chunk_manifest.json",
+  "download_report": "results/pherc0139_w045_supervision_preflight/download_report.json",
+  "cache_root": "data/pherc0139_w045_supervision_pilot",
+  "annotation_array_kinds": ["inklabels", "supervision_mask"],
+  "evaluation_mask_kind": "supervision_mask",
+  "source_centered_planes": 84,
+  "z_pool": 4,
+  "label_plane": 10,
+  "derived_root": "data/pherc0139_w045_supervision_pilot/derived",
+  "report_json": "results/pherc0139_w045_supervision_preflight/chunk_audit_report.json",
+  "limitation": "Official training/supervision data with transferred annotations; DEV evidence only and not an independent reference."
+}

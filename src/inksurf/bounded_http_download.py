@@ -57,6 +57,12 @@ def _sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def report_destination(root: Path, destination: Path, portable: bool) -> str:
+    if portable:
+        return str(destination.resolve().relative_to(root.resolve())).replace("\\", "/")
+    return str(destination.resolve())
+
+
 def _atomic_json(path: Path, value: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, temporary = tempfile.mkstemp(prefix=path.name + ".", suffix=".tmp", dir=path.parent)
@@ -93,6 +99,7 @@ def run(manifest_path: Path) -> dict[str, Any]:
         raise RuntimeError("insufficient disk margin")
 
     results = []
+    portable = bool(manifest.get("portable_report_paths", False))
     for row in manifest["files"]:
         destination = output_root / row["destination"]
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -130,11 +137,11 @@ def run(manifest_path: Path) -> dict[str, Any]:
         if expected_hash and digest != expected_hash:
             raise RuntimeError(f"SHA256 mismatch: {row['destination']}")
         results.append({
-            "destination": str(destination.resolve()),
+            "destination": report_destination(root, destination, portable),
             "url": row["url"],
             "size_bytes": expected_size,
             "sha256": digest,
-            "status": status,
+            "status": "verified" if portable else status,
         })
 
     report = {
@@ -142,11 +149,13 @@ def run(manifest_path: Path) -> dict[str, Any]:
         "experiment_id": manifest["experiment_id"],
         "track": manifest["track"],
         "regime": manifest["regime"],
-        "project_root": str(root),
+        "portable_report_paths": portable,
         "expected_bytes": expected_total,
         "verified_bytes": sum(row["size_bytes"] for row in results),
         "files": results,
     }
+    if not portable:
+        report["project_root"] = str(root)
     _atomic_json(root / manifest["report_json"], report)
     return report
 

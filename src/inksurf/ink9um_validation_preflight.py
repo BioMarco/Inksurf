@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 from pathlib import Path
 from typing import Any
@@ -12,6 +13,13 @@ import requests
 from .seating_reproduce import _atomic_json
 
 NEXT = re.compile(r'<([^>]+)>; rel="next"')
+
+
+class InsufficientChunks(ValueError):
+    def __init__(self, found: int, required: int):
+        super().__init__(f"only {found} selection chunks found; {required} required")
+        self.found = found
+        self.required = required
 
 
 def list_bucket_tree(url: str, max_pages: int) -> tuple[list[dict[str, Any]], int]:
@@ -43,10 +51,11 @@ def chunk_key(path: str) -> tuple[int, int] | None:
 
 def select_validation_chunks(
     items: list[dict[str, Any]], count: int, chunk_bounds_yx: list[list[int]] | None = None,
-    minimum_compressed_bytes: int = 0,
+    minimum_compressed_bytes: int = 0, selection_mask_kind: str = "validation_mask",
+    selection_support: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     candidates = []
-    marker = "_validation_mask.zarr/0/"
+    marker = f"_{selection_mask_kind}.zarr/0/"
     for item in items:
         key = chunk_key(str(item.get("path", "")))
         if marker in str(item.get("path", "")) and key is not None:
@@ -56,11 +65,55 @@ def select_validation_chunks(
                     continue
             if int(item["size"]) < minimum_compressed_bytes:
                 continue
-            candidates.append({"chunk_yx": list(key), "compressed_validation_bytes": int(item["size"])})
+            overlap = support_overlap_fraction(key, selection_support) if selection_support else None
+            if overlap is not None and overlap < float(selection_support["minimum_overlap_fraction"]):
+                continue
+            candidate = {"chunk_yx": list(key), "compressed_validation_bytes": int(item["size"])}
+            if overlap is not None:
+                candidate["support_overlap_fraction"] = overlap
+            candidates.append(candidate)
     candidates.sort(key=lambda item: (-item["compressed_validation_bytes"], item["chunk_yx"]))
     if len(candidates) < count:
-        raise ValueError(f"only {len(candidates)} validation chunks found")
+        raise InsufficientChunks(len(candidates), count)
     return candidates[:count]
+
+
+def support_overlap_fraction(chunk_yx: tuple[int, int], support: dict[str, Any]) -> float:
+    source_height, source_width = map(int, support["source_canvas_shape_yx"])
+    target_height, target_width = map(int, support["target_shape_yx"])
+    chunk_pixels = int(support["chunk_pixels"])
+    scale = int(support["chunk_to_source_scale"])
+    y, x = chunk_yx
+    sy0, sy1 = y * chunk_pixels * scale, min((y + 1) * chunk_pixels * scale, source_height)
+    sx0, sx1 = x * chunk_pixels * scale, min((x + 1) * chunk_pixels * scale, source_width)
+    if sy0 >= sy1 or sx0 >= sx1:
+        return 0.0
+    y0, y1 = math.floor(sy0 * target_height / source_height), math.ceil(sy1 * target_height / source_height)
+    x0, x1 = math.floor(sx0 * target_width / source_width), math.ceil(sx1 * target_width / source_width)
+    rectangles = support["rects_y0_y1_x0_x1"]
+    for index, first in enumerate(rectangles):
+        fy0, fy1, fx0, fx1 = first
+        if not (0 <= fy0 < fy1 <= target_height and 0 <= fx0 < fx1 <= target_width):
+            raise ValueError("support rectangle is outside the target canvas")
+        for second in rectangles[index + 1:]:
+            sy0r, sy1r, sx0r, sx1r = second
+            if min(fy1, sy1r) > max(fy0, sy0r) and min(fx1, sx1r) > max(fx0, sx0r):
+                raise ValueError("support rectangles must not overlap")
+    covered = 0
+    for ry0, ry1, rx0, rx1 in rectangles:
+        covered += max(0, min(y1, ry1) - max(y0, ry0)) * max(0, min(x1, rx1) - max(x0, rx0))
+    return covered / ((y1 - y0) * (x1 - x0))
+
+
+def validate_annotation_provenance(
+    attributes: dict[str, Any], source_volume_url: str, source_level: int,
+) -> None:
+    declared_url = str(attributes.get("source_surface_volume", "")).rstrip("/")
+    expected_url = source_volume_url.rstrip("/")
+    if declared_url != expected_url:
+        raise ValueError("annotation source_surface_volume does not match configured source")
+    if int(attributes.get("source_surface_volume_level", -1)) != source_level:
+        raise ValueError("annotation source_surface_volume_level does not match configured level")
 
 
 def raw_chunk_bytes(shape: list[int], chunks: list[int], y: int, x: int) -> int:
@@ -101,11 +154,22 @@ def run(config_path: Path) -> dict[str, Any]:
     prefix = cfg["annotation_prefix"] + "/"
     if any(not str(item.get("path", "")).startswith(prefix) for item in items):
         raise ValueError("listing escaped frozen annotation prefix")
+    array_kinds = cfg.get("annotation_array_kinds", ["inklabels", "supervision_mask", "validation_mask"])
+    selection_mask_kind = cfg.get("selection_mask_kind", "validation_mask")
+    if not set(array_kinds).issubset({"inklabels", "supervision_mask", "validation_mask"}):
+        raise ValueError("unsupported annotation array kind")
+    if selection_mask_kind not in array_kinds or "inklabels" not in array_kinds:
+        raise ValueError("selection mask and inklabels must be declared annotation arrays")
     arrays = {}
-    for kind in ("inklabels", "supervision_mask", "validation_mask"):
+    attributes = {}
+    for kind in array_kinds:
         relative = f"{prefix}{cfg['segment']}_{kind}.zarr/0/.zarray"
         arrays[kind], size = fetch_json(cfg["annotation_resolve_base"] + relative)
         transferred += size
+        attrs_relative = f"{prefix}{cfg['segment']}_{kind}.zarr/.zattrs"
+        attributes[kind], size = fetch_json(cfg["annotation_resolve_base"] + attrs_relative)
+        transferred += size
+        validate_annotation_provenance(attributes[kind], cfg["source_volume_url"], int(cfg["source_level"]))
     shapes = {tuple(meta["shape"]) for meta in arrays.values()}
     chunks = {tuple(meta["chunks"]) for meta in arrays.values()}
     if len(shapes) != 1 or len(chunks) != 1 or next(iter(shapes))[0] != 21:
@@ -121,21 +185,38 @@ def run(config_path: Path) -> dict[str, Any]:
     try:
         selected = select_validation_chunks(
             items, int(cfg["roi_chunk_count"]), cfg.get("selection_chunk_bounds_yx"),
-            int(cfg.get("minimum_compressed_validation_bytes", 0)),
+            int(cfg.get("minimum_compressed_validation_bytes", 0)), selection_mask_kind,
+            cfg.get("selection_support"),
         )
-    except ValueError as exc:
+    except InsufficientChunks as exc:
+        status = "NO_GO_NO_LABELED_OVERLAP" if exc.found == 0 else "NO_GO_INSUFFICIENT_LABELED_OVERLAP"
+        empty_manifest = {
+            "schema_version": cfg["schema_version"], "experiment_id": cfg["experiment_id"],
+            "track": "A", "regime": regime, "geometry_tier": "G1", "status": status,
+            "selection_mask_kind": selection_mask_kind, "selected_chunks": [],
+            "planned_source_raw_bytes": 0, "planned_annotation_bytes": 0,
+        }
+        empty_download = {
+            "schema_version": "inksurf-empty-download-manifest/1.0", "experiment_id": cfg["experiment_id"] + "-download",
+            "track": "A", "regime": regime, "status": status, "files": [], "max_total_bytes": 0,
+        }
+        _atomic_json(root / cfg["chunk_manifest_json"], empty_manifest)
+        _atomic_json(root / cfg["download_manifest_json"], empty_download)
         report = {
             "schema_version": cfg["schema_version"], "experiment_id": cfg["experiment_id"],
-            "status": "NO_GO_NO_LABELED_OVERLAP", "track": "A", "regime": regime,
+            "status": status, "track": "A", "regime": regime,
             "geometry_tier": "G1", "listed_annotation_objects": len(items),
             "metadata_bytes_transferred": transferred,
             "selection_chunk_bounds_yx": cfg.get("selection_chunk_bounds_yx"),
             "minimum_compressed_validation_bytes": int(cfg.get("minimum_compressed_validation_bytes", 0)),
-            "selection_error": str(exc), "selected_chunk_count": 0,
+            "selection_mask_kind": selection_mask_kind,
+            "selection_support": cfg.get("selection_support"),
+            "selection_error": str(exc), "available_selection_chunk_count": exc.found,
+            "required_selection_chunk_count": exc.required, "selected_chunk_count": 0,
             "planned_source_raw_bytes": 0, "planned_annotation_bytes": 0,
             "validation_files_accessed": 0, "discovery_files_accessed": 0,
             "limitations": [
-                "The second render coverage does not overlap a non-empty transferred-label validation chunk.",
+                f"The requested coverage does not contain enough non-empty {selection_mask_kind} chunks.",
                 "No source, prediction or label pixels were downloaded by this failed preflight.",
             ],
         }
@@ -187,6 +268,10 @@ def run(config_path: Path) -> dict[str, Any]:
         "source_chunks_zyx": source_meta["chunks"],
         "annotation_shape_zyx": list(next(iter(shapes))),
         "annotation_chunks_zyx": list(next(iter(chunks))),
+        "selection_mask_kind": selection_mask_kind,
+        "selection_support": cfg.get("selection_support"),
+        "annotation_source_surface_volume": attributes["inklabels"]["source_surface_volume"],
+        "annotation_source_surface_volume_level": attributes["inklabels"]["source_surface_volume_level"],
         "selected_chunks": selected,
         "planned_source_raw_bytes": planned_raw,
         "planned_annotation_bytes": planned_annotation,
@@ -206,6 +291,7 @@ def run(config_path: Path) -> dict[str, Any]:
         "max_total_bytes": cfg["max_download_bytes"],
         "output_root": cfg["download_output_root"],
         "report_json": cfg["download_report_json"],
+        "portable_report_paths": bool(cfg.get("portable_report_paths", False)),
         "files": download_files,
     }
     if regime == "VALIDATION":
@@ -228,6 +314,9 @@ def run(config_path: Path) -> dict[str, Any]:
         "metadata_bytes_transferred": transferred,
         "selected_chunk_count": len(selected),
         "selection_chunk_bounds_yx": cfg.get("selection_chunk_bounds_yx"),
+        "selection_mask_kind": selection_mask_kind,
+        "selection_support": cfg.get("selection_support"),
+        "annotation_online_validation": bool(attributes["inklabels"].get("online_validation")),
         "planned_source_raw_bytes": planned_raw,
         "planned_annotation_bytes": planned_annotation,
         "validation_files_accessed": 0,
@@ -236,10 +325,14 @@ def run(config_path: Path) -> dict[str, Any]:
             (
                 "This is a locally locked VALIDATION partition, but it remains an upstream online-validation case."
                 if regime == "VALIDATION"
-                else "Official online-validation data is classified DEV, not confirmatory validation."
+                else (
+                    "Official online-validation data is classified DEV, not confirmatory validation."
+                    if attributes["inklabels"].get("online_validation")
+                    else "Official supervision/training data is classified DEV and cannot provide confirmatory validation."
+                )
             ),
             "Labels are transferred annotations/pseudo-labels, not independent IR ground truth.",
-            "Compressed validation-chunk size is a deterministic coverage proxy, not an ink score.",
+            f"Compressed {selection_mask_kind}-chunk size is a deterministic coverage proxy, not an ink score.",
         ],
     }
     _atomic_json(root / cfg["chunk_manifest_json"], manifest)

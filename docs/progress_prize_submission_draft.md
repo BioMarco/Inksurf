@@ -63,7 +63,7 @@ mistaken for independent confirmation.
 
 ## Reproducibility
 
-- 126 offline tests on Windows; the same suite runs in GitHub Actions;
+- 138 offline tests on Windows; the same suite runs in GitHub Actions;
 - deterministic synthetic demonstration with a planted correlated artifact;
 - frozen real-data configs, source/checkpoint hashes and bounded I/O manifests;
 - atomic output, cache verification and explicit negative-result retention;
@@ -96,6 +96,15 @@ found zero non-empty transferred-label chunks. The preserved verdicts are
 before downloading source, prediction or label pixels. This prevents
 content-driven ROI selection from turning missing benchmark overlap into an
 apparently positive result.
+
+A provenance-corrected follow-up resolved the `pherc0139-w029` annotation to
+its declared source segment, PHerc0139-w045. Cross-TIFXYZ correspondence passed
+on a spatial holdout (median residual `9.61 µm`, p90 `15.34 µm`), but the
+second official ink output intersected zero of 101,342 supervised pixels under
+conservative, centre-sampled and permissive support policies. The bound
+decision is `NO_GO_NO_LABELED_COMMON_SUPPORT`; no score comparison was made.
+This demonstrates that registration success alone does not make two outputs an
+eligible benchmark pair.
 
 On PHerc0139-w016, geometry is now G2 only for the 12 frozen bounded DEV
 chunks. They cover `0.0751664 cm²`; the naive top-5% policy has pixel precision

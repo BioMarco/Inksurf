@@ -1,0 +1,14 @@
+{
+  "schema_version": "inksurf-cross-model-support-audit/1.0",
+  "experiment_id": "pherc0139-w045-cross-model-common-support-audit-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G1",
+  "chunk_audit_report": "results/pherc0139_w045_supervision_preflight/chunk_audit_report.json",
+  "chunk_audit_sha256": "28742352978da98ef2f98df88f5bc5aa029212c03594d61d8ed0b9723201574d",
+  "tiff_fetch_report": "results/pherc0139_w045_cross_model/tiff_roi_fetch.json",
+  "tiff_fetch_sha256": "c518fa423256e42e3e9bad95700c6bb6137588a0fdb61492e44300870b5f2a28",
+  "minimum_supported_chunks": 4,
+  "threshold_note": "Operational DEV stop rule set after tile fetch; not a preregistered confirmatory gate.",
+  "output_report": "results/pherc0139_w045_cross_model/support_audit.json"
+}

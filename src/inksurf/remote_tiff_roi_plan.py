@@ -64,10 +64,15 @@ def run(config_path: Path) -> dict:
     if config.get("track") != "A" or config.get("regime") != "DEV":
         raise ValueError("remote TIFF planning is Track A DEV only")
     root = config_path.resolve().parent.parent
-    chunk_path = root / config["chunk_audit_report"]
-    if _sha256(chunk_path) != config["chunk_audit_sha256"]:
-        raise ValueError("chunk audit report hash mismatch")
-    chunks = json.loads(chunk_path.read_text(encoding="utf-8"))["chunks"]
+    manifest_name = config.get("roi_manifest", config.get("chunk_audit_report"))
+    manifest_hash = config.get("roi_manifest_sha256", config.get("chunk_audit_sha256"))
+    if not manifest_name or not manifest_hash:
+        raise ValueError("ROI manifest path and SHA-256 are required")
+    chunk_path = root / manifest_name
+    if _sha256(chunk_path) != manifest_hash:
+        raise ValueError("ROI manifest hash mismatch")
+    roi_list_key = config.get("roi_list_key", "chunks")
+    chunks = json.loads(chunk_path.read_text(encoding="utf-8"))[roi_list_key]
     source_shape = tuple(map(int, config["source_canvas_shape_yx"]))
     scale = int(config["chunk_level_to_canvas_scale"])
     chunk_pixels = int(config["chunk_pixels"])
@@ -120,6 +125,8 @@ def run(config_path: Path) -> dict:
         "schema_version": config["schema_version"], "experiment_id": config["experiment_id"],
         "track": "A", "regime": "DEV", "status": "tile_ranges_planned_registration_unverified",
         "source_canvas_shape_yx": list(source_shape), "roi_count": len(source_rois),
+        "roi_manifest": manifest_name, "roi_manifest_sha256": manifest_hash,
+        "roi_list_key": roi_list_key,
         "artifacts": artifacts, "planned_compressed_bytes": planned,
         "maximum_planned_bytes": int(config["maximum_planned_bytes"]),
         "within_budget": planned <= int(config["maximum_planned_bytes"]),
