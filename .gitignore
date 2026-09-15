@@ -44,6 +44,11 @@ results/track_a_dev_candidate_package_*/candidates.csv
 results/track_a_dev_geometry/*candidates.csv
 results/track_a_dev_input_audit*/regions.csv
 results/track_a_dev_structural_features/structural_regions.csv
+
+# Fail closed for future experiment outputs. Public aggregate receipts already
+# tracked by Git remain versioned; every new result requires explicit review
+# and `git add -f` before it can enter repository history.
+results/**
 # Sample-level DEV coordinates derived from IR labels. Keep locally for exact
 # reruns, but do not publish them with the code repository.
 results/fragment_ir_pixel_audit/matched_pixels.csv
