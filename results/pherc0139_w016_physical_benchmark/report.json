@@ -1,0 +1,72 @@
+{
+  "component_metric_limitation": "Components are clipped at the 12 chunk boundaries and are not a continuous-ROI estimate.",
+  "experiment_id": "pherc0139-w016-g2-physical-dev-diagnostic-20260915",
+  "geometry_tier": "G2",
+  "interpretation": "Naive policies quantify review burden; InkSurf abstains because only one effective evidence group exists. Zero false positives with zero yield is not detector superiority.",
+  "policies": {
+    "inksurf_fail_closed_one_effective_group": {
+      "accepted_fraction": 0.0,
+      "accepted_pixels": 0,
+      "evaluated_negative_area_cm2": 0.05719425101959228,
+      "evaluated_pixels": 81524,
+      "false_positive_area_cm2": 0.0,
+      "false_positive_area_fraction": 0.0,
+      "false_positive_components_chunk_clipped": 0,
+      "false_positive_components_per_cm2_chunk_clipped": 0.0,
+      "minimum_component_area_mm2": 0.01,
+      "pixel_precision": null,
+      "pixel_recall": 0.0,
+      "positive_pixels": 19419,
+      "true_positive_pixels": 0
+    },
+    "naive_score_gte_0_5": {
+      "accepted_fraction": 0.2700922427751337,
+      "accepted_pixels": 22019,
+      "evaluated_negative_area_cm2": 0.05719425101959228,
+      "evaluated_pixels": 81524,
+      "false_positive_area_cm2": 0.008506617416152953,
+      "false_positive_area_fraction": 0.14873203625376533,
+      "false_positive_components_chunk_clipped": 7,
+      "false_positive_components_per_cm2_chunk_clipped": 122.38992337887426,
+      "minimum_component_area_mm2": 0.01,
+      "pixel_precision": 0.5809073981561379,
+      "pixel_recall": 0.6586847932437304,
+      "positive_pixels": 19419,
+      "true_positive_pixels": 12791
+    },
+    "naive_top_0.01": {
+      "accepted_fraction": 0.010009322408125215,
+      "accepted_pixels": 816,
+      "evaluated_negative_area_cm2": 0.05719425101959228,
+      "evaluated_pixels": 81524,
+      "false_positive_area_cm2": 0.0,
+      "false_positive_area_fraction": 0.0,
+      "false_positive_components_chunk_clipped": 0,
+      "false_positive_components_per_cm2_chunk_clipped": 0.0,
+      "minimum_component_area_mm2": 0.01,
+      "pixel_precision": 1.0,
+      "pixel_recall": 0.042020701374942064,
+      "positive_pixels": 19419,
+      "true_positive_pixels": 816
+    },
+    "naive_top_0.05": {
+      "accepted_fraction": 0.05000981306118444,
+      "accepted_pixels": 4077,
+      "evaluated_negative_area_cm2": 0.05719425101959228,
+      "evaluated_pixels": 81524,
+      "false_positive_area_cm2": 0.00024111370422363283,
+      "false_positive_area_fraction": 0.004215698255075282,
+      "false_positive_components_chunk_clipped": 1,
+      "false_positive_components_per_cm2_chunk_clipped": 17.484274768410607,
+      "minimum_component_area_mm2": 0.01,
+      "pixel_precision": 0.9374540103016924,
+      "pixel_recall": 0.19681754982233896,
+      "positive_pixels": 19419,
+      "true_positive_pixels": 3822
+    }
+  },
+  "regime": "DEV",
+  "schema_version": "inksurf-physical-benchmark/1.0",
+  "status": "bounded_physical_diagnostic_complete",
+  "track": "A"
+}

@@ -63,7 +63,7 @@ mistaken for independent confirmation.
 
 ## Reproducibility
 
-- 113 offline tests on Windows; the same suite runs in GitHub Actions;
+- 120 offline tests on Windows; the same suite runs in GitHub Actions;
 - deterministic synthetic demonstration with a planted correlated artifact;
 - frozen real-data configs, source/checkpoint hashes and bounded I/O manifests;
 - atomic output, cache verification and explicit negative-result retention;
@@ -87,6 +87,12 @@ First Letters image. PHerc0814 uses transferred reference annotations and was
 exposed to upstream model selection; the locked result is therefore useful as a
 local method stress test, not independent ground truth. Structural claims
 require G2/G3 geometry and are currently blocked.
+
+On PHerc0139-w016, geometry is now G2 only for the 12 frozen bounded DEV
+chunks. They cover `0.0751664 cm²`; the naive top-5% policy has pixel precision
+`0.9375` and false-positive area equal to `0.4216%` of evaluated negative area.
+This remains non-confirmatory because the reference is transferred/pseudo-label
+data and the chunks are not one continuous review region.
 
 ## Integration path
 

@@ -122,6 +122,32 @@ def _artifact_pair_rows(sample_id: str, sample: dict[str, Any]) -> list[dict[str
             by_label.setdefault(label, []).append(segment)
 
     rows: list[dict[str, Any]] = []
+    for segment in sample.get("inkSegments") or []:
+        renders = list(segment.get("renders") or [])
+        for first, second in combinations(renders, 2):
+            volume_a = str(first.get("targetVolume") or "")
+            volume_b = str(second.get("targetVolume") or "")
+            if not volume_a or not volume_b or volume_a == volume_b:
+                continue
+            rows.append({
+                "sample_id": sample_id,
+                "label": str(segment.get("label") or ""),
+                "segment_a": str(segment.get("id") or ""),
+                "segment_b": str(segment.get("id") or ""),
+                "surface_volume_a": volume_a,
+                "surface_volume_b": volume_b,
+                "ink_volume_a": volume_a,
+                "ink_volume_b": volume_b,
+                "both_ink_outputs_present": bool(first.get("url") and second.get("url")),
+                "distinct_ink_source_volumes": True,
+                "layers_a": str(segment.get("layers") or ""),
+                "layers_b": str(segment.get("layers") or ""),
+                "ink_output_a": str(first.get("url") or ""),
+                "ink_output_b": str(second.get("url") or ""),
+                "model_a": str(first.get("modelName") or first.get("modelId") or ""),
+                "model_b": str(second.get("modelName") or second.get("modelId") or ""),
+                "alignment_status": "same_segment_render_pair_transform_unverified",
+            })
     for label, segments in sorted(by_label.items()):
         for first, second in combinations(segments, 2):
             surface_a = _base_volume_id(first.get("layers"))
@@ -145,6 +171,8 @@ def _artifact_pair_rows(sample_id: str, sample: dict[str, Any]) -> list[dict[str
                 "layers_b": str(second.get("layers") or ""),
                 "ink_output_a": str(first.get("full") or ""),
                 "ink_output_b": str(second.get("full") or ""),
+                "model_a": "",
+                "model_b": "",
                 "alignment_status": "same_label_only_transform_unverified",
             })
     return rows
@@ -207,10 +235,10 @@ def audit_catalog(
         summaries.append(summary)
 
     ready = [item for item in summaries if item["metadata_ready"]]
-    independent_ink_pairs = sum(bool(row["distinct_ink_source_volumes"]) for row in artifact_rows)
+    distinct_source_ink_pairs = sum(bool(row["distinct_ink_source_volumes"]) for row in artifact_rows)
     if not ready:
         status = "no_go_metadata"
-    elif independent_ink_pairs:
+    elif distinct_source_ink_pairs:
         status = "conditional_go_alignment_unverified"
     elif artifact_rows:
         status = "conditional_go_raw_evidence_only"
@@ -231,7 +259,8 @@ def audit_catalog(
         "samples": summaries,
         "metadata_ready_samples": [item["sample_id"] for item in ready],
         "same_label_cross_volume_artifact_pairs": len(artifact_rows),
-        "independent_ink_output_pairs": independent_ink_pairs,
+        "distinct_source_ink_output_pairs": distinct_source_ink_pairs,
+        "independent_ink_output_pairs": 0,
         "downloaded_volumetric_bytes": 0,
         "validation_files_accessed": 0,
         "discovery_files_accessed": 0,
@@ -239,7 +268,12 @@ def audit_catalog(
             [
                 "same-surface overlap across scans is not established by catalog metadata",
                 "cross-scan transforms and registration error are not yet verified",
-                "the same-label cross-volume candidates provide zero independent ink-output pairs",
+                (
+                    f"{distinct_source_ink_pairs} distinct-source ink-output pairs remain candidates only; "
+                    "registration, model and training dependencies are unverified"
+                    if distinct_source_ink_pairs
+                    else "the catalog provides zero distinct-source ink-output pairs"
+                ),
                 "a held-out evaluation unit has not yet been frozen",
             ]
             if ready else ["no development sample satisfies the preregistered metadata gate"]
@@ -283,7 +317,7 @@ def write_outputs(
         "sample_id", "label", "segment_a", "segment_b", "surface_volume_a",
         "surface_volume_b", "ink_volume_a", "ink_volume_b", "both_ink_outputs_present",
         "distinct_ink_source_volumes", "layers_a", "layers_b", "ink_output_a",
-        "ink_output_b", "alignment_status",
+        "ink_output_b", "model_a", "model_b", "alignment_status",
     ]
     _write_csv(root / outputs["artifact_pairs_csv"], artifact_fields, artifact_rows)
 

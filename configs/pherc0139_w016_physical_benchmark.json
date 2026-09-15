@@ -1,0 +1,15 @@
+{
+  "schema_version": "inksurf-physical-benchmark/1.0",
+  "experiment_id": "pherc0139-w016-g2-physical-dev-diagnostic-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "geometry_tier": "G2",
+  "roi_geometry_report": "results/pherc0139_w016_geometry/roi_geometry_audit.json",
+  "roi_geometry_sha256": "3793d01c5746fc500348f7b4ef7c69e949c8063e26ccb4e5a6465981ae3f139a",
+  "predictions": "results/ink9um_validation_inference/kaggle_v3/predictions.npz",
+  "predictions_sha256": "ee614cb90eb102b35ec84cf903f3c1f03711fbeaa4f97cccae0f4ed667b12b5f",
+  "derived_pattern": "data/ink9um_validation_pilot/derived/chunk_{y}_{x}.npz",
+  "top_fractions": [0.01, 0.05],
+  "minimum_component_area_mm2": 0.01,
+  "output_report": "results/pherc0139_w016_physical_benchmark/report.json"
+}

@@ -1,0 +1,33 @@
+{
+  "experiment_id": "pherc0139-w016-tifxyz-geometry-audit-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "surface_id": "PHerc0139/20250108000004-w029_2025010827/20260102150214",
+  "coordinate_order": "X,Y,Z",
+  "coordinate_files": {
+    "x": "data/ink9um_validation_pilot/geometry/x.tif",
+    "y": "data/ink9um_validation_pilot/geometry/y.tif",
+    "z": "data/ink9um_validation_pilot/geometry/z.tif"
+  },
+  "reference_shape_yx": [28080, 28880],
+  "source_download_report": "results/pherc0139_w016_geometry/download_report.json",
+  "expected_grid_spacing_voxels": 20.0,
+  "spacing_relative_tolerance": 0.15,
+  "maximum_jump_factor": 3.0,
+  "parent_volume": {
+    "catalog_url": "https://raw.githubusercontent.com/ScrollPrize/villa/main/scrollprize.org/static/data_browser/index.json",
+    "scroll_id": "PHerc0139",
+    "segment_label": "w029",
+    "target_volume_id": "20260102150214",
+    "zarr_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20260102150214-2.399um-0.2m-78keV-masked.zarr/",
+    "zarray_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20260102150214-2.399um-0.2m-78keV-masked.zarr/0/.zarray",
+    "catalog_max_bytes": 4194304,
+    "metadata_max_bytes": 65536,
+    "timeout_seconds": 30
+  },
+  "ct_support": "results/pherc0139_w016_geometry/ct_support_report.json",
+  "external_self_intersection_qa": null,
+  "outputs": {
+    "report_json": "results/pherc0139_w016_geometry/tifxyz_geometry_audit.json"
+  }
+}

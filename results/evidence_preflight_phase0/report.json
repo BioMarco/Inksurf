@@ -2,7 +2,7 @@
   "blockers": [
     "same-surface overlap across scans is not established by catalog metadata",
     "cross-scan transforms and registration error are not yet verified",
-    "the same-label cross-volume candidates provide zero independent ink-output pairs",
+    "93 distinct-source ink-output pairs remain candidates only; registration, model and training dependencies are unverified",
     "a held-out evaluation unit has not yet been frozen"
   ],
   "catalog": {
@@ -13,6 +13,7 @@
   },
   "claim": "The official catalog contains plausible DEV sources for a bounded consistency pilot; this does not establish co-registration, ink evidence, or prize readiness.",
   "discovery_files_accessed": 0,
+  "distinct_source_ink_output_pairs": 93,
   "downloaded_volumetric_bytes": 0,
   "experiment_id": "inksurf-evidence-phase0-20260914",
   "independent_ink_output_pairs": 0,
@@ -22,7 +23,7 @@
     "PHerc0139"
   ],
   "regime": "DEV",
-  "same_label_cross_volume_artifact_pairs": 2,
+  "same_label_cross_volume_artifact_pairs": 95,
   "samples": [
     {
       "has_ink3d": true,
@@ -71,7 +72,7 @@
     }
   ],
   "schema_version": "inksurf-evidence-preflight/1.0",
-  "status": "conditional_go_raw_evidence_only",
+  "status": "conditional_go_alignment_unverified",
   "track": "A",
   "validation_files_accessed": 0
 }

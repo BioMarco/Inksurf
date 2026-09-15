@@ -1,0 +1,173 @@
+{
+  "candidate_count": 12,
+  "central_depth_range_half_open": [
+    2,
+    19
+  ],
+  "chunks": [
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        39,
+        30
+      ],
+      "derived_sha256": "3f27ff7f9688adf27aaf8df2877ef47509618bc7bdaeb68b327344d92c7303af",
+      "evaluated_pixels": 7907,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        41,
+        30
+      ],
+      "derived_sha256": "0646fadaf64ba2410b17ea1394d3216aeeb56e65cc4e40e6f536a4565ad062eb",
+      "evaluated_pixels": 5688,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        38,
+        29
+      ],
+      "derived_sha256": "d82759f4c428eb84a9f9121badd918cb52101fabf666b67b49913652315ebe9c",
+      "evaluated_pixels": 3205,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        39,
+        14
+      ],
+      "derived_sha256": "fda416f530ac449ed249af609b380e9149d042ee750100822b6cdf266676c0a8",
+      "evaluated_pixels": 12859,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        41,
+        14
+      ],
+      "derived_sha256": "728a5cf41a75fcc293d0ba5ba20d24db883b93d0e237f17dc908f7d362662a13",
+      "evaluated_pixels": 5690,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        41,
+        28
+      ],
+      "derived_sha256": "05c73ca50aca11198c1a68eab1717a78ef5ee8f135824caca55d3f7f3086ef47",
+      "evaluated_pixels": 3828,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        39,
+        16
+      ],
+      "derived_sha256": "2f3d7363e445cd4713171e3f5dd2653c4c781fb6f7c2dbf32b4fb3cc79a39c67",
+      "evaluated_pixels": 6839,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        40,
+        30
+      ],
+      "derived_sha256": "4cb71cd841f42fccdd890579be3bd73d4c6352699446776803ff17849621b4a9",
+      "evaluated_pixels": 12491,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        42,
+        29
+      ],
+      "derived_sha256": "145647eaeb92237745de2470cb095353be6393ca3debc1e45b907ca624662b0a",
+      "evaluated_pixels": 5550,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        40,
+        14
+      ],
+      "derived_sha256": "7189e6132201039d3deaacd1f45bdd667fbf7db4f55d627a836a26dfc311abfd",
+      "evaluated_pixels": 13959,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        40,
+        16
+      ],
+      "derived_sha256": "ba627babf2ef028c9e27a4728427de46db763e4f9b153ef32014756dca900c75",
+      "evaluated_pixels": 1572,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    },
+    {
+      "any_depth_support_fraction": 1.0,
+      "central_depth_support_fraction": 1.0,
+      "chunk_yx": [
+        38,
+        14
+      ],
+      "derived_sha256": "626097f80b7cfee2612202caf0a1a783349b28e77df2a2d334f4f091e1363462",
+      "evaluated_pixels": 1936,
+      "median_nonzero_depth_fraction": 1.0,
+      "passes": true
+    }
+  ],
+  "criteria": {
+    "minimum_any_depth_support_fraction": 0.995,
+    "minimum_central_depth_support_fraction": 0.95,
+    "require_every_chunk_to_pass": true
+  },
+  "discovery_files_accessed": 0,
+  "experiment_id": "pherc0139-w016-bounded-ct-support-20260915",
+  "methodological_note": "Nonzero extracted-CT support is checked only on the bounded DEV evaluation pixels; this does not validate ink.",
+  "minimum_any_depth_support_fraction_observed": 1.0,
+  "minimum_central_depth_support_fraction_observed": 1.0,
+  "passing_candidates": 12,
+  "regime": "DEV",
+  "schema_version": "inksurf-ink9um-ct-support/1.0",
+  "source_chunk_audit": "results/ink9um_validation_preflight/chunk_audit_report.json",
+  "source_chunk_audit_sha256": "9fcbf4c7d096ce35d001b9c72131ca0e1a1c96aad85a7b061c156a1e887d06fe",
+  "status": "pass",
+  "support_source": "published extracted surface volume",
+  "surface_id": "PHerc0139/20250108000004-w029_2025010827/20260102150214",
+  "track": "A",
+  "validation_files_accessed": 0
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "inksurf-roi-geometry-audit/1.0",
+  "experiment_id": "pherc0139-w016-bounded-roi-geometry-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "surface_id": "PHerc0139/20250108000004-w029_2025010827/20260102150214",
+  "coordinate_files": {
+    "x": "data/ink9um_validation_pilot/geometry/x.tif",
+    "y": "data/ink9um_validation_pilot/geometry/y.tif",
+    "z": "data/ink9um_validation_pilot/geometry/z.tif"
+  },
+  "whole_surface_geometry_report": "results/pherc0139_w016_geometry/tifxyz_geometry_audit.json",
+  "whole_surface_geometry_sha256": "72464d5db994673935e42eee7d47c7ef4add3d3dd965ce18474df252919e77ed",
+  "chunk_audit_report": "results/ink9um_validation_preflight/chunk_audit_report.json",
+  "chunk_audit_sha256": "9fcbf4c7d096ce35d001b9c72131ca0e1a1c96aad85a7b061c156a1e887d06fe",
+  "chunk_pixels": 128,
+  "grid_step_level2_pixels": 5,
+  "voxel_um": 2.399,
+  "area_output_directory": "data/ink9um_validation_pilot/pixel_area_um2",
+  "output_report": "results/pherc0139_w016_geometry/roi_geometry_audit.json"
+}

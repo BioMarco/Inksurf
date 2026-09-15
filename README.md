@@ -164,6 +164,7 @@ These experiments are receipts for specific claims, not a ladder in which every
 | PHerc0139 cross-scan repeatability | DEV / G2 | Pearson `0.99534`, top-5% Jaccard `0.95270` | Robust repeatability; shared anatomy remains a confounder |
 | PHerc0139 bounded labels | DEV / G1 | Ensemble AP `0.72371`; abstained AP `0.80921` | Promising development result |
 | PHerc0814 locked labels | VALIDATION / G1 | Ensemble AP `0.59718`; 2/4 gates passed | `NO-GO` for seed-disagreement abstention |
+| PHerc0139 physical burden | DEV / bounded G2 | Top-5% precision `0.9375`; false area `0.4216%` of negative area | Promising DEV diagnostic; pseudo-label reference |
 
 Detailed reports:
 
@@ -171,6 +172,7 @@ Detailed reports:
 - [cross-scan repeatability](results/pherc0139_cross_scan_consistency/report.md)
 - [bounded DEV benchmark](results/ink9um_validation_evaluation/report.md)
 - [locked PHerc0814 validation](results/ink9um_pherc0814_validation/report.md)
+- [bounded physical-area diagnostic](results/pherc0139_w016_physical_benchmark/report.md)
 - [naive workflow versus InkSurf](docs/method_comparison.md)
 - [bounded real-data walkthrough](docs/real_data_walkthrough.md)
 - [Progress Prize submission draft](docs/progress_prize_submission_draft.md)
@@ -217,6 +219,11 @@ explicit publication review. See the
 The immediate target is a defensible Vesuvius Challenge Progress Prize
 submission. The current contribution is an evidence-independence and failure
 diagnostic layer, not a First Letters submission.
+
+The current official-catalog preflight has identified a promising PHerc0139
+cross-energy, cross-model render pair on the same segment. It remains a
+candidate only: registration and training provenance are not yet sufficient to
+count two independent groups.
 
 Before submission:
 

@@ -1,0 +1,286 @@
+{
+  "chunks": [
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        39,
+        30
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.007392616377113175,
+      "evaluated_pixels": 7907,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_39_30.npy",
+      "pixel_area_sha256": "29c68452916f70f65cf74aa67c9378d90064f62aeeda8d20a2f027e89f0ad739",
+      "pixel_area_um2_quantiles": {
+        "max": 94.17108395087747,
+        "min": 92.82719215913784,
+        "p01": 92.8702965616305,
+        "p50": 93.49530742429026,
+        "p99": 94.03438049700239
+      },
+      "selected_tifxyz_cells": 335,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        41,
+        30
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.005286499282093446,
+      "evaluated_pixels": 5688,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_41_30.npy",
+      "pixel_area_sha256": "850fe5cd9a3750cb59d4280a72f2ba4e23ed0b76d07ec809eeefa626dcfdc65f",
+      "pixel_area_um2_quantiles": {
+        "max": 93.88239658474473,
+        "min": 90.88399221163165,
+        "p01": 91.12134187296014,
+        "p50": 93.05537817874904,
+        "p99": 93.83258405823545
+      },
+      "selected_tifxyz_cells": 255,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        38,
+        29
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.0029873751308547914,
+      "evaluated_pixels": 3205,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_38_29.npy",
+      "pixel_area_sha256": "abd4ad9fe781044cddd61f7c54de5b29e4594cd9848c58425c7d1a304bce06aa",
+      "pixel_area_um2_quantiles": {
+        "max": 93.58735058345079,
+        "min": 92.43315973881089,
+        "p01": 92.5399321086865,
+        "p50": 93.215266118514,
+        "p99": 93.57325383103438
+      },
+      "selected_tifxyz_cells": 157,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        39,
+        14
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.011727410066356412,
+      "evaluated_pixels": 12859,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_39_14.npy",
+      "pixel_area_sha256": "1d8cb19bf1d55fc6c0f635e11ee6135e48077c79d3983846f70aeb08f8090102",
+      "pixel_area_um2_quantiles": {
+        "max": 92.38271715277656,
+        "min": 89.3867091256959,
+        "p01": 89.43126161991229,
+        "p50": 91.44458541395207,
+        "p99": 92.26716458085046
+      },
+      "selected_tifxyz_cells": 537,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        41,
+        14
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.005214799677644844,
+      "evaluated_pixels": 5690,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_41_14.npy",
+      "pixel_area_sha256": "10dd9590546e7b0b5a6e0944f4aee18ae70e8f5778a5e8021ff354de396e567f",
+      "pixel_area_um2_quantiles": {
+        "max": 92.4318456666205,
+        "min": 91.07919740944966,
+        "p01": 91.13574462722397,
+        "p50": 91.68319542124605,
+        "p99": 92.29363715225868
+      },
+      "selected_tifxyz_cells": 256,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        41,
+        28
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.0035186816306200424,
+      "evaluated_pixels": 3828,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_41_28.npy",
+      "pixel_area_sha256": "35330610acc040af08bc0f5b3466bae47f0d63f047fdb4f941fdb5bfdc343317",
+      "pixel_area_um2_quantiles": {
+        "max": 93.797759451749,
+        "min": 88.76558557070908,
+        "p01": 89.35007790780743,
+        "p50": 91.95783086378152,
+        "p99": 93.50687643413272
+      },
+      "selected_tifxyz_cells": 195,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        39,
+        16
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.0062029397784380234,
+      "evaluated_pixels": 6839,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_39_16.npy",
+      "pixel_area_sha256": "081343e32dc860c2c156cdf420ceb20afce89d26e09510db892a54cc75851b05",
+      "pixel_area_um2_quantiles": {
+        "max": 91.53508935873553,
+        "min": 89.77325957454977,
+        "p01": 89.77793788946725,
+        "p50": 90.71482227486364,
+        "p99": 91.52552644990783
+      },
+      "selected_tifxyz_cells": 310,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        40,
+        30
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.011793808695464583,
+      "evaluated_pixels": 12491,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_40_30.npy",
+      "pixel_area_sha256": "2af3855583d20e7b5c27d221d5c56df5bb449eb2bb2ddb61b58a4d2f8927ed3a",
+      "pixel_area_um2_quantiles": {
+        "max": 95.62344792766682,
+        "min": 93.60181912689585,
+        "p01": 93.76039887196333,
+        "p50": 94.35761419036913,
+        "p99": 95.55420916697943
+      },
+      "selected_tifxyz_cells": 519,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        42,
+        29
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.005186557907301855,
+      "evaluated_pixels": 5550,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_42_29.npy",
+      "pixel_area_sha256": "4b5db698a4b7344199c2fd646f00318a3757885c3e26829eef183f89f9fce702",
+      "pixel_area_um2_quantiles": {
+        "max": 94.11598187751216,
+        "min": 92.79421672209895,
+        "p01": 92.85295054516081,
+        "p50": 93.3862612151894,
+        "p99": 94.08372109015045
+      },
+      "selected_tifxyz_cells": 241,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        40,
+        14
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.012752494569420968,
+      "evaluated_pixels": 13959,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_40_14.npy",
+      "pixel_area_sha256": "000f03bdff7db90527f7361b67305c00d12421e50c263a19d54035338d83dc84",
+      "pixel_area_um2_quantiles": {
+        "max": 92.4318456666205,
+        "min": 89.67773943167616,
+        "p01": 89.74941263382462,
+        "p50": 91.60298027750395,
+        "p99": 92.28495845329405
+      },
+      "selected_tifxyz_cells": 579,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        40,
+        16
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.0013646912134797778,
+      "evaluated_pixels": 1572,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_40_16.npy",
+      "pixel_area_sha256": "574085db116bf880269f66637ddb0246689bb0733d6d9b2e89b0bc4139876ee5",
+      "pixel_area_um2_quantiles": {
+        "max": 89.58405487261251,
+        "min": 82.43298143365955,
+        "p01": 82.56414614690206,
+        "p50": 87.94965516878204,
+        "p99": 89.58405487261251
+      },
+      "selected_tifxyz_cells": 82,
+      "unsupported_pixels": 0
+    },
+    {
+      "adjacent_normal_flips_selected": 0,
+      "chunk_yx": [
+        38,
+        14
+      ],
+      "degenerate_selected_cells": 0,
+      "evaluated_area_cm2": 0.0017385669867579837,
+      "evaluated_pixels": 1936,
+      "passes": true,
+      "pixel_area_map": "data/ink9um_validation_pilot/pixel_area_um2/chunk_38_14.npy",
+      "pixel_area_sha256": "a2e1e0fc38497fabbd12705d547ce9e982788417f863926d6a0a1af20c404d74",
+      "pixel_area_um2_quantiles": {
+        "max": 90.16644868266329,
+        "min": 89.24436901660142,
+        "p01": 89.24436901660142,
+        "p50": 89.83608200378417,
+        "p99": 90.16544433964366
+      },
+      "selected_tifxyz_cells": 95,
+      "unsupported_pixels": 0
+    }
+  ],
+  "claim": "G2 applies only to the frozen bounded evaluation pixels, not to the whole surface or to ink validity.",
+  "coordinate_sha256": {
+    "x": "9f6bd997d436e042da6c40775c98bc31a0a22550ae77fc3699cdfcbe45a3c758",
+    "y": "7696c60bb67bf8ac93c0ba61021d1bdd6bdb8b9216a99c9e25d9631d19858db3",
+    "z": "f188a1303564ec30e04e68d8b066b372e57ad9557c7e28ed5ca13f007a3468f6"
+  },
+  "evaluated_area_cm2": 0.0751664413155459,
+  "evaluated_pixels": 81524,
+  "experiment_id": "pherc0139-w016-bounded-roi-geometry-20260915",
+  "geometry_scope": "frozen_bounded_evaluation_pixels",
+  "recommended_geometry_tier": "G2",
+  "regime": "DEV",
+  "schema_version": "inksurf-roi-geometry-audit/1.0",
+  "status": "pass",
+  "surface_id": "PHerc0139/20250108000004-w029_2025010827/20260102150214",
+  "track": "A",
+  "whole_surface_geometry_report": "results/pherc0139_w016_geometry/tifxyz_geometry_audit.json",
+  "whole_surface_geometry_sha256": "72464d5db994673935e42eee7d47c7ef4add3d3dd965ce18474df252919e77ed"
+}

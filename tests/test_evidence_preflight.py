@@ -58,6 +58,23 @@ class EvidencePreflightTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             audit_catalog(config, CatalogDocument(payload, config["catalog"]["url"]))
 
+    def test_two_renders_on_one_segment_are_discovered_but_not_declared_independent(self):
+        config, payload = _config()
+        document = json.loads(payload)
+        document["scrolls"][0]["inkSegments"][0]["renders"] = [
+            {"targetVolume": "111", "url": "https://x/a.tif", "modelName": "a"},
+            {"targetVolume": "222", "url": "https://x/b.tif", "modelName": "b"},
+        ]
+        updated = json.dumps(document, sort_keys=True).encode()
+        config["catalog"]["sha256"] = hashlib.sha256(updated).hexdigest()
+        report, _, pairs = audit_catalog(config, CatalogDocument(updated, config["catalog"]["url"]))
+        render_pair = next(row for row in pairs if row["alignment_status"].startswith("same_segment"))
+        self.assertTrue(render_pair["distinct_ink_source_volumes"])
+        self.assertEqual(render_pair["model_a"], "a")
+        self.assertEqual(report["distinct_source_ink_output_pairs"], 1)
+        self.assertEqual(report["independent_ink_output_pairs"], 0)
+        self.assertEqual(report["status"], "conditional_go_alignment_unverified")
+
     def test_validation_or_discovery_not_allowed_in_phase_zero(self):
         config, _ = _config()
         config["regime"] = "VALIDATION"

@@ -21,8 +21,9 @@ disagreement and abstention maps in standard formats.
    the seed-disagreement abstention rule fails the locked check.
 3. Measure AP, false positives per cm2, abstention coverage and stability on
    spatially separated known-text and blank regions. AP, coverage and spatial
-   bootstrap are implemented; false positives per physical area still require
-   a G2 benchmark with explicit scale.
+   bootstrap are implemented. Physical false area is now measured on 12 bounded
+   G2 DEV chunks; a continuous-region component rate and independent reference
+   are still missing.
 4. ~~Freeze and run one untouched scroll-surface validation unit.~~ Completed:
    PHerc0814, 2/4 gates, `NO-GO`. The negative outcome is preserved.
 5. ~~Package CLI, examples, machine-readable provenance, permissive license and

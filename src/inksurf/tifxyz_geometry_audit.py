@@ -133,8 +133,11 @@ def run(config_path: Path) -> dict[str, Any]:
         spacing_tolerance=float(config["spacing_relative_tolerance"]),
         maximum_jump_factor=float(config["maximum_jump_factor"]),
     )
-    with tifffile.TiffFile(root / config["reference_raster"]) as tif:
-        reference_shape = tuple(int(value) for value in tif.pages[0].shape)
+    if config.get("reference_shape_yx"):
+        reference_shape = tuple(int(value) for value in config["reference_shape_yx"])
+    else:
+        with tifffile.TiffFile(root / config["reference_raster"]) as tif:
+            reference_shape = tuple(int(value) for value in tif.pages[0].shape)
     grid_shape = tuple(int(value) for value in arrays["x"].shape)
     ratios = tuple(reference_shape[index] / grid_shape[index] for index in range(2))
     integer_mapping = all(float(value).is_integer() and value > 0 for value in ratios)

@@ -1,0 +1,133 @@
+{
+  "coordinate_order": "X,Y,Z",
+  "ct_support_provenance": {
+    "candidate_count": 12,
+    "passing_candidates": 12,
+    "report": "results/pherc0139_w016_geometry/ct_support_report.json",
+    "sha256": "a0970cb3b02e881da40ed9d181d6af1dd8b0e32dac88c0e37ef816d1922e91ee",
+    "status": "pass"
+  },
+  "ct_support_verified": true,
+  "experiment_id": "pherc0139-w016-tifxyz-geometry-audit-20260915",
+  "external_self_intersection_qa_supplied": false,
+  "g2_blockers": [
+    "one or more local TIFXYZ grid checks failed"
+  ],
+  "geometry": {
+    "actual_bounds_xyz": [
+      [
+        9079.9853515625,
+        8714.7353515625,
+        3953.783447265625
+      ],
+      [
+        18473.740234375,
+        17787.15625,
+        30370.982421875
+      ]
+    ],
+    "continuity": {
+      "u": {
+        "abrupt_jumps": 0,
+        "distance_quantiles_voxels": {
+          "max": 25.969133119476897,
+          "min": 3.3103718669173454,
+          "p01": 19.228201074075635,
+          "p50": 20.017024602503373,
+          "p99": 20.566342617997886
+        },
+        "median_relative_error": 0.0008512301251686338,
+        "valid_edges": 1712056,
+        "within_spacing_tolerance": true
+      },
+      "v": {
+        "abrupt_jumps": 0,
+        "distance_quantiles_voxels": {
+          "max": 24.088768054345113,
+          "min": 4.946322514231651,
+          "p01": 18.958427309942156,
+          "p50": 19.99781161793119,
+          "p99": 20.568353755661455
+        },
+        "median_relative_error": 0.00010941910344044458,
+        "valid_edges": 1712084,
+        "within_spacing_tolerance": true
+      }
+    },
+    "grid_shape_uv": [
+      1404,
+      1444
+    ],
+    "invalid_vertices": 313824,
+    "largest_component_fraction": 1.0,
+    "nonfinite_vertices": 0,
+    "partial_sentinel_vertices": 0,
+    "topology": {
+      "adjacent_normal_dot_p01": 0.9890819256948578,
+      "adjacent_normal_flips": 137,
+      "adjacent_normal_pairs": 3418216,
+      "degenerate_quads": 3,
+      "median_parallelogram_area_voxels2": 400.29276321118505,
+      "valid_quads": 1710589
+    },
+    "valid_components_8_connected": 1,
+    "valid_vertices": 1713552,
+    "vertices": 2027376
+  },
+  "local_grid_checks_pass": false,
+  "methodological_note": "G2 requires the verified local grid, parent-volume bounds, and CT support. External winding/self-intersection QA remains recommended and is required before G3.",
+  "parent_volume_provenance": {
+    "catalog_bytes": 751244,
+    "catalog_sha256": "b464f82279ed5cecba4a3a4c9838aa56e212ab23918114b9f19252ea5564fafc",
+    "catalog_updated": "2026-06-15",
+    "catalog_url": "https://raw.githubusercontent.com/ScrollPrize/villa/main/scrollprize.org/static/data_browser/index.json",
+    "chunks_zyx": [
+      128,
+      128,
+      128
+    ],
+    "dtype": "|u1",
+    "segment_label": "w029",
+    "segment_to_volume_association_verified": true,
+    "shape_zyx": [
+      76953,
+      26511,
+      26511
+    ],
+    "target_volume_id": "20260102150214",
+    "zarr_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20260102150214-2.399um-0.2m-78keV-masked.zarr/",
+    "zarray_bytes": 241,
+    "zarray_sha256": "f6c769e82435da8ff855923dcfbe7fd0fc0359b9468a7b8e3736f15b03ba661b",
+    "zarray_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/volumes/20260102150214-2.399um-0.2m-78keV-masked.zarr/0/.zarray"
+  },
+  "raster_mapping": {
+    "grid_shape_uv": [
+      1404,
+      1444
+    ],
+    "integer_aligned": true,
+    "reference_pixels_per_grid_step_yx": [
+      20.0,
+      20.0
+    ],
+    "reference_shape_yx": [
+      28080,
+      28880
+    ]
+  },
+  "recommended_geometry_tier": "G1",
+  "regime": "DEV",
+  "source_download_report": "results/pherc0139_w016_geometry/download_report.json",
+  "surface_id": "PHerc0139/20250108000004-w029_2025010827/20260102150214",
+  "track": "A",
+  "validation_files_accessed": 0,
+  "volume_bounds": {
+    "out_of_bounds_vertices": 0,
+    "verified": true,
+    "volume_shape_zyx": [
+      76953,
+      26511,
+      26511
+    ]
+  }
+}

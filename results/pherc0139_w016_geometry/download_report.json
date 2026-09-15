@@ -1,0 +1,39 @@
+{
+  "expected_bytes": 24329325,
+  "experiment_id": "pherc0139-w016-g2-geometry-download-20260915",
+  "files": [
+    {
+      "destination": "D:\\Vesuvius\\inksurf\\data\\ink9um_validation_pilot\\geometry\\meta.json",
+      "sha256": "1f4c793ba0755e6fb05aa9219f320c68aff66aefc3b8bfea6a3f60a0e098b762",
+      "size_bytes": 411,
+      "status": "downloaded",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260102150214-2.399um.tifxyz/meta.json"
+    },
+    {
+      "destination": "D:\\Vesuvius\\inksurf\\data\\ink9um_validation_pilot\\geometry\\x.tif",
+      "sha256": "9f6bd997d436e042da6c40775c98bc31a0a22550ae77fc3699cdfcbe45a3c758",
+      "size_bytes": 8109638,
+      "status": "downloaded",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260102150214-2.399um.tifxyz/x.tif"
+    },
+    {
+      "destination": "D:\\Vesuvius\\inksurf\\data\\ink9um_validation_pilot\\geometry\\y.tif",
+      "sha256": "7696c60bb67bf8ac93c0ba61021d1bdd6bdb8b9216a99c9e25d9631d19858db3",
+      "size_bytes": 8109638,
+      "status": "downloaded",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260102150214-2.399um.tifxyz/y.tif"
+    },
+    {
+      "destination": "D:\\Vesuvius\\inksurf\\data\\ink9um_validation_pilot\\geometry\\z.tif",
+      "sha256": "f188a1303564ec30e04e68d8b066b372e57ad9557c7e28ed5ca13f007a3468f6",
+      "size_bytes": 8109638,
+      "status": "downloaded",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20250108000004-w029_2025010827/mesh/20250108000004-on-20260102150214-2.399um.tifxyz/z.tif"
+    }
+  ],
+  "project_root": "D:\\Vesuvius\\inksurf",
+  "regime": "DEV",
+  "schema_version": "inksurf-bounded-http-download/1.0",
+  "track": "A",
+  "verified_bytes": 24329325
+}

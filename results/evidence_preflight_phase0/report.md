@@ -4,7 +4,7 @@
 
 **Track/regime:** Track A / DEV
 
-**Result:** `conditional_go_raw_evidence_only`
+**Result:** `conditional_go_alignment_unverified`
 
 **Volumetric bytes downloaded:** 0
 
@@ -34,12 +34,18 @@ All three known-text DEV samples satisfy the preregistered catalog gate. Paris
 prediction and Ink3D products. This only establishes that a bounded pilot has
 plausible source material.
 
-The artifact audit found two Paris 4 same-label pairs backed by distinct
-surface-volume IDs (`w104-106` and `w122-123`). Neither provides two independent
-ink outputs: one member of `w104-106` has no full ink output, while both
-`w122-123` outputs point to the same 2.4 um source volume. Therefore the catalog
-contains a route to compare raw acquisitions, but **zero catalogued pairs of
-independent ink predictions** on an apparently corresponding surface.
+The corrected artifact audit now inspects multiple render entries on one
+segment as well as same-label pairs across segments. It finds 93 ink-output
+pairs associated with distinct source-volume IDs. These are candidates, not 93
+independent confirmations: transform, model lineage and training-data
+dependencies remain unverified. The audited count of independent pairs is
+therefore still zero.
+
+One actionable DEV candidate is PHerc0139 segment `20250108000004` (`w029`):
+the catalog exposes a 2.399 µm / 78 keV render from volume `20260102150214` and
+a 1.129 µm / 59 keV render from volume `20260413113053`, using different model
+IDs. HTTP metadata confirms tiled DEFLATE TIFFs of 63,656,391 and 41,030,186
+bytes. No prediction pixels were downloaded in this phase.
 
 The Paris 4 declared ink count is 80 while the catalog contains 81 ink-segment
 entries, 80 of which have a `full` output. This is recorded as a provenance
@@ -49,19 +55,17 @@ distinction, not interpreted as an upstream error.
 
 - Common physical surface coverage across scans is not established.
 - Cross-scan transforms and registration error are not verified.
-- No independent ink-output pair is present in the two same-label cross-volume
-  candidates; any independence test must start from raw evidence or generate
-  new outputs under a frozen protocol.
+- Distinct source volumes and model names do not establish independent training
+  data or failure modes.
 - A held-out evaluation unit has not been frozen.
 - Paris 4 carries a publication-reservation notice that must be preserved in
   every derived manifest.
 
 ## Decision
 
-Proceed only to a transform/overlap feasibility audit for the two Paris 4 raw
-surface candidates. Do not download or scan volumes until one pair has a
-bounded I/O plan, a transform path, a physical-scale evaluation unit and a
-declared legal regime.
+Proceed to a bounded transform/overlap plan for the PHerc0139-w029 render pair.
+Use TIFF tile ranges rather than downloading the complete 104.7 MB pair, and do
+not count it as two groups until provenance and registration pass.
 
 Machine-readable artifacts: `report.json`, `scan_pairs.csv` and
 `artifact_pairs.csv` in this folder.

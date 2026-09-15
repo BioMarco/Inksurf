@@ -2043,3 +2043,73 @@ nuovo dato è stato letto. La suite completa conta 113 test, tutti superati.
 validare. Il prossimo test richiede una ROI G2 con reference ammissibile e una
 mappa di area derivata dalla geometria; usare una scala nominale su una
 flattening distorta non sarebbe sufficiente.
+
+## 45. Upgrade geometrico bounded e burden fisico PHerc0139-w016
+
+**Data:** 15 settembre 2026. **Track/regime/tier:** Track A / DEV / G2 limitato
+agli 81.524 pixel di valutazione congelati.
+
+Il listing metadata S3 del segmento ufficiale
+`20250108000004-w029_2025010827` ha identificato il TIFXYZ corrispondente al
+volume `20260102150214`. Sono stati trasferiti 4 file per 24.329.325 byte sotto
+cap 24 MiB e verificati con SHA-256. La griglia è `1404 x 1444`, con mapping
+intero 20 pixel level 0 o 5 pixel level 2 per passo TIFXYZ.
+
+**Risultato negativo conservato:** l'audit dell'intera superficie resta G1:
+137 coppie di normali adiacenti invertite e 3 quad degeneri su circa 1,71
+milioni di quad validi. Bounds nel parent volume, associazione catalogo e
+CT-support passano. Nessuna soglia è stata rilassata dopo il risultato.
+
+**Risultato verificato bounded:** sulle 12 ROI già selezionate senza contenuto
+delle label, zero pixel valutati dipendono da quad non supportati, zero celle
+selezionate sono degeneri e zero coppie selezionate invertono la normale. Il
+CT-support centrale e a qualunque profondità è `1,0` in tutti i chunk. L'area
+fisica valutata è `0,0751664 cm2`, di cui `0,0571943 cm2` negativa.
+
+Il benchmark fisico diagnostico produce:
+
+| policy | precisione pixel | recall pixel | area falsa / area negativa |
+|---|---:|---:|---:|
+| naive score >=0,5 | 0,5809 | 0,6587 | 14,8732% |
+| naive top 1% | 1,0000 | 0,0420 | 0,0000% |
+| naive top 5% | 0,9375 | 0,1968 | 0,4216% |
+| InkSurf fail-closed, un solo gruppo | n/a | 0,0000 | 0,0000% |
+
+**Interpretazione:** risultato DEV promettente ma da validare. Il top 1% è
+perfetto su questo subset, ma le reference sono annotazioni trasferite/pseudo-
+label e il modello è legato alla selezione upstream. Lo zero InkSurf ha yield
+zero e non indica superiorità del detector. Le componenti sono tagliate ai
+bordi dei 12 chunk, quindi il loro tasso non è una misura di ROI continua.
+
+Artefatti: config `pherc0139_w016_*`, moduli `ink9um_ct_support`,
+`roi_geometry_audit`, `physical_benchmark` e report aggregati sotto
+`results/pherc0139_w016_geometry/` e
+`results/pherc0139_w016_physical_benchmark/`. Prossimo test: sfruttare il nuovo
+pair ufficiale cross-acquisition/cross-model sullo stesso segmento soltanto
+dopo audit di provenance, registrazione e dipendenza del training.
+
+## 46. Correzione del preflight per render multipli sullo stesso segmento
+
+**Data:** 15 settembre 2026. **Track/regime:** Track A / DEV metadata-only.
+
+Il preflight storico contava soltanto coppie same-label tra segmenti diversi e
+ignorava più render associati allo stesso segmento. `evidence_preflight` ora
+enumera anche queste coppie, registra volume sorgente e modello e mantiene la
+distinzione tra `distinct_source_ink_output_pairs` e coppie realmente
+indipendenti.
+
+**Risultato verificato sul catalogo congelato** SHA-256 `b464f822...4fafc`:
+93 coppie di ink output usano volume IDs distinti, ma zero sono promosse a
+indipendenti senza audit. Un candidato concreto è PHerc0139-w029: render
+2,399 µm/78 keV dal volume `20260102150214`, modello
+`new_canon_autoresearch_recipe`, e render 1,129 µm/59 keV level 1 dal volume
+`20260413113053`, modello `mrg20736_1um_s1z2`. I TIFF sono tiled DEFLATE
+1024x1024, rispettivamente 63.656.391 e 41.030.186 byte; sono supportate range
+request. Nessun pixel prediction è stato scaricato.
+
+**Interpretazione:** risultato promettente ma da validare. Acquisizione,
+energia, risoluzione e modello differiscono, ma il training lineage è ignoto e
+le raster shape `28080x28880` e `29860x30720` richiedono registrazione fisica.
+Il prossimo passo è un piano I/O per le sole tile che coprono le 12 ROI DEV,
+seguito da confronto TIFXYZ; non è autorizzato chiamare queste fonti
+indipendenti prima dei due audit.
