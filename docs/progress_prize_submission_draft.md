@@ -107,6 +107,14 @@ negative and zero are transferred positives. The bound decision is
 demonstrates that registration success alone does not make two outputs an
 eligible two-class benchmark pair.
 
+The final unrevealed official validation-mask candidate, PHerc1667-w029, was
+then frozen before pixel access. Its 12 metadata-selected chunks contained
+68,831 validation pixels and 3,541 positives, but all positives occurred in one
+chunk. The preregistered minimum was four chunks with both classes. The
+hash-bound verdict is `NO_GO_LABEL_DIVERSITY_UPPER_BOUND`; InkSurf stopped
+before TIFXYZ and prediction-tile downloads. This is evidence for fail-closed
+workflow integrity, not a model-quality result.
+
 On PHerc0139-w016, geometry is now G2 only for the 12 frozen bounded DEV
 chunks. They cover `0.0751664 cm²`; the naive top-5% policy has pixel precision
 `0.9375` and false-positive area equal to `0.4216%` of evaluated negative area.

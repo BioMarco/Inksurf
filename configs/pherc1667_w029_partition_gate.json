@@ -1,0 +1,15 @@
+{
+  "schema_version": "inksurf-validation-partition-gate/1.0",
+  "experiment_id": "pherc1667-w029-partition-gate-20260916",
+  "track": "A",
+  "regime": "VALIDATION",
+  "protocol": {
+    "report": "configs/pherc1667_w029_cross_model_protocol.json",
+    "sha256": "3504a16503d550783ea211de7e96c1a96868e8f90f592c359fefa28f8b93b90d"
+  },
+  "chunk_audit": {
+    "report": "results/pherc1667_w029_validation/chunk_audit_report.json",
+    "sha256": "f68f5c4e20992c3c8d48fe4a03b122e85fcbe23d3424d2b2839dba361602ba1a"
+  },
+  "output_report": "results/pherc1667_w029_validation/partition_gate.json"
+}

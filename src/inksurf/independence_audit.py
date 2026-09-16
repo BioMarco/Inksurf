@@ -16,7 +16,7 @@ def _atomic_json(path: Path, payload: dict) -> None:
         prefix=path.name + ".", suffix=".tmp", dir=path.parent
     )
     try:
-        with os.fdopen(descriptor, "w", encoding="utf-8") as stream:
+        with os.fdopen(descriptor, "w", encoding="utf-8", newline="\n") as stream:
             json.dump(payload, stream, indent=2, sort_keys=True)
             stream.write("\n")
             stream.flush()

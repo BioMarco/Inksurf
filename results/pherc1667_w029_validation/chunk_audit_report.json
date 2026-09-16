@@ -1,0 +1,185 @@
+{
+  "chunks": [
+    {
+      "chunk_yx": [
+        28,
+        54
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_28_54.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 3541,
+      "ink_prevalence_in_validation": 0.3045497548808807,
+      "pooled_nonzero_fraction": 0.9999970935639881,
+      "source_sha256": "3fd67fa99c9fe0a820c5f166eebde6e61347455b8d1be06c6bd8f82b4e2b04a5",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 11627
+    },
+    {
+      "chunk_yx": [
+        24,
+        54
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_24_54.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "bea74e500223e7be5290560a0e34873729866c8f2fdf6caf862c1cb9680b7b83",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 4643
+    },
+    {
+      "chunk_yx": [
+        39,
+        41
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_39_41.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "e70d99f79e95bc3a96abe49c747ea09c46e4a92eca133fd9049771feb89cd405",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 3033
+    },
+    {
+      "chunk_yx": [
+        29,
+        55
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_29_55.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 0.9999825613839286,
+      "source_sha256": "a2564c9223e54679d505ad13581b083f85aaf0edbcab43acd6ecf494b48fbaa1",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 939
+    },
+    {
+      "chunk_yx": [
+        40,
+        40
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_40_40.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "ba32efba0b80e966db91586ee0d148a05bca32bdfb6b90a4f2ee01f6995764c3",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 2507
+    },
+    {
+      "chunk_yx": [
+        28,
+        56
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_28_56.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 0.9999970935639881,
+      "source_sha256": "0d186ba6b9877f4114e1a51239c3bbcdc2077977db28b74735a713219b8a7efe",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 2879
+    },
+    {
+      "chunk_yx": [
+        24,
+        56
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_24_56.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "07d3802523c48bd480cd8f4b3207df3f47270bd0a41c7836dbdafa777f7cfa7f",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 3393
+    },
+    {
+      "chunk_yx": [
+        35,
+        40
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_35_40.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "71d0bf7544923208775350bb7ac1c41332044cdb7599763fc29d986fa2301a7b",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 14375
+    },
+    {
+      "chunk_yx": [
+        35,
+        41
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_35_41.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "0b19f1b7fc10ec38301ee89b106fb4f0517a3603b54ba12e297eb9b9be3c0274",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 1965
+    },
+    {
+      "chunk_yx": [
+        40,
+        39
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_40_39.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "1bee3f67adfd00a10ec1be1f19b27f5986952865b5ed034b06ce9aa13daf258e",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 4979
+    },
+    {
+      "chunk_yx": [
+        36,
+        38
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_36_38.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 1.0,
+      "source_sha256": "af11aaa3b621b3afdf291b91e080bf5149bd9b276697bb887716d9d65901f833",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 7457
+    },
+    {
+      "chunk_yx": [
+        24,
+        55
+      ],
+      "derived": "data/pherc1667_w029_validation/derived/chunk_24_55.npz",
+      "evaluation_mask_kind": "validation_mask",
+      "ink_pixels_in_validation": 0,
+      "ink_prevalence_in_validation": 0.0,
+      "pooled_nonzero_fraction": 0.9999912806919643,
+      "source_sha256": "7877b8a5ede46565c1b75effa52a6ac643c844926b892e55640179df0f9eaf58",
+      "supervision_pixels_in_validation": 0,
+      "validation_pixels": 11034
+    }
+  ],
+  "evaluation_mask_kind": "validation_mask",
+  "experiment_id": "pherc1667-w029-validation-chunk-audit-20260916",
+  "geometry_tier": "G1",
+  "ink_prevalence_in_validation": 0.05144484316659645,
+  "limitation": "Locally locked validation with transferred/pseudo labels; upstream online-validation exposure prevents fully independent confirmation.",
+  "preparation": "official level-2 XY; centered 84 Z planes; rounded 4x Z mean pooling; 21x128x128 uint8",
+  "regime": "VALIDATION",
+  "schema_version": "inksurf-ink9um-chunk-audit/1.0",
+  "status": "bounded_chunks_ready_for_inference",
+  "total_ink_pixels_in_validation": 3541,
+  "total_validation_pixels": 68831,
+  "track": "A",
+  "visual_files_inspected": 0
+}

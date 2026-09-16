@@ -167,6 +167,7 @@ These experiments are receipts for specific claims, not a ladder in which every
 | PHerc0814 locked labels | VALIDATION / G1 | Ensemble AP `0.59718`; 2/4 gates passed | `NO-GO` for seed-disagreement abstention |
 | PHerc0139 physical burden | DEV / bounded G2 | Top-5% precision `0.9375`; false area `0.4216%` of negative area | Promising DEV diagnostic; pseudo-label reference |
 | PHerc0139-w045 cross-model eligibility | DEV / G1 | UV holdout residual p50 `9.61 µm`; 32,467 geometry-supported labeled pixels, all negative | `NO-GO` single-class; score comparison prohibited |
+| PHerc1667-w029 locked partition | VALIDATION / G1 | 68,831 labeled pixels, but positives occur in only 1/12 chunks | `NO-GO` frozen spatial-diversity gate; no prediction download |
 
 Detailed reports:
 
@@ -255,6 +256,14 @@ bytes. The test requires spatial-holdout TIFXYZ registration, two-class common
 support, whole-chunk bootstrap, a fusion AP gain over the best individual
 render, and an abstention gain. Failure at any prerequisite is reported as
 NO-GO without moving the ROI or relaxing thresholds.
+
+After reveal, the partition contained 3,541 positive and 65,290 negative pixels,
+but every positive was in one chunk. The frozen requirement was at least four
+chunks containing both classes. InkSurf therefore stopped with
+`NO_GO_LABEL_DIVERSITY_UPPER_BOUND` before downloading TIFXYZ or prediction
+tiles. The official validation-mask census is now exhausted; the cross-model
+confirmation route remains closed until a genuinely suitable whole-region
+reference becomes available.
 
 Before submission:
 

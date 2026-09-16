@@ -70,6 +70,12 @@ candidate, PHerc1667-w029. Its protocol must be frozen before any label-pixel
 access; if it also fails, the submission remains an auditor/validator
 contribution rather than a confirmed cross-model detector.
 
+That frozen PHerc1667 test has now failed its preregistered spatial-diversity
+gate: all 3,541 positives are confined to one of 12 chunks, versus four required.
+No prediction or TIFXYZ pixels were downloaded. The official validation-mask
+search is exhausted, so the submission scope is now explicitly the reproducible
+validator/auditor contribution; no cross-model detection claim will be made.
+
 ## Stop conditions
 
 - no G2 surface or reproducible seating;

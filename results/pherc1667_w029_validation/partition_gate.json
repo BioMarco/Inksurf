@@ -1,0 +1,22 @@
+{
+  "additional_pixel_download_allowed": false,
+  "chunks_with_both_classes_before_geometry": 1,
+  "claim_limit": "Local locked test only. The upstream online-validation pseudo-labels and unknown training lineage prevent independent ground-truth or independent-model claims.",
+  "experiment_id": "pherc1667-w029-partition-gate-20260916",
+  "gates": {
+    "maximum_possible_chunks_with_both_classes": false,
+    "maximum_possible_eligible_ink_pixels": true,
+    "maximum_possible_eligible_negative_pixels": true
+  },
+  "geometry_tier": "G1",
+  "ink_pixels": 3541,
+  "negative_pixels": 65290,
+  "reason": "Common-geometry filtering can only remove pixels and cannot increase the number of chunks containing both classes.",
+  "regime": "VALIDATION",
+  "required_chunks_with_both_classes": 4,
+  "schema_version": "inksurf-validation-partition-gate/1.0",
+  "score_comparison_allowed": false,
+  "status": "NO_GO_LABEL_DIVERSITY_UPPER_BOUND",
+  "track": "A",
+  "validation_pixels": 68831
+}

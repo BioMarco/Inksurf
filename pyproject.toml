@@ -73,6 +73,7 @@ inksurf-cross-model-candidate-decision = "inksurf.cross_model_candidate_decision
 inksurf-ink9um-provenance-census = "inksurf.ink9um_provenance_census:main"
 inksurf-tifxyz-common-support = "inksurf.tifxyz_common_support:main"
 inksurf-cross-model-label-evaluation = "inksurf.cross_model_label_evaluation:main"
+inksurf-validation-partition-gate = "inksurf.validation_partition_gate:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

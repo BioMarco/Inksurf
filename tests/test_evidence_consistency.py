@@ -1,11 +1,19 @@
 import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import numpy as np
 
-from inksurf.evidence_consistency import combine_evidence, validate_config
+from inksurf.evidence_consistency import _atomic_json, combine_evidence, validate_config
 
 
 class EvidenceConsistencyTests(unittest.TestCase):
+    def test_atomic_json_is_git_stable_lf_on_windows(self):
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "receipt.json"
+            _atomic_json(path, {"value": 1})
+            self.assertNotIn(b"\r\n", path.read_bytes())
+
     def test_correlated_variants_cannot_inflate_independent_support(self):
         high = np.ones((2, 2), dtype=np.float32)
         low = np.zeros((2, 2), dtype=np.float32)

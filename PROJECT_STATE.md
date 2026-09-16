@@ -2292,3 +2292,38 @@ di annotazioni. Nessun file pixel è stato ancora scaricato.
 superati. Prossimo passo: pubblicare il freeze, poi scaricare soltanto il
 manifest bounded e fermarsi ai gate di registrazione/supporto prima di ogni
 confronto di score.
+
+## 52. Stop anticipato PHerc1667-w029
+
+**Data:** 16 settembre 2026. Il freeze è stato pubblicato nel commit
+`a2ec27f` prima del reveal. Il manifest bounded ha poi trasferito e verificato
+48 file per 21.434.252 byte; non sono stati scaricati TIFXYZ né tile di
+prediction.
+
+Le 12 chunk congelate contengono 68.831 pixel di validation: 3.541 positivi e
+65.290 negativi. Tuttavia tutti i positivi appartengono alla sola chunk
+`[28,54]`; le altre 11 chunk hanno zero positivi. Il protocollo richiede almeno
+4 chunk con entrambe le classi. Il massimo possibile prima ancora
+dell'intersezione geometrica è quindi 1: filtrare per supporto TIFXYZ può solo
+rimuovere pixel e non può aumentare questo numero.
+
+Il gate hash-bound restituisce `NO_GO_LABEL_DIVERSITY_UPPER_BOUND`, vieta il
+confronto di score e blocca ulteriori download pixel per questo esperimento.
+Questo è un risultato negativo robusto rispetto alla regola congelata, non una
+valutazione dei due modelli e non evidenza di assenza d'inchiostro. La selezione
+per dimensione compressa della validation mask è riproducibile e blind, ma non
+garantisce diversità spaziale dei positivi.
+
+Il censimento delle validation mask ufficiali è ora esaurito: PHerc0139 fallisce
+il supporto positivo comune; PHerc0814 era già rivelato/upstream validation;
+PHerc1667 fallisce il gate di diversità spaziale. Non è lecito scegliere nuove
+chunk PHerc1667 dopo il reveal per salvare il risultato. La via cross-model
+confermativa viene quindi fermata; la candidatura Progress Prize deve
+posizionare InkSurf come validator/auditor fail-closed con evidenza DEV e
+risultati negativi riproducibili, finché non sarà disponibile una reference
+indipendente whole-region.
+
+Artefatti: `configs/pherc1667_w029_validation_chunk_audit.json`,
+`configs/pherc1667_w029_partition_gate.json` e report in
+`results/pherc1667_w029_validation/`. La suite completa conta 149 test, tutti
+superati.
