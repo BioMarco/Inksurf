@@ -1,0 +1,35 @@
+{
+  "schema_version": "inksurf-release-readiness/1.0",
+  "audit_date": "2026-09-16",
+  "version": "0.1.0",
+  "target": "Vesuvius Challenge Progress Prize",
+  "deadline": "2026-09-30T23:59:00-07:00",
+  "software_release_status": "GO_AFTER_OWNER_VISIBILITY_APPROVAL",
+  "progress_prize_positioning": "validator_auditor_failure_diagnostic",
+  "ink_or_structural_claim_status": "NO_GO",
+  "checks": {
+    "unittest_passed": 149,
+    "unittest_failed": 0,
+    "pytest_passed": 149,
+    "pytest_failed": 0,
+    "wheel_build": "pass",
+    "wheel_filename": "inksurf-0.1.0-py3-none-any.whl",
+    "wheel_sha256": "819b0335a41db2dc784fe3856fc3a7ae1a7c14aa0366d568b7054e7a4f621f51",
+    "synthetic_reference_pixels": 320,
+    "synthetic_accepted_reference_pixels": 320,
+    "synthetic_correlated_artifact_pixels": 75,
+    "synthetic_accepted_correlated_artifact_pixels": 0,
+    "claim_audit_status": "NO_GO_SUBMISSION_CLAIM",
+    "confirmation_eligible_receipts": 0,
+    "software_guardrail_demonstrated": true,
+    "tracked_data_bearing_extension_files": 0,
+    "tracked_credential_pattern_matches": 0,
+    "deterministic_json_lf_test": "pass"
+  },
+  "external_blockers": [
+    "owner approval for public repository visibility",
+    "community use or reproducibility feedback",
+    "owner submission through the official prize form"
+  ],
+  "claim_limit": "Software utility and failure diagnosis only; no validated physical-ink, letter or structural-discovery claim."
+}

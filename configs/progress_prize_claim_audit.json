@@ -1,6 +1,6 @@
 {
   "schema_version": "inksurf-claim-audit/1.0",
-  "experiment_id": "inksurf-progress-prize-claim-audit-20260915",
+  "experiment_id": "inksurf-progress-prize-claim-audit-20260916",
   "track": "A",
   "regime": "DEV",
   "evidence": [
@@ -57,6 +57,16 @@
       "independent_groups": 1,
       "ground_truth_independent": false,
       "permitted_claim": "diagnosis of signal-bearing seed disagreement"
+    },
+    {
+      "evidence_id": "pherc1667-frozen-partition",
+      "artifact": "results/pherc1667_w029_validation/partition_gate.json",
+      "sha256": "b9b245a1231641b6e585e0cee1eb70ee9668fb988588ec547f595d78e2b84533",
+      "expected_schema": "inksurf-validation-partition-gate/1.0",
+      "role": "locked_validation",
+      "independent_groups": 0,
+      "ground_truth_independent": false,
+      "permitted_claim": "negative frozen eligibility result; score comparison prohibited"
     }
   ],
   "output_report": "results/progress_prize_claim_audit/report.json"

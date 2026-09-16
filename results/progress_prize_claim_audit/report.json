@@ -103,9 +103,29 @@
       "role": "post_hoc",
       "sha256": "5c00d96eedac3086c0ab7ec150d585bccaeb2d363f9fc883cf484522748d9681",
       "status": "diagnostic_complete_no_threshold_fitted"
+    },
+    {
+      "artifact": "results/pherc1667_w029_validation/partition_gate.json",
+      "confirmation_eligible": false,
+      "evidence_id": "pherc1667-frozen-partition",
+      "geometry_tier": "G1",
+      "go_checks_passed": 0,
+      "go_checks_total": 0,
+      "ground_truth_independent": false,
+      "independence_verification": {
+        "declared_groups": 0,
+        "reason": "no hashed independence audit; claim ceiling capped at one group",
+        "status": "unverified"
+      },
+      "independent_groups": 0,
+      "permitted_claim": "negative frozen eligibility result; score comparison prohibited",
+      "regime": "VALIDATION",
+      "role": "locked_validation",
+      "sha256": "b9b245a1231641b6e585e0cee1eb70ee9668fb988588ec547f595d78e2b84533",
+      "status": "NO_GO_LABEL_DIVERSITY_UPPER_BOUND"
     }
   ],
-  "experiment_id": "inksurf-progress-prize-claim-audit-20260915",
+  "experiment_id": "inksurf-progress-prize-claim-audit-20260916",
   "next_requirement": "A G2/G3 locked result with at least two independent groups and independent ground truth.",
   "regime": "DEV",
   "schema_version": "inksurf-claim-audit/1.0",

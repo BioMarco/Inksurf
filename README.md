@@ -180,6 +180,8 @@ Detailed reports:
 - [naive workflow versus InkSurf](docs/method_comparison.md)
 - [bounded real-data walkthrough](docs/real_data_walkthrough.md)
 - [Progress Prize submission draft](docs/progress_prize_submission_draft.md)
+- [v0.1.0 release-readiness audit](docs/release_readiness_20260916.md)
+- [changelog](CHANGELOG.md)
 
 The PHerc0814 labels are transferred annotations/pseudo-labels and the upstream
 model used that case for online validation. This is not fully independent

@@ -2327,3 +2327,25 @@ Artefatti: `configs/pherc1667_w029_validation_chunk_audit.json`,
 `configs/pherc1667_w029_partition_gate.json` e report in
 `results/pherc1667_w029_validation/`. La suite completa conta 149 test, tutti
 superati.
+
+## 53. Release gate Progress Prize v0.1.0
+
+**Data:** 16 settembre 2026. I requisiti ufficiali correnti del Progress Prize
+sono stati ricontrollati: contributo open source su dati Vesuvius, vantaggio
+dimostrabile, documentazione/esempi, formati standard e integrazione modulare;
+deadline mensile 30 settembre 2026 alle 23:59 Pacific. Il bando favorisce
+rilascio anticipato e uso/feedback della comunità.
+
+Il gate locale è `GO_AFTER_OWNER_VISIBILITY_APPROVAL`: 149 test `unittest` e
+149 test `pytest` superati; wheel `inksurf-0.1.0` costruita; demo sintetica
+corretta; claim audit ancora prudentemente `NO_GO_SUBMISSION_CLAIM`; zero file
+data-bearing tracciati e zero pattern credenziali. La scrittura atomica JSON è
+stata resa LF-deterministica su Windows per evitare hash diversi dopo il
+checkout Git.
+
+La candidatura è pronta come software validator/auditor e non come detector di
+inchiostro o First Letters. I blocker esterni sono: visibilità pubblica del
+repository (la lettura GitHub anonima non lo ha risolto), un primo feedback
+comunitario e l'invio del form sotto l'identità del proprietario. Artefatti:
+`docs/release_readiness_20260916.md` e
+`results/release_readiness/report.json`.
