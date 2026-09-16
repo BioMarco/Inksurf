@@ -2256,3 +2256,39 @@ Artefatti: `configs/ink9um_provenance_census.json`,
 `results/ink9um_provenance_census/report.json` e `cases.csv`. Prossimo passo:
 preregistrare il protocollo PHerc1667-w029 e soltanto dopo eseguire un download
 strettamente limitato alle ROI selezionate con criteri metadata-only.
+
+## 51. Protocollo congelato PHerc1667-w029
+
+**Data:** 16 settembre 2026. **Track/regime/tier:** Track A / VALIDATION locale
+/ G1. La reference resta upstream online-validation e pseudo-label; non è ground
+truth indipendente. Al momento del freeze non era stato letto alcun pixel
+PHerc1667 di annotazione, volume sorgente o prediction.
+
+Il protocollo `pherc1667_w029_cross_model_protocol.json` congela prima del
+reveal: due render ufficiali 1,129 µm/59 keV e 2,399 µm/78 keV; selezione delle
+12 validation chunk con maggiore dimensione compressa e tie-break
+lessicografico; registrazione TIFXYZ con holdout spaziale; supporto comune
+conservativo; campionamento bilineare in UV; baseline dei singoli render;
+fusione media; astensione del 20% a massimo disaccordo; bootstrap su chunk
+interi con 2.000 repliche e seed 1667.
+
+I gate congelati richiedono almeno 100 positivi, 1.000 negativi e 4 chunk con
+entrambe le classi nel supporto comune; gain AP della fusione di almeno 0,02 sul
+miglior singolo render con limite CI95 inferiore maggiore di zero; gain AP dopo
+astensione di almeno 0,02. Le soglie di registrazione restano mediana <=50 µm e
+p90 <=150 µm. Qualunque fallimento produce NO-GO senza cambiare ROI o soglie.
+
+Il preflight metadata-only ha elencato 13.959 oggetti (4.305.146 byte di
+metadati) e congelato le chunk, nell'ordine:
+`[28,54]`, `[24,54]`, `[39,41]`, `[29,55]`, `[40,40]`, `[28,56]`,
+`[24,56]`, `[35,40]`, `[35,41]`, `[40,39]`, `[36,38]`, `[24,55]`.
+Il download previsto è 21.430.272 byte raw di volume più 3.980 byte compressi
+di annotazioni. Nessun file pixel è stato ancora scaricato.
+
+**Stato:** `bounded_download_ready`. Artefatti congelati in
+`configs/pherc1667_w029_cross_model_protocol.json`,
+`configs/pherc1667_w029_validation_preflight.json` e
+`results/pherc1667_w029_validation/`. La suite completa conta 146 test, tutti
+superati. Prossimo passo: pubblicare il freeze, poi scaricare soltanto il
+manifest bounded e fermarsi ai gate di registrazione/supporto prima di ogni
+confronto di score.

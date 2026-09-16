@@ -248,6 +248,14 @@ PHerc0814 case, and the still-unrevealed PHerc1667-w029 candidate. The census
 accessed 94,420 metadata bytes and no pixel files. PHerc1667 is the next bounded
 candidate, subject to a frozen protocol and provenance/independence caveats.
 
+The PHerc1667-w029 protocol is now frozen and hash-bound before pixel reveal.
+Twelve validation chunks were selected solely by compressed-mask size; the
+bounded plan totals 21,430,272 raw source bytes plus 3,980 compressed annotation
+bytes. The test requires spatial-holdout TIFXYZ registration, two-class common
+support, whole-chunk bootstrap, a fusion AP gain over the best individual
+render, and an abstention gain. Failure at any prerequisite is reported as
+NO-GO without moving the ROI or relaxing thresholds.
+
 Before submission:
 
 1. ~~demonstrate a decision-level advantage over naive ensemble/repeatability

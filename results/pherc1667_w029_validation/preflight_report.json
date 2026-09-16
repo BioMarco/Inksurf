@@ -1,0 +1,24 @@
+{
+  "annotation_online_validation": true,
+  "discovery_files_accessed": 0,
+  "experiment_id": "pherc1667-w029-cross-model-preflight-20260916",
+  "geometry_tier": "G1",
+  "limitations": [
+    "This is a locally locked VALIDATION partition, but it remains an upstream online-validation case.",
+    "Labels are transferred annotations/pseudo-labels, not independent IR ground truth.",
+    "Compressed validation_mask-chunk size is a deterministic coverage proxy, not an ink score."
+  ],
+  "listed_annotation_objects": 13959,
+  "metadata_bytes_transferred": 4305146,
+  "planned_annotation_bytes": 3980,
+  "planned_source_raw_bytes": 21430272,
+  "regime": "VALIDATION",
+  "schema_version": "inksurf-ink9um-validation-preflight/1.0",
+  "selected_chunk_count": 12,
+  "selection_chunk_bounds_yx": null,
+  "selection_mask_kind": "validation_mask",
+  "selection_support": null,
+  "status": "bounded_download_ready",
+  "track": "A",
+  "validation_files_accessed": 0
+}

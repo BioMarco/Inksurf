@@ -1,0 +1,299 @@
+{
+  "allowed_hosts": [
+    "vesuvius-challenge-open-data.s3.amazonaws.com",
+    "huggingface.co",
+    "us.aws.cdn.hf.co",
+    "cdn-lfs.hf.co"
+  ],
+  "experiment_id": "pherc1667-w029-cross-model-preflight-20260916-download",
+  "files": [
+    {
+      "destination": "source/2/0/28/54",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/28/54"
+    },
+    {
+      "destination": "annotations/inklabels/0.28.54",
+      "size_bytes": 148,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.28.54",
+      "xet_hash": "6e9dd3597f15475c9f80966047ae2c67da265e689a09c4876a89689ff4895a62"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.28.54",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.28.54",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.28.54",
+      "size_bytes": 183,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.28.54",
+      "xet_hash": "a961661924606c1275d0606e3fb3df44dd0b0945859413d831d22b6b2c32665d"
+    },
+    {
+      "destination": "source/2/0/24/54",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/24/54"
+    },
+    {
+      "destination": "annotations/inklabels/0.24.54",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.24.54",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.24.54",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.24.54",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.24.54",
+      "size_bytes": 173,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.24.54",
+      "xet_hash": "bfebc15fcda54a6b8bc5998f9b5b2378dcbbff97a5e67c16e7b5c73331bd57c2"
+    },
+    {
+      "destination": "source/2/0/39/41",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/39/41"
+    },
+    {
+      "destination": "annotations/inklabels/0.39.41",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.39.41",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.39.41",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.39.41",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.39.41",
+      "size_bytes": 173,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.39.41",
+      "xet_hash": "9e1c2bad4ee9052554c9385c83ee7b9cfc2ee40595e9d0e18d3dda161bb1e281"
+    },
+    {
+      "destination": "source/2/0/29/55",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/29/55"
+    },
+    {
+      "destination": "annotations/inklabels/0.29.55",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.29.55",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.29.55",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.29.55",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.29.55",
+      "size_bytes": 165,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.29.55",
+      "xet_hash": "e81104f880b4246c04877f0035a01f56b9727f55382a72ac959dd59ba96b3384"
+    },
+    {
+      "destination": "source/2/0/40/40",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/40/40"
+    },
+    {
+      "destination": "annotations/inklabels/0.40.40",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.40.40",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.40.40",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.40.40",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.40.40",
+      "size_bytes": 162,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.40.40",
+      "xet_hash": "578228e46f42f72ecafa81258cdbfa3ae6a00029b24ef26d78736e5911473947"
+    },
+    {
+      "destination": "source/2/0/28/56",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/28/56"
+    },
+    {
+      "destination": "annotations/inklabels/0.28.56",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.28.56",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.28.56",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.28.56",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.28.56",
+      "size_bytes": 157,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.28.56",
+      "xet_hash": "576040e9364e7eea42eeeb0b0ea3a0dff0707f112f1f0057b97decae2c64079e"
+    },
+    {
+      "destination": "source/2/0/24/56",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/24/56"
+    },
+    {
+      "destination": "annotations/inklabels/0.24.56",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.24.56",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.24.56",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.24.56",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.24.56",
+      "size_bytes": 151,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.24.56",
+      "xet_hash": "dfdca144f25ae5b2ae6adaf9d4688cee415458f14d9661efa1fb0fa6a3c5ee34"
+    },
+    {
+      "destination": "source/2/0/35/40",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/35/40"
+    },
+    {
+      "destination": "annotations/inklabels/0.35.40",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.35.40",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.35.40",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.35.40",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.35.40",
+      "size_bytes": 148,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.35.40",
+      "xet_hash": "0630a56916b8644a8ee6c03783a63774170684b4e60b0d2b8a2b835a30854465"
+    },
+    {
+      "destination": "source/2/0/35/41",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/35/41"
+    },
+    {
+      "destination": "annotations/inklabels/0.35.41",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.35.41",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.35.41",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.35.41",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.35.41",
+      "size_bytes": 146,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.35.41",
+      "xet_hash": "1456834505e5b134453f7bec33ea5ace45acf31b6b87414cf479c241f9395817"
+    },
+    {
+      "destination": "source/2/0/40/39",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/40/39"
+    },
+    {
+      "destination": "annotations/inklabels/0.40.39",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.40.39",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.40.39",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.40.39",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.40.39",
+      "size_bytes": 145,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.40.39",
+      "xet_hash": "c7a5a4889c6b6fee69aea339324de687cfc8fba7f305223d33711dd71114fa2e"
+    },
+    {
+      "destination": "source/2/0/36/38",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/36/38"
+    },
+    {
+      "destination": "annotations/inklabels/0.36.38",
+      "size_bytes": 182,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.36.38",
+      "xet_hash": "02cc890ec8d8b1e48246046a4c1af7251deb44b61dccc44a140bb45d2d077dd8"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.36.38",
+      "size_bytes": 138,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.36.38",
+      "xet_hash": "07cef84386cdf80a8df0edce88b45633c0e54a9ad5c7a48368e3e8b4ca19776f"
+    },
+    {
+      "destination": "annotations/validation_mask/0.36.38",
+      "size_bytes": 138,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.36.38",
+      "xet_hash": "52ff2c979f117a344bf3e5742e72a47523d5addef47ec46da0992fc5ffaf6978"
+    },
+    {
+      "destination": "source/2/0/24/55",
+      "size_bytes": 1785856,
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/24/55"
+    },
+    {
+      "destination": "annotations/inklabels/0.24.55",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.24.55",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/supervision_mask/0.24.55",
+      "size_bytes": 78,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.24.55",
+      "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+    },
+    {
+      "destination": "annotations/validation_mask/0.24.55",
+      "size_bytes": 133,
+      "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.24.55",
+      "xet_hash": "302fb28902480d8082e0167445e2248fd9e156eae0578842685b94a7e4e2ac77"
+    }
+  ],
+  "freeze_state": "frozen_before_ground_truth",
+  "ground_truth_reveal_count_before": 0,
+  "max_total_bytes": 33554432,
+  "method_source_sha256": "85768a14e8b43dfe5c48e6aac1fb90c2470a83a1ec9b533820ed90bb8dcf4528",
+  "output_root": "data/pherc1667_w029_validation",
+  "portable_report_paths": true,
+  "project_root_relative": "../..",
+  "regime": "VALIDATION",
+  "report_json": "results/pherc1667_w029_validation/download_report.json",
+  "schema_version": "inksurf-validation-http-download/1.0",
+  "track": "A",
+  "validation_partition_id": "ink9um-pherc1667-w029-top12-v1"
+}

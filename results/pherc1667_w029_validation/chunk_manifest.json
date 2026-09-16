@@ -1,0 +1,349 @@
+{
+  "annotation_chunks_zyx": [
+    21,
+    128,
+    128
+  ],
+  "annotation_shape_zyx": [
+    21,
+    9500,
+    7830
+  ],
+  "annotation_source_surface_volume": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr",
+  "annotation_source_surface_volume_level": 2,
+  "experiment_id": "pherc1667-w029-cross-model-preflight-20260916",
+  "geometry_tier": "G1",
+  "planned_annotation_bytes": 3980,
+  "planned_source_raw_bytes": 21430272,
+  "regime": "VALIDATION",
+  "schema_version": "inksurf-ink9um-validation-preflight/1.0",
+  "selected_chunks": [
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 148,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.28.54",
+          "xet_hash": "6e9dd3597f15475c9f80966047ae2c67da265e689a09c4876a89689ff4895a62"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.28.54",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 183,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.28.54",
+          "xet_hash": "a961661924606c1275d0606e3fb3df44dd0b0945859413d831d22b6b2c32665d"
+        }
+      },
+      "chunk_yx": [
+        28,
+        54
+      ],
+      "compressed_validation_bytes": 183,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/28/54",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.24.54",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.24.54",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 173,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.24.54",
+          "xet_hash": "bfebc15fcda54a6b8bc5998f9b5b2378dcbbff97a5e67c16e7b5c73331bd57c2"
+        }
+      },
+      "chunk_yx": [
+        24,
+        54
+      ],
+      "compressed_validation_bytes": 173,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/24/54",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.39.41",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.39.41",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 173,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.39.41",
+          "xet_hash": "9e1c2bad4ee9052554c9385c83ee7b9cfc2ee40595e9d0e18d3dda161bb1e281"
+        }
+      },
+      "chunk_yx": [
+        39,
+        41
+      ],
+      "compressed_validation_bytes": 173,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/39/41",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.29.55",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.29.55",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 165,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.29.55",
+          "xet_hash": "e81104f880b4246c04877f0035a01f56b9727f55382a72ac959dd59ba96b3384"
+        }
+      },
+      "chunk_yx": [
+        29,
+        55
+      ],
+      "compressed_validation_bytes": 165,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/29/55",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.40.40",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.40.40",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 162,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.40.40",
+          "xet_hash": "578228e46f42f72ecafa81258cdbfa3ae6a00029b24ef26d78736e5911473947"
+        }
+      },
+      "chunk_yx": [
+        40,
+        40
+      ],
+      "compressed_validation_bytes": 162,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/40/40",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.28.56",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.28.56",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 157,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.28.56",
+          "xet_hash": "576040e9364e7eea42eeeb0b0ea3a0dff0707f112f1f0057b97decae2c64079e"
+        }
+      },
+      "chunk_yx": [
+        28,
+        56
+      ],
+      "compressed_validation_bytes": 157,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/28/56",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.24.56",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.24.56",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 151,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.24.56",
+          "xet_hash": "dfdca144f25ae5b2ae6adaf9d4688cee415458f14d9661efa1fb0fa6a3c5ee34"
+        }
+      },
+      "chunk_yx": [
+        24,
+        56
+      ],
+      "compressed_validation_bytes": 151,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/24/56",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.35.40",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.35.40",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 148,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.35.40",
+          "xet_hash": "0630a56916b8644a8ee6c03783a63774170684b4e60b0d2b8a2b835a30854465"
+        }
+      },
+      "chunk_yx": [
+        35,
+        40
+      ],
+      "compressed_validation_bytes": 148,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/35/40",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.35.41",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.35.41",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 146,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.35.41",
+          "xet_hash": "1456834505e5b134453f7bec33ea5ace45acf31b6b87414cf479c241f9395817"
+        }
+      },
+      "chunk_yx": [
+        35,
+        41
+      ],
+      "compressed_validation_bytes": 146,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/35/41",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.40.39",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.40.39",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 145,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.40.39",
+          "xet_hash": "c7a5a4889c6b6fee69aea339324de687cfc8fba7f305223d33711dd71114fa2e"
+        }
+      },
+      "chunk_yx": [
+        40,
+        39
+      ],
+      "compressed_validation_bytes": 145,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/40/39",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 182,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.36.38",
+          "xet_hash": "02cc890ec8d8b1e48246046a4c1af7251deb44b61dccc44a140bb45d2d077dd8"
+        },
+        "supervision_mask": {
+          "size_bytes": 138,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.36.38",
+          "xet_hash": "07cef84386cdf80a8df0edce88b45633c0e54a9ad5c7a48368e3e8b4ca19776f"
+        },
+        "validation_mask": {
+          "size_bytes": 138,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.36.38",
+          "xet_hash": "52ff2c979f117a344bf3e5742e72a47523d5addef47ec46da0992fc5ffaf6978"
+        }
+      },
+      "chunk_yx": [
+        36,
+        38
+      ],
+      "compressed_validation_bytes": 138,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/36/38",
+      "source_raw_bytes": 1785856
+    },
+    {
+      "annotation_chunks": {
+        "inklabels": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_inklabels.zarr/0/0.24.55",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "supervision_mask": {
+          "size_bytes": 78,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_supervision_mask.zarr/0/0.24.55",
+          "xet_hash": "50cce7bbd06eea2a0367c31de5fb3ac212044946ebc1055005e49f634c82ea6a"
+        },
+        "validation_mask": {
+          "size_bytes": 133,
+          "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc1667-w029/pherc1667-w029_validation_mask.zarr/0/0.24.55",
+          "xet_hash": "302fb28902480d8082e0167445e2248fd9e156eae0578842685b94a7e4e2ac77"
+        }
+      },
+      "chunk_yx": [
+        24,
+        55
+      ],
+      "compressed_validation_bytes": 133,
+      "source_chunk_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1667/segments/20251212185248-w029_20251212185248662_flatboi/surface-volumes/2.399um-0.22m-78keV-volume-20251217075048.zarr/2/0/24/55",
+      "source_raw_bytes": 1785856
+    }
+  ],
+  "selection": "largest_compressed_validation_chunks_then_lexicographic",
+  "selection_mask_kind": "validation_mask",
+  "selection_support": null,
+  "source_axes": "Z,Y,X",
+  "source_chunks_zyx": [
+    109,
+    128,
+    128
+  ],
+  "source_shape_zyx": [
+    109,
+    9500,
+    7830
+  ],
+  "track": "A"
+}
