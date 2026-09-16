@@ -21,10 +21,11 @@ def _sha256(path: Path) -> str:
 def decide(registration: dict, support: dict) -> str:
     if registration.get("status") != "GO_UV_CORRESPONDENCE":
         return "NO_GO_REGISTRATION"
-    if int(support["totals"]["any"]["eligible_pixels"]) == 0:
-        return "NO_GO_NO_LABELED_COMMON_SUPPORT"
-    if int(support["center_supported_chunk_count"]) < int(support["minimum_supported_chunks"]):
-        return "NO_GO_INSUFFICIENT_COMMON_SUPPORT"
+    permissive = support["totals"]["any"]
+    if int(permissive["eligible_pixels"]) == 0:
+        return "NO_GO_NO_COMMON_GEOMETRY_SUPPORT"
+    if int(permissive["eligible_ink_pixels"]) == 0 or int(permissive["eligible_negative_pixels"]) == 0:
+        return "NO_GO_SINGLE_CLASS_COMMON_SUPPORT"
     return "GO_SCORE_COMPARISON"
 
 
@@ -54,7 +55,6 @@ def run(config_path: Path) -> dict:
         "common_support": {
             "report": config["support"]["report"], "sha256": config["support"]["sha256"],
             "status": receipts["support"]["status"], "roi_count": receipts["support"]["roi_count"],
-            "center_supported_chunk_count": receipts["support"]["center_supported_chunk_count"],
             "totals": receipts["support"]["totals"],
         },
         "score_comparison_performed": False,

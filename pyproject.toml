@@ -70,6 +70,8 @@ inksurf-remote-tiff-roi-fetch = "inksurf.remote_tiff_roi_fetch:main"
 inksurf-cross-model-support-audit = "inksurf.cross_model_support_audit:main"
 inksurf-cross-tifxyz-registration = "inksurf.cross_tifxyz_registration:main"
 inksurf-cross-model-candidate-decision = "inksurf.cross_model_candidate_decision:main"
+inksurf-ink9um-provenance-census = "inksurf.ink9um_provenance_census:main"
+inksurf-tifxyz-common-support = "inksurf.tifxyz_common_support:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

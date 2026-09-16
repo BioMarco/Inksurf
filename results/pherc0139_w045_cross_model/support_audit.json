@@ -280,7 +280,7 @@
   ],
   "experiment_id": "pherc0139-w045-cross-model-common-support-audit-20260915",
   "geometry_tier": "G1",
-  "interpretation_limit": "Support only. Normalized raster mapping is not G2 registration and no score agreement was measured.",
+  "interpretation_limit": "Nonzero-output overlap diagnostic only: a prediction value of zero can be valid data and must not be treated as missing coverage. Use TIFXYZ validity for common-support eligibility. Normalized raster mapping is not G2 registration and no score agreement was measured.",
   "minimum_supported_chunks": 4,
   "regime": "DEV",
   "roi_count": 12,

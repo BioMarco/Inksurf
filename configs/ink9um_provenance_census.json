@@ -1,0 +1,19 @@
+{
+  "schema_version": "inksurf-ink9um-provenance-census/1.0",
+  "experiment_id": "ink9um-exact-source-provenance-census-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "annotation_root_prefix": "ink_9um/labels/aligned-scrollprizeorg-21slices",
+  "annotation_root_api": "https://huggingface.co/api/buckets/scrollprize/datasets/tree/ink_9um/labels/aligned-scrollprizeorg-21slices",
+  "annotation_api_base": "https://huggingface.co/api/buckets/scrollprize/datasets/tree",
+  "annotation_resolve_base": "https://huggingface.co/buckets/scrollprize/datasets/resolve",
+  "s3_list_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/",
+  "s3_object_base": "https://vesuvius-challenge-open-data.s3.amazonaws.com",
+  "maximum_cases": 30,
+  "maximum_metadata_bytes": 8388608,
+  "timeout_seconds": 60,
+  "maximum_retries": 3,
+  "cache_json": "cache/ink9um_provenance_census/progress.json",
+  "output_report": "results/ink9um_provenance_census/report.json",
+  "output_csv": "results/ink9um_provenance_census/cases.csv"
+}

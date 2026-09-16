@@ -62,11 +62,13 @@ Next implementation sequence:
 5. prepare the open-source walkthrough and submission draft for owner review.
 
 The first provenance-correct cross-model candidate has now been audited end to
-end. Its TIFXYZ correspondence passes, but it has zero labeled common-support
-pixels, so score comparison is blocked. The remaining bounded search is a
-metadata census of all `ink_9um` source declarations; if that finds no eligible
-pair, the cross-model confirmation route stops and the submission remains an
-auditor/validator contribution.
+end. Its TIFXYZ correspondence passes and 32,467 labeled pixels have common
+geometric support, but the common subset contains only negatives and no
+transferred positives, so score comparison is blocked. The metadata census of
+all 24 `ink_9um` source declarations found one still-unrevealed validation-mask
+candidate, PHerc1667-w029. Its protocol must be frozen before any label-pixel
+access; if it also fails, the submission remains an auditor/validator
+contribution rather than a confirmed cross-model detector.
 
 ## Stop conditions
 

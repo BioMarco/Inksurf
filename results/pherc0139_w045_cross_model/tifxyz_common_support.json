@@ -1,0 +1,313 @@
+{
+  "annotation_canvas_shape_yx": [
+    5820,
+    8020
+  ],
+  "chunks": [
+    {
+      "chunk_yx": [
+        7,
+        30
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        28,
+        21
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 14625,
+          "eligible_pixels": 14625
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 14625,
+          "eligible_pixels": 14625
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 14625,
+          "eligible_pixels": 14625
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        5,
+        29
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        6,
+        31
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        6,
+        30
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        28,
+        23
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 3613,
+          "eligible_pixels": 3613
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 3613,
+          "eligible_pixels": 3613
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 3613,
+          "eligible_pixels": 3613
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        28,
+        22
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 13559,
+          "eligible_pixels": 13559
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 13559,
+          "eligible_pixels": 13559
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 13559,
+          "eligible_pixels": 13559
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        6,
+        29
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        7,
+        31
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        28,
+        20
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 670,
+          "eligible_pixels": 670
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 670,
+          "eligible_pixels": 670
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 670,
+          "eligible_pixels": 670
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        5,
+        30
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        }
+      }
+    },
+    {
+      "chunk_yx": [
+        5,
+        31
+      ],
+      "metrics": {
+        "all": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "any": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        },
+        "nearest": {
+          "eligible_ink_pixels": 0,
+          "eligible_negative_pixels": 0,
+          "eligible_pixels": 0
+        }
+      }
+    }
+  ],
+  "claim_limit": "Geometry-valid labeled support only; this does not validate registration residuals, model scores, label independence or ink.",
+  "experiment_id": "pherc0139-w045-tifxyz-common-support-20260915",
+  "geometry_tier": "G1",
+  "regime": "DEV",
+  "roi_count": 12,
+  "schema_version": "inksurf-tifxyz-common-support/1.0",
+  "status": "NO_GO_SINGLE_CLASS_COMMON_SUPPORT",
+  "tifxyz_valid_fraction": [
+    0.8852353651952592,
+    0.7647677966390597
+  ],
+  "totals": {
+    "all": {
+      "eligible_ink_pixels": 0,
+      "eligible_negative_pixels": 32467,
+      "eligible_pixels": 32467
+    },
+    "any": {
+      "eligible_ink_pixels": 0,
+      "eligible_negative_pixels": 32467,
+      "eligible_pixels": 32467
+    },
+    "nearest": {
+      "eligible_ink_pixels": 0,
+      "eligible_negative_pixels": 32467,
+      "eligible_pixels": 32467
+    }
+  },
+  "track": "A"
+}

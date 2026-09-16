@@ -1,26 +1,25 @@
 {
   "claim": "No ink or model-quality claim: the candidate pair fails a prerequisite for score comparison.",
   "common_support": {
-    "center_supported_chunk_count": 0,
-    "report": "results/pherc0139_w045_cross_model/support_audit.json",
+    "report": "results/pherc0139_w045_cross_model/tifxyz_common_support.json",
     "roi_count": 12,
-    "sha256": "bc4ac331b7744b17ec7561f4c9d63ceff6a5b402431cf6570e19bd7f9e86fc72",
-    "status": "NO_GO_INSUFFICIENT_COMMON_SUPPORT",
+    "sha256": "bb8bc4a1c8dd849dd57d2735decf0e5e1279a7922c33fdbaf03d4b8a336a8cfb",
+    "status": "NO_GO_SINGLE_CLASS_COMMON_SUPPORT",
     "totals": {
       "all": {
         "eligible_ink_pixels": 0,
-        "eligible_pixels": 0,
-        "ink_prevalence": null
+        "eligible_negative_pixels": 32467,
+        "eligible_pixels": 32467
       },
       "any": {
         "eligible_ink_pixels": 0,
-        "eligible_pixels": 0,
-        "ink_prevalence": null
+        "eligible_negative_pixels": 32467,
+        "eligible_pixels": 32467
       },
-      "center": {
+      "nearest": {
         "eligible_ink_pixels": 0,
-        "eligible_pixels": 0,
-        "ink_prevalence": null
+        "eligible_negative_pixels": 32467,
+        "eligible_pixels": 32467
       }
     }
   },
@@ -42,6 +41,6 @@
   "schema_version": "inksurf-cross-model-candidate-decision/1.0",
   "score_comparison_allowed": false,
   "score_comparison_performed": false,
-  "status": "NO_GO_NO_LABELED_COMMON_SUPPORT",
+  "status": "NO_GO_SINGLE_CLASS_COMMON_SUPPORT",
   "track": "A"
 }

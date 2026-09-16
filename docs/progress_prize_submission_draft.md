@@ -99,12 +99,13 @@ apparently positive result.
 
 A provenance-corrected follow-up resolved the `pherc0139-w029` annotation to
 its declared source segment, PHerc0139-w045. Cross-TIFXYZ correspondence passed
-on a spatial holdout (median residual `9.61 µm`, p90 `15.34 µm`), but the
-second official ink output intersected zero of 101,342 supervised pixels under
-conservative, centre-sampled and permissive support policies. The bound
-decision is `NO_GO_NO_LABELED_COMMON_SUPPORT`; no score comparison was made.
-This demonstrates that registration success alone does not make two outputs an
-eligible benchmark pair.
+on a spatial holdout (median residual `9.61 µm`, p90 `15.34 µm`). A corrected
+audit uses TIFXYZ validity—not nonzero prediction values—as the coverage test:
+32,467 of 101,342 supervised pixels have common geometric support, but all are
+negative and zero are transferred positives. The bound decision is
+`NO_GO_SINGLE_CLASS_COMMON_SUPPORT`; no score comparison was made. This
+demonstrates that registration success alone does not make two outputs an
+eligible two-class benchmark pair.
 
 On PHerc0139-w016, geometry is now G2 only for the 12 frozen bounded DEV
 chunks. They cover `0.0751664 cm²`; the naive top-5% policy has pixel precision

@@ -166,7 +166,7 @@ These experiments are receipts for specific claims, not a ladder in which every
 | PHerc0139 bounded labels | DEV / G1 | Ensemble AP `0.72371`; abstained AP `0.80921` | Promising development result |
 | PHerc0814 locked labels | VALIDATION / G1 | Ensemble AP `0.59718`; 2/4 gates passed | `NO-GO` for seed-disagreement abstention |
 | PHerc0139 physical burden | DEV / bounded G2 | Top-5% precision `0.9375`; false area `0.4216%` of negative area | Promising DEV diagnostic; pseudo-label reference |
-| PHerc0139-w045 cross-model eligibility | DEV / G1 | UV holdout residual p50 `9.61 µm`, but 0 labeled common-support pixels | `NO-GO`; score comparison prohibited |
+| PHerc0139-w045 cross-model eligibility | DEV / G1 | UV holdout residual p50 `9.61 µm`; 32,467 geometry-supported labeled pixels, all negative | `NO-GO` single-class; score comparison prohibited |
 
 Detailed reports:
 
@@ -235,9 +235,18 @@ were downloaded by that failed preflight.
 
 The correctly provenance-matched `ink_9um` case maps to PHerc0139-w045. Its
 two TIFXYZ grids have strong spatial-holdout UV correspondence (median residual
-`9.61 µm`), but the second ink output overlaps zero supervised pixels even
-under a permissive support policy. The hash-bound decision is therefore
-`NO_GO_NO_LABELED_COMMON_SUPPORT`, and no score agreement was computed.
+`9.61 µm`). A corrected eligibility audit derives coverage from TIFXYZ validity,
+not from nonzero model values: 32,467 supervised pixels have common geometric
+support, but all are negative and none is a transferred positive. The hash-bound
+decision is therefore `NO_GO_SINGLE_CLASS_COMMON_SUPPORT`, and no score
+agreement was computed.
+
+A metadata-only census of all 24 `ink_9um` reference cases found 22 exact-source
+segments with two distinct render volume/model identifiers. Three also expose a
+validation mask: the already rejected PHerc0139 case, the already revealed
+PHerc0814 case, and the still-unrevealed PHerc1667-w029 candidate. The census
+accessed 94,420 metadata bytes and no pixel files. PHerc1667 is the next bounded
+candidate, subject to a frozen protocol and provenance/independence caveats.
 
 Before submission:
 

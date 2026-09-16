@@ -1,4 +1,4 @@
-"""Measure common raster support before any cross-model score comparison."""
+"""Diagnose overlap of nonzero raster output; this is not a coverage audit."""
 
 from __future__ import annotations
 
@@ -106,7 +106,11 @@ def run(config_path: Path) -> dict:
         "minimum_supported_chunks": int(config["minimum_supported_chunks"]),
         "threshold_note": config.get("threshold_note"),
         "totals": totals, "chunks": rows,
-        "interpretation_limit": "Support only. Normalized raster mapping is not G2 registration and no score agreement was measured.",
+        "interpretation_limit": (
+            "Nonzero-output overlap diagnostic only: a prediction value of zero can be valid data and must not "
+            "be treated as missing coverage. Use TIFXYZ validity for common-support eligibility. Normalized raster "
+            "mapping is not G2 registration and no score agreement was measured."
+        ),
     }
     _atomic_json(root / config["output_report"], report)
     return report

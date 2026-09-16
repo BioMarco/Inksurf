@@ -1,0 +1,27 @@
+{
+  "schema_version": "inksurf-tifxyz-common-support/1.0",
+  "experiment_id": "pherc0139-w045-tifxyz-common-support-20260915",
+  "track": "A",
+  "regime": "DEV",
+  "chunk_audit_report": "results/pherc0139_w045_supervision_preflight/chunk_audit_report.json",
+  "chunk_audit_sha256": "28742352978da98ef2f98df88f5bc5aa029212c03594d61d8ed0b9723201574d",
+  "tifxyz_download_report": "results/pherc0139_w045_cross_model/tifxyz_download.json",
+  "tifxyz_download_sha256": "cc00d19cae8aa85b53cf632c2d4966dfa8bcb9198d64145fb86bb55250bcc9b9",
+  "coordinate_sets": [
+    {
+      "volume_id": "20260102150214",
+      "x": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260102150214/x.tif",
+      "y": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260102150214/y.tif",
+      "z": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260102150214/z.tif"
+    },
+    {
+      "volume_id": "20260413113053",
+      "x": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260413113053/x.tif",
+      "y": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260413113053/y.tif",
+      "z": "data/pherc0139_w045_supervision_pilot/geometry/volume_20260413113053/z.tif"
+    }
+  ],
+  "annotation_canvas_shape_yx": [5820, 8020],
+  "chunk_pixels": 128,
+  "output_report": "results/pherc0139_w045_cross_model/tifxyz_common_support.json"
+}

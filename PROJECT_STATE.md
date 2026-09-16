@@ -2198,21 +2198,26 @@ tenuti fuori produce residuo mediano `9,6067 µm`, p90 `15,3424 µm` e massimo
 `GO_UV_CORRESPONDENCE`. Questo non dimostra una registrazione locale non rigida
 G2 né validita dell'inchiostro.
 
-**Risultato negativo robusto:** il primo ink render è nonzero in tutte le 12
-ROI; il secondo è nonzero in sole 2. Dopo proiezione sulla griglia 128x128,
-nessun pixel del secondo render interseca la supervision mask, anche con la
-policy permissiva `any`. I pixel eleggibili comuni sono quindi zero per le
-policy `all`, `center` e `any`. Il decision audit legato agli hash restituisce
-`NO_GO_NO_LABELED_COMMON_SUPPORT`; nessun confronto di score è stato eseguito.
+**Correzione metodologica verificata (16 settembre 2026):** il primo audit
+usava `prediction > 0` come proxy di copertura. Questa equivalenza è errata:
+zero può essere una predizione valida. Il nuovo audit deriva il supporto dalla
+validità TIFXYZ delle due superfici. Trova 32.467 pixel supervisionati con
+supporto geometrico comune, identici sotto le policy `all`, `nearest` e `any`.
+Tutti sono negativi; i positivi trasferiti eleggibili sono zero. Il decision
+audit legato agli hash restituisce quindi
+`NO_GO_SINGLE_CLASS_COMMON_SUPPORT`; nessun confronto di score è stato
+eseguito. Il vecchio `support_audit.json` è conservato esclusivamente come
+diagnostica di sovrapposizione dell'output nonzero e non rappresenta copertura.
 
-**Interpretazione:** risultato robusto come audit di eleggibilità e artefatto
-metodologico evitato, non come valutazione dei modelli. La buona corrispondenza
-UV rende improbabile che lo zero dipenda da un semplice errore globale di scala
-o orientamento. Non è lecito spostare le ROI dopo aver visto le prediction.
-Questo pair non puo sostenere il benchmark etichettato InkSurf; resta inoltre
-non verificata l'indipendenza del training. Artefatti aggregati in
+**Interpretazione:** risultato robusto come audit di eleggibilità, non come
+valutazione dei modelli. La buona corrispondenza UV e il supporto geometrico
+comune escludono l'assenza totale di copertura, ma il sottoinsieme comune non
+permette di misurare AP/AUC o sensibilità all'inchiostro perché contiene una
+sola classe. Non è lecito spostare le ROI dopo aver visto le prediction. Questo
+pair non puo sostenere il benchmark etichettato InkSurf; resta inoltre non
+verificata l'indipendenza del training. Artefatti aggregati in
 `results/pherc0139_w045_supervision_preflight/` e
-`results/pherc0139_w045_cross_model/`. La suite completa conta 138 test, tutti
+`results/pherc0139_w045_cross_model/`. La suite completa conta 143 test, tutti
 superati.
 
 Prossimo passo piu informativo: censire automaticamente la provenienza di tutte
@@ -2220,3 +2225,34 @@ le reference `ink_9um` tramite `.zattrs`, quindi incrociare gli esatti segmenti
 sorgente con render multipli e supporto etichettato. Se il censimento non trova
 un pair ammissibile, fermare la ricerca di conferma cross-model e finalizzare il
 Progress Prize come validator di provenance, registration e support eligibility.
+
+## 50. Censimento provenance `ink_9um`
+
+**Data:** 16 settembre 2026. **Track/regime:** Track A / DEV. Operazione
+metadata-only; nessun pixel sorgente, prediction o label è stato letto.
+
+Il comando riproducibile `inksurf-ink9um-provenance-census` risolve gli
+`.zattrs` delle reference nel loro segmento sorgente esatto e cataloga i render
+ufficiali dello stesso segmento. Il client applica cap di byte, retry, cache
+resumable e scrittura atomica. Il run completo ha censito 24 casi usando 94.420
+byte di metadati; 22 casi hanno almeno due identificatori distinti sia per
+volume sia per modello. Tre casi espongono anche una validation mask:
+
+- `pherc0139-w016`, già escluso dal percorso di benchmark per mancato supporto
+  positivo comune sul segmento sorgente w045;
+- `pherc0814-46527`, già rivelato e usato a monte per online validation, quindi
+  utile soltanto come stress test post-hoc;
+- `pherc1667-w029`, unico candidato non ancora rivelato per un nuovo test
+  locale congelato.
+
+**Interpretazione prudente:** il censimento dimostra disponibilità catalogale,
+non indipendenza statistica né validità dell'inchiostro. Identificatori diversi
+di volume/modello non bastano a provare training lineage indipendente. Prima di
+qualsiasi accesso ai pixel PHerc1667 devono essere congelati selezione, gate di
+registrazione/supporto, metriche, baseline e stop rule. La validation mask è
+upstream e non costituisce ground truth indipendente da sola.
+
+Artefatti: `configs/ink9um_provenance_census.json`,
+`results/ink9um_provenance_census/report.json` e `cases.csv`. Prossimo passo:
+preregistrare il protocollo PHerc1667-w029 e soltanto dopo eseguire un download
+strettamente limitato alle ROI selezionate con criteri metadata-only.

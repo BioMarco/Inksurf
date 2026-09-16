@@ -8,8 +8,8 @@
     "sha256": "ac3e62771ac5ffdd3409a36a11d33fba937c7abb25a404ccb83d17a49721d480"
   },
   "support": {
-    "report": "results/pherc0139_w045_cross_model/support_audit.json",
-    "sha256": "bc4ac331b7744b17ec7561f4c9d63ceff6a5b402431cf6570e19bd7f9e86fc72"
+    "report": "results/pherc0139_w045_cross_model/tifxyz_common_support.json",
+    "sha256": "bb8bc4a1c8dd849dd57d2735decf0e5e1279a7922c33fdbaf03d4b8a336a8cfb"
   },
   "output_report": "results/pherc0139_w045_cross_model/candidate_decision.json"
 }
