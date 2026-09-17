@@ -271,12 +271,16 @@ reference becomes available.
 Before submission:
 
 1. ~~demonstrate a decision-level advantage over naive ensemble/repeatability
-   checks;~~ completed in the preserved comparison;
-2. measure the implemented physical false-positive burden on an eligible G2
-   labeled ROI;
+checks;~~ completed in the preserved comparison
+([`docs/method_comparison.md`](https://github.com/BioMarco/Inksurf/blob/main/docs/method_comparison.md));
+2. ~~measure the implemented physical false-positive burden on an eligible G2
+labeled ROI;~~ completed
+([`results/pherc0139_w016_physical_benchmark/report.md`](https://github.com/BioMarco/Inksurf/blob/main/results/pherc0139_w016_physical_benchmark/report.md));
 3. consume rather than duplicate community CT-support, seating and dual-energy
-   outputs;
-4. publish an end-to-end real-data walkthrough with bounded downloads;
+outputs;
+4. ~~publish an end-to-end real-data walkthrough with bounded downloads;~~
+completed
+([`docs/real_data_walkthrough.md`](https://github.com/BioMarco/Inksurf/blob/main/docs/real_data_walkthrough.md));
 5. obtain community feedback and complete the official submission review.
 
 First Letters work remains a separate locked-discovery track. A qualifying
