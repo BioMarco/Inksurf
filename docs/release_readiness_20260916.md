@@ -8,7 +8,7 @@
 
 ## Release decision
 
-**Software release: GO after owner visibility approval.**
+**Software release: GO.**
 
 **Progress Prize submission: credible as a validator/auditor contribution.**
 
@@ -30,7 +30,8 @@ silently changing regions or thresholds.
 | Comprehensive documentation | README, governance, protocols, walkthrough, method comparison and submission draft | Ready |
 | Usage examples | Synthetic demo and bounded PHerc0139/PHerc1667 workflows | Ready |
 | Standard formats and modular integration | NumPy, TIFF, Zarr and TIFXYZ/mesh QA receipts; JSON/CSV outputs | Ready |
-| Early open-source release and actual use | Repository did not resolve anonymously during this audit | Owner action required |
+| Early open-source release | Public GitHub repository, MIT licence and green public CI | Ready |
+| Actual community use | No public issue/comment from an external user yet | Feedback requested |
 
 ## Verified release gate
 
@@ -49,6 +50,8 @@ silently changing regions or thresholds.
 - local data, caches, credentials, model weights and discovery material remain
   excluded by Git.
 
+The public repository API confirms visibility `public`, default branch `main`,
+MIT licence and a successful GitHub Actions run for commit `6b3c6a8`.
 Machine-readable summary: `results/release_readiness/report.json`.
 
 ## Scientific scope to preserve
@@ -61,9 +64,8 @@ preregistered four-chunk diversity gate. None is independent ground truth.
 
 ## Remaining actions
 
-1. Owner reviews this exact public tree and changes the GitHub repository to
-   public if it is still private.
-2. Create a GitHub release/tag `v0.1.0` after public CI is green.
+1. Create a GitHub release/tag `v0.1.0` after public CI is green.
+2. Add discoverability topics to the GitHub About panel.
 3. Share the repository in the Vesuvius Challenge community and request one
    concrete reproducibility/integration review.
 4. Submit the Progress Prize form using
@@ -71,6 +73,5 @@ preregistered four-chunk diversity gate. None is independent ground truth.
 5. Keep First Letters/Title discovery artifacts private and separate; do not
    attach them to this Progress Prize submission.
 
-The repository visibility change, public announcement and official submission
-must be performed or explicitly approved by the owner because they publish work
-under the owner's identity.
+The public announcement and official submission must be performed or explicitly
+approved by the owner because they publish work under the owner's identity.

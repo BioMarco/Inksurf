@@ -11,6 +11,12 @@ requires-python = ">=3.10"
 license = { text = "MIT" }
 dependencies = ["numpy>=1.26", "requests>=2.31"]
 
+[project.urls]
+Homepage = "https://github.com/BioMarco/Inksurf"
+Repository = "https://github.com/BioMarco/Inksurf"
+Issues = "https://github.com/BioMarco/Inksurf/issues"
+Documentation = "https://github.com/BioMarco/Inksurf/tree/main/docs"
+
 [project.optional-dependencies]
 catalog = ["huggingface_hub>=1.4,<2"]
 benchmark = ["tifffile>=2024.1", "zarr>=2.17", "imagecodecs>=2024.1"]

@@ -181,6 +181,7 @@ Detailed reports:
 - [bounded real-data walkthrough](docs/real_data_walkthrough.md)
 - [Progress Prize submission draft](docs/progress_prize_submission_draft.md)
 - [v0.1.0 release-readiness audit](docs/release_readiness_20260916.md)
+- [prepared September 2026 submission answers](docs/progress_prize_form_202609.md)
 - [changelog](CHANGELOG.md)
 
 The PHerc0814 labels are transferred annotations/pseudo-labels and the upstream

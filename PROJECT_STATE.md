@@ -2349,3 +2349,24 @@ repository (la lettura GitHub anonima non lo ha risolto), un primo feedback
 comunitario e l'invio del form sotto l'identità del proprietario. Artefatti:
 `docs/release_readiness_20260916.md` e
 `results/release_readiness/report.json`.
+
+## 54. Repository pubblica e submission package
+
+**Data:** 17 settembre 2026. La GitHub API pubblica conferma
+`BioMarco/Inksurf` visibile pubblicamente, branch predefinito `main`, licenza MIT
+riconosciuta e descrizione di 227 caratteri coerente con il posizionamento
+scientifico. GitHub Actions è verde sul commit `6b3c6a8`. La descrizione non
+richiede correzioni sostanziali.
+
+Il modulo ufficiale September 2026 Progress Prizes richiede: email, nome
+completo, descrizione individuale/team, Discord opzionale, URL pubblico, una
+risposta che copra dati usati, probabilità di lettura, nuova capacità ed
+evidenze, più accettazione dei termini. È stato preparato
+`docs/progress_prize_form_202609.md` con il testo pronto da incollare e
+`docs/community_feedback_request.md` con un messaggio prudente per ottenere uso
+o feedback pubblico.
+
+Gap non bloccanti ma importanti: nessun topic GitHub configurato, nessun tag o
+release `v0.1.0`, nessun feedback esterno ancora documentato. Il prossimo passo
+è pubblicare tag/release, aggiungere topic e chiedere una riproduzione
+comunitaria prima dell'invio del form entro il 30 settembre 2026.
