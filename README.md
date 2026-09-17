@@ -223,9 +223,10 @@ explicit publication review. See the
 
 ## Project status and roadmap
 
-The immediate target is a defensible Vesuvius Challenge Progress Prize
-submission. The current contribution is an evidence-independence and failure
-diagnostic layer, not a First Letters submission.
+InkSurf was submitted as an individual contribution to the September 2026
+Vesuvius Challenge Progress Prize on 17 September 2026. The contribution is an
+evidence-independence and failure diagnostic layer, not a First Letters
+submission. Prize review is pending.
 
 The current official-catalog preflight has identified a promising PHerc0139
 cross-energy, cross-model render pair on the same segment. It remains a
@@ -248,17 +249,16 @@ agreement was computed.
 A metadata-only census of all 24 `ink_9um` reference cases found 22 exact-source
 segments with two distinct render volume/model identifiers. Three also expose a
 validation mask: the already rejected PHerc0139 case, the already revealed
-PHerc0814 case, and the still-unrevealed PHerc1667-w029 candidate. The census
-accessed 94,420 metadata bytes and no pixel files. PHerc1667 is the next bounded
-candidate, subject to a frozen protocol and provenance/independence caveats.
+PHerc0814 case, and PHerc1667-w029, subsequently evaluated under a frozen
+protocol. The census accessed 94,420 metadata bytes and no pixel files.
 
-The PHerc1667-w029 protocol is now frozen and hash-bound before pixel reveal.
+The PHerc1667-w029 protocol was frozen and hash-bound before pixel reveal.
 Twelve validation chunks were selected solely by compressed-mask size; the
-bounded plan totals 21,430,272 raw source bytes plus 3,980 compressed annotation
-bytes. The test requires spatial-holdout TIFXYZ registration, two-class common
-support, whole-chunk bootstrap, a fusion AP gain over the best individual
-render, and an abstention gain. Failure at any prerequisite is reported as
-NO-GO without moving the ROI or relaxing thresholds.
+bounded plan totalled 21,430,272 raw source bytes plus 3,980 compressed annotation
+bytes. The preregistered test required spatial-holdout TIFXYZ registration,
+two-class common support, whole-chunk bootstrap, a fusion AP gain over the best
+individual render, and an abstention gain. Any failed prerequisite would be
+reported as NO-GO without moving the ROI or relaxing thresholds.
 
 After reveal, the partition contained 3,541 positive and 65,290 negative pixels,
 but every positive was in one chunk. The frozen requirement was at least four
@@ -268,20 +268,23 @@ tiles. The official validation-mask census is now exhausted; the cross-model
 confirmation route remains closed until a genuinely suitable whole-region
 reference becomes available.
 
-Before submission:
+### September 2026 submission status
 
-1. ~~demonstrate a decision-level advantage over naive ensemble/repeatability
-checks;~~ completed in the preserved comparison
-([`docs/method_comparison.md`](https://github.com/BioMarco/Inksurf/blob/main/docs/method_comparison.md));
-2. ~~measure the implemented physical false-positive burden on an eligible G2
-labeled ROI;~~ completed
-([`results/pherc0139_w016_physical_benchmark/report.md`](https://github.com/BioMarco/Inksurf/blob/main/results/pherc0139_w016_physical_benchmark/report.md));
-3. consume rather than duplicate community CT-support, seating and dual-energy
-outputs;
-4. ~~publish an end-to-end real-data walkthrough with bounded downloads;~~
-completed
-([`docs/real_data_walkthrough.md`](https://github.com/BioMarco/Inksurf/blob/main/docs/real_data_walkthrough.md));
-5. obtain community feedback and complete the official submission review.
+The open-source `v0.1.0` release is published and the September 2026 Progress
+Prizes form was submitted on 17 September 2026 as an individual contribution.
+InkSurf was shared in the Vesuvius Challenge Discord `#ink-detection` and
+`#show-and-tell` channels to request community feedback. External use and
+independent reproduction have not yet been documented.
+
+The submission evidence includes the preserved
+[decision-level comparison](docs/method_comparison.md),
+[bounded physical false-positive diagnostic](results/pherc0139_w016_physical_benchmark/report.md)
+and [real-data walkthrough](docs/real_data_walkthrough.md).
+
+Next steps are to assess any incoming community feedback, improve integration
+with community CT-support, seating and dual-energy outputs where useful, and
+document independent reproductions if they occur. These are future activities,
+not completed submission evidence.
 
 First Letters work remains a separate locked-discovery track. A qualifying
 submission would additionally require a verified TIFXYZ mesh, low-distortion
